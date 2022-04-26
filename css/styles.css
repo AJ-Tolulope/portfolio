@@ -1972,4 +1972,7 @@ footer section
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .effect-3{
+        margin-left: -80px;
+    }
 }
