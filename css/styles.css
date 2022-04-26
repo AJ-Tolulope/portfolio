@@ -1811,7 +1811,7 @@ footer section
     }
 }
 
-@media(max-width: 1020px){
+@media(max-width: 1021px){
     .portfolio-section .portfolio-item,
     .service-section .service-item{
         flex: 0 0 50%;
@@ -1973,6 +1973,9 @@ footer section
         max-width: 100%;
     }
     .effect-3{
-        margin-left: -100px;
+    height: 130px;
+    width: 130px;
+    left: -20%;
+    top: -10%;
     }
 }
