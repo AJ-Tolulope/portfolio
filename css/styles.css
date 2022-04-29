@@ -336,7 +336,7 @@ section
 .section{
     width: 90%;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
 }
 .section-title{
     padding: 0 15px ;
@@ -378,10 +378,10 @@ preloader
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
 }
 .preloader.fade-out{
     visibility: hidden;
-    transition: all 0.6s ease;
 }
 .preloader .box{
     width: 65px;
@@ -595,13 +595,12 @@ navigation menu
     opacity: 0;
     visibility: hidden;
     overflow-y: auto;
-    
+    transition: all 0.3s ease-in;
 }
 .nav-menu.open{
     visibility: visible;
     opacity: 1;
     z-index: 999;
-    transition: all 0.3s ease-in;
 }
 /* ----------------------------------- */
 
@@ -1044,7 +1043,7 @@ skills
     margin: 0 0 10px;
     text-transform: capitalize;
 }
-.about-section .timeline .timeline-item-inner h1{
+.about-section .timeline .timeline-item-inner h3{
     font-size: 20px;
     font-weight: 600;
     color: var(--text-black-700);
@@ -1133,7 +1132,7 @@ service-section
 .service-section .service-item-inner:hover .icon i{
     color: var(--skin-color);
 }
-.service-section .service-item-inner h1{
+.service-section .service-item-inner h2{
     font-size: 20px;
     font-weight: 600;
     color: var(--text-black-700);
@@ -1848,6 +1847,9 @@ footer section
     .links{
         display: none;
     }
+    .container{
+        width: 90%;
+    }
     .contact-section .w-50,
     .contact-section .contact-item,
     .portfolio-popup .description,
@@ -1859,9 +1861,9 @@ footer section
     .about-section .about-img,
     .home-section .home-text,
     .home-section .home-img{
-        flex: 0 0 90%;
-        max-width: 90%;
-        margin: auto;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
     .about-section .skills .skill-item{
         margin-bottom: 20px;
