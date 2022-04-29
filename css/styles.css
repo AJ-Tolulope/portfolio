@@ -478,7 +478,7 @@ move-up
 header 
  ------------- */
 .header{
-    padding: 20px;
+    padding: 10px;
     position: fixed;
     width: 100%;
     max-width: 100%;
@@ -497,7 +497,6 @@ logo
     line-height: 36px;
     height: 40px;
     width: 40px;
-    margin-left: 20px;
     font-size: 24px;
     text-align: center;
     color: var(--skin-color);
