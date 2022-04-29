@@ -167,7 +167,7 @@ effect
     height: 30px;
     border: 4px solid #0000dd;
     right: 10%;
-    bottom: 10%;
+    bottom: 20%;
     animation: spin 10s linear infinite;
 }
 @keyframes spin{
@@ -206,8 +206,8 @@ effect
     width: 180px;
     border: 25px solid var(--skin-color);
     border-radius: 50%;
-    left: 20%;
-    top: -120px;
+    right: 10%;
+    top: -20px;
     animation: bounceLeft 3s infinite ease-in-out;
 }
 @keyframes bounceLeft{
@@ -257,7 +257,7 @@ effect
     height: 30px;
     border: 4px solid #0000dd;
     right: 10%;
-    bottom: 10%;
+    bottom: 20%;
     animation: spin 10s linear infinite;
 }
 .effect-7{
@@ -481,9 +481,11 @@ header
     padding: 20px;
     position: fixed;
     width: 100%;
+    max-width: 100%;
     top: 0;
     left: 0;
     z-index: 99;
+    border: 1px solid #ff8c00;
 }
 /* -------------------------- */
 
@@ -1808,6 +1810,15 @@ footer section
         box-shadow: var(--inner-shadow);
         color: var(--skin-color);
     }
+    .effect-3{
+        height: 180px;
+        width: 180px;
+        border: 25px solid var(--skin-color);
+        border-radius: 50%;
+        left: 20%;
+        top: -50px;
+        animation: bounceLeft 3s infinite ease-in-out;
+    }
 }
 
 @media(max-width: 1021px){
@@ -1838,6 +1849,15 @@ footer section
     .links ul li a:after{
         border-radius: 5px;
     }
+    .effect-3{
+        height: 180px;
+        width: 180px;
+        border: 25px solid var(--skin-color);
+        border-radius: 50%;
+        left: 20%;
+        top: -50px;
+        animation: bounceLeft 3s infinite ease-in-out;
+    }
 }
 
 @media(max-width: 768px){
@@ -1846,6 +1866,9 @@ footer section
     }
     .links{
         display: none;
+    }
+    .section{
+        width: 100%;
     }
     .container{
         width: 90%;
@@ -1881,9 +1904,6 @@ footer section
     .home-section .home-img .img-box{
         margin-bottom: 20px;
         max-width: 350px;
-    }
-    .effect-3{
-        margin-left: -60px;
     }
     .effect-4{
         left: 5%;
@@ -1961,6 +1981,11 @@ footer section
         width: 100%;
         border-radius: 16px 16px 0px 0px;
     }
+
+    .effect-3{
+        left: 50%;
+        top: 30px;
+    }
 }
 
 @media(max-width: 574px){
@@ -1973,8 +1998,5 @@ footer section
     .service-section .service-item{
         flex: 0 0 100%;
         max-width: 100%;
-    }
-    .effect-3{
-        margin-left: -80px;
     }
 }
