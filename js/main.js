@@ -68,7 +68,7 @@ function fadeOutEffect(){
     document.querySelector(".fade-out-effect").classList.add("active");
     setTimeout(() =>{
         document.querySelector(".fade-out-effect").classList.remove("active");
-    },300)
+    },1000)
 }
 /*--------------------- fade out effect end -------------------*/ 
 
@@ -332,14 +332,6 @@ function bodyScrollToggle(){
     activeSlide = sliderContainer.querySelector(".testi-item.active")
     let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
     
-    // set width of all slides
-    slides.forEach((slide) =>{
-        slide.style.width = slideWidth + "px";
-    });
-
-    // set width of sliderContainer
-    sliderContainer.style.width = slideWidth * slides.length + "px";
-    
     // next slide effect
     nextBtn.addEventListener("click", ()=>{
         if(slideIndex === slides.length-1){
@@ -350,6 +342,7 @@ function bodyScrollToggle(){
         }
         slider(); 
     })
+
 
     // prev slide effect 
     prevBtn.addEventListener("click", () =>{
@@ -362,13 +355,13 @@ function bodyScrollToggle(){
         slider();
     })
 
+    // make each slide display none after deactivation
     function slider(){
         // deactivate existing active slides 
         sliderContainer.querySelector(".testi-item.active").classList.remove("active")
 
         // activate new slide 
         slides[slideIndex].classList.add("active");
-        sliderContainer.style.marginLeft = - (slideWidth * slideIndex) + "px";
     }
     slider();
 
