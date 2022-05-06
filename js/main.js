@@ -45,7 +45,6 @@ function showNavMenu(){
 
 function hideNavMenu(){
     navMenu.classList.remove("open");
-    fadeOutEffect();
     bodyScrollToggle();
 };
 
@@ -61,16 +60,6 @@ window.addEventListener("load", () =>{
     },300)
 });
 /*--------------------- preloader end -------------------*/ 
-
-
-/*--------------------- fade out effect start -------------------*/ 
-function fadeOutEffect(){
-    document.querySelector(".fade-out-effect").classList.add("active");
-    setTimeout(() =>{
-        document.querySelector(".fade-out-effect").classList.remove("active");
-    },1000)
-}
-/*--------------------- fade out effect end -------------------*/ 
 
 
 /* -------------------------- set time start -----------------------------*/
