@@ -34,8 +34,8 @@ general
 /* override custom css variables for theme */
 body.dark{
     --bg-black-900: #ffffff;
-    --bg-black-100: #353535;
-    --bg-black-50: #2b2c2f;
+    --bg-black-100: #202020;
+    --bg-black-50: #1d1e20;
     --bg-opacity: rgba(43, 44, 47, 0.5);
     --text-black-900: #ffffff;
     --text-black-700: #ffffff;
@@ -56,6 +56,8 @@ body.hidden-scrolling{
 }
 html{
     scroll-behavior: smooth;
+    scrollbar-base-color: var(--skin-color);
+    scroll-behavior: auto;
 }
 *:not(i){
     font-family: var(--Abel);
@@ -106,7 +108,7 @@ img{
 .btn-1{
     padding: 10px 20px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--skin-color);
     background-color: var(--bg-black-50);
     line-height: 1.5;
@@ -180,7 +182,7 @@ effect
 }
 .effect-2{
     left: 3%;
-    bottom: 20%;
+    bottom: 15%;
     width: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -414,34 +416,6 @@ preloader
 
 
 /* ----------------
-fade-out .effect
-------------------- */
-.fade-out-effect{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--bg-black-50);
-    z-index: -1;
-    visibility: hidden;
-}
-.fade-out-effect.active{
-    visibility: visible;
-    z-index: 1000;
-    animation: fadeOut 0.3s ease-out;
-}
-@keyframes fadeOut{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-/* -------------------------------- */
-
-/* ----------------
 move-up
 ---------------- */
 .move-up{
@@ -497,12 +471,12 @@ logo
     line-height: 36px;
     height: 40px;
     width: 40px;
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     color: var(--skin-color);
     border-radius: 50%;
-    border: 2px solid var(--skin-color);
-    font-weight: 600;
+    border: 4px solid var(--skin-color);
+    font-weight: 800;
     text-transform: uppercase;
 }
 .header .logo:hover a{
@@ -725,21 +699,41 @@ home
     text-transform: capitalize;
     margin: 0;
 }
-.home-section .home-text h2{
-    font-size: 55px;
+.home-section .home-text h3{
+    font-size: 50px;
     font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-black-600);
+    margin: 0 0 20px;
+    position: relative;
+    padding: 5px 0;
+}
+.home-section .home-text h3:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 37%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--skin-color);
+}
+
+.home-section .home-text h1{
+    font-size: 40px;
+    font-weight: 550;
     color: var(--text-black-600);
     margin: 0;
 }
-.home-section .home-text h1{
+.home-section .home-text h2{
     font-size: 20px;
     font-weight: 500;
     color: var(--text-black-700);
-    margin: 0;
+    margin: 0 0 20px;
     text-transform: capitalize;
 }
 .home-section .home-text .btn-1{
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .home-section .home-img .img-box{
     max-width: 450px;
@@ -1326,11 +1320,11 @@ portfolio-popup
     font-weight: 400;
     text-transform: capitalize;
 }
-.portfolio-popup .pp-project-details h1{
+.portfolio-popup .pp-project-details h2{
     font-size: 20px;
     font-weight: 600;
     color: var(--text-black-700);
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     text-transform: capitalize;
 }
 .portfolio-popup .description{
@@ -1897,6 +1891,7 @@ footer section
     .home-section .home-text,
     .home-section .home-img{
         flex: 0 0 100%;
+        min-width: 100%;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -1914,8 +1909,16 @@ footer section
         padding: 10px 0;
     }
     .home-section .home-img .img-box{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         max-width: 350px;
+    }
+    .home-section .home-text h3{
+        font-size: 45px;
+    }
+    .home-section .home-text h3:before{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45%;
     }
     .effect-4{
         left: 5%;
@@ -2002,9 +2005,9 @@ footer section
 
 @media(max-width: 574px){
     .home-section .home-img .img-box{
-        max-width: 260px;
+        max-width: 280px;
     }
-    .home-section .home-text h2{
+    .home-section .home-text h1{
         font-size: 40px;
     }
     .service-section .service-item{
