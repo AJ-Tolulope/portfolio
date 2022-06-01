@@ -1,18 +1,107 @@
 
-/* -------------------------- sccroll top section start -----------------------------*/
-$(document).ready(function () {
-
-    // click to scroll top
-    $('.move-up span').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 1000);
-    })
-
-    // AOS Instance
-    AOS.init();
-
+/* ============================= preloader start =============================*/ 
+window.addEventListener("load", () =>{
+    // preloader
+    document.querySelector(".preloader").classList.remove("fade-out");
+    setTimeout(() =>{
+        document.querySelector(".preloader").classList.add("fade-out");
+    }, 100)
 });
+
+// AOS Instance
+AOS.init();
+/* ============================= preloader end =============================*/ 
+
+/* ============================= theme light and dark mode =============================*/
+
+const dayNight = document.querySelector(".day-night");
+
+function themeMode(){
+    if(localStorage.getItem("theme") !== null){
+        if(localStorage.getItem("theme") === "dark"){
+            document.body.classList.add("dark");
+        }
+        else{
+            document.body.classList.remove("dark");
+        }
+    }
+    updateIcon();
+}
+themeMode();
+
+dayNight.addEventListener("click", () =>{
+    document.body.classList.toggle("dark");
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme", "dark");
+    }
+    else{
+        localStorage.setItem("theme", "light");
+    }
+    updateIcon();
+})
+function updateIcon(){
+    if(document.body.classList.contains("dark")){
+        dayNight.querySelector("i").classList.remove("fa-sun");
+        dayNight.querySelector("i").classList.add("fa-moon");
+    }
+    else{
+        dayNight.querySelector("i").classList.remove("fa-moon");
+        dayNight.querySelector("i").classList.add("fa-sun");
+    }
+}
+
+
+/* ============================= theme color start ============================= */ 
+
+const alternativeStyles = document.querySelectorAll(".alternate-style")
+
+if(localStorage.getItem("color") !== null){
+    changeColor();
+}
+
+function setActiveStyle(color){
+    localStorage.setItem("color", color);
+    changeColor();
+}
+
+function changeColor(){
+    alternativeStyles.forEach((style) =>{
+        if(localStorage.getItem("color") === style.getAttribute("title")){
+            style.removeAttribute("disabled");
+        }
+        else{
+            style.setAttribute("disabled", "true")
+        }
+    })
+}
+/* ============================= theme color end ============================= */ 
+
+/* ============================= toggle style switcher =============================*/ 
+
+const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
+
+styleSwitcherToggler.addEventListener("click", () =>{
+    document.querySelector(".style-switcher").classList.toggle("open");
+})
+
+// hide style-switcher on scroll
+window.addEventListener("scroll", () =>{
+    if(document.querySelector(".style-switcher").classList.contains("open")){
+        document.querySelector(".style-switcher").classList.remove("open")
+    }
+})
+
+
+/* -------------------------- sccroll top section start -----------------------------*/
+// $(document).ready(function () {
+
+//     // click to scroll top
+//     $('.move-up span').click(function () {
+//         $('html, body').animate({
+//             scrollTop: 0
+//         }, 1000);
+//     })
+// });
 
 function scrollTop(){
     const scrollTop = document.getElementById("move-up");
@@ -49,17 +138,6 @@ function hideNavMenu(){
 };
 
 /*--------------------- navigation menu end -------------------*/
-
-
-/*--------------------- preloader start -------------------*/ 
-window.addEventListener("load", () =>{
-    // preloader
-    document.querySelector(".preloader").classList.remove("fade-out");
-    setTimeout(() =>{
-        document.querySelector(".preloader").classList.add("fade-out");
-    },300)
-});
-/*--------------------- preloader end -------------------*/ 
 
 
 /* -------------------------- set time start -----------------------------*/
@@ -315,7 +393,6 @@ function bodyScrollToggle(){
 (() =>{
     const sliderContainer = document.querySelector(".testi-slider-container"),
     slides = sliderContainer.querySelectorAll(".testi-item"),
-    slideWidth = sliderContainer.offsetWidth,
     prevBtn = document.querySelector(".testi-slider-nav .prev"),
     nextBtn = document.querySelector(".testi-slider-nav .next"),
     activeSlide = sliderContainer.querySelector(".testi-item.active")
