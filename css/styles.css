@@ -711,7 +711,7 @@ home
 }
 .home-section .home-text .typing-text:after{
     background: var(--bg-black-50);
-    animation: typewriter 15s steps(25) 5s infinite;
+    animation: typewriter 10s steps(25) 5s infinite;
 }
 .home-section .home-text .typing-text:before{
     left: -.3em;
@@ -719,7 +719,7 @@ home
     opacity: 1;
     background: var(--bg-black-100);
     animation: 
-      typewriter 15s steps(25) 5s infinite,
+      typewriter 10s steps(25) 5s infinite,
       blink .75s steps(25) infinite;
 }
 @keyframes typewriter{
