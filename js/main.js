@@ -434,15 +434,3 @@ function bodyScrollToggle(){
 })();
 
 
-// /*------------ hide all sections except active -----------------*/ 
-// (() =>{
-//     const section = document.querySelectorAll(".section");
-//     section.forEach((section) =>{
-//         if(!section.classList.contains("active")){
-//             section.classList.add("hide");
-//         }
-//     })
-// })();
-
-
-
