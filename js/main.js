@@ -1,12 +1,12 @@
 
 /* ============================= preloader start =============================*/ 
-window.addEventListener("load", () =>{
-    // preloader
-    document.querySelector(".preloader").classList.remove("fade-out");
-    setTimeout(() =>{
-        document.querySelector(".preloader").classList.add("fade-out");
-    }, 100)
-});
+// window.addEventListener("load", () =>{
+//     // preloader
+//     document.querySelector(".preloader").classList.remove("fade-out");
+//     setTimeout(() =>{
+//         document.querySelector(".preloader").classList.add("fade-out");
+//     }, 100)
+// });
 
 // AOS Instance
 AOS.init();
