@@ -10,6 +10,24 @@ general
 
 /* ---------------- custom variables --------------*/
 :root{
+    --bg-black-900: #ffffff;
+    --bg-black-100: #202020;
+    --bg-black-50: #1d1e20;
+    --bg-opacity: rgba(43, 44, 47, 0.5);
+    --text-black-900: #ffffff;
+    --text-black-700: #ffffff;
+    --text-black-600: #bbbbbb;
+    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636; 
+    --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
+
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+
+}
+/* override custom css variables for theme */
+body.dark{
     --bg-black-900: #000000;
     --bg-black-100: #dddddd;
     --bg-black-50: #ffffff;
@@ -22,27 +40,9 @@ general
     --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8; 
     --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #d0d0d0;
-
-    /*      theme font-family   */
-    --Abel: 'Abel', cursive;
-
-}
-/* override custom css variables for theme */
-body.dark{
-    --bg-black-900: #ffffff;
-    --bg-black-100: #202020;
-    --bg-black-50: #1d1e20;
-    --bg-opacity: rgba(43, 44, 47, 0.5);
-    --text-black-900: #ffffff;
-    --text-black-700: #ffffff;
-    --text-black-600: #bbbbbb;
-    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
-    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
-    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636; 
-    --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
 body{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     background-color: var(--bg-black-50);
     width: 100% !important;
@@ -72,7 +72,7 @@ a{
     text-decoration: none;
 }
 p{
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-black-700);
 }
 ul{
@@ -695,7 +695,7 @@ home
     padding: 0 15px;
 }
 .home-section .home-text p{
-    color: var(--text-black-300);
+    color: var(--text-black-600);
     font-size: 16px;
     text-transform: capitalize;
     margin: 0;
@@ -752,7 +752,7 @@ home
 .home-section .home-text h2{
     font-size: 18px;
     font-weight: 500;
-    color: var(--text-black-300);
+    color: var(--text-black-600);
     display: inline-block;
     margin: 0 0 20px;
 }
