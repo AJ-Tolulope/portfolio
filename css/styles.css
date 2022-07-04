@@ -667,6 +667,17 @@ home
 .home-section{
     position: relative;
 }
+.home-section:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/green-dots.png);
+    opacity: .05;
+    z-index: -1;
+}
 .home-section .full-screen{
     padding: 50px 0;
     min-height: 100vh;
@@ -711,7 +722,7 @@ home
 }
 .home-section .home-text .typing-text:after{
     background: var(--bg-black-50);
-    animation: typewriter 10s steps(25) 5s infinite;
+    animation: typewriter 15s steps(25) 5s infinite;
 }
 .home-section .home-text .typing-text:before{
     left: -.3em;
@@ -719,7 +730,7 @@ home
     opacity: 1;
     background: var(--bg-black-100);
     animation: 
-      typewriter 10s steps(25) 5s infinite,
+      typewriter 15s steps(25) 5s infinite,
       blink .75s steps(25) infinite;
 }
 @keyframes typewriter{
@@ -1155,7 +1166,7 @@ portfolio-section
 }
 .portfolio-section .portfolio-item.show{
     display: block;
-    animation: fade-in;
+    animation: fade-in .5s ease;
 }
 .portfolio-section .portfolio-item-inner{
     width: 100%;
