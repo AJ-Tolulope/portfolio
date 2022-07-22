@@ -18,11 +18,11 @@ const dayNight = document.querySelector(".day-night");
 
 function themeMode(){
     if(localStorage.getItem("theme") !== null){
-        if(localStorage.getItem("theme") === "dark"){
-            document.body.classList.add("dark");
+        if(localStorage.getItem("theme") === "light-mode"){
+            document.body.classList.add("light-mode");
         }
         else{
-            document.body.classList.remove("dark");
+            document.body.classList.remove("light-mode");
         }
     }
     updateIcon();
@@ -30,9 +30,9 @@ function themeMode(){
 themeMode();
 
 dayNight.addEventListener("click", () =>{
-    document.body.classList.toggle("dark");
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("theme", "dark");
+    document.body.classList.toggle("light-mode");
+    if(document.body.classList.contains("light-mode")){
+        localStorage.setItem("theme", "light-mode");
     }
     else{
         localStorage.setItem("theme", "light");
@@ -40,7 +40,7 @@ dayNight.addEventListener("click", () =>{
     updateIcon();
 })
 function updateIcon(){
-    if(document.body.classList.contains("dark")){
+    if(document.body.classList.contains("light-mode")){
         dayNight.querySelector("i").classList.remove("fa-sun");
         dayNight.querySelector("i").classList.add("fa-moon");
     }
@@ -91,17 +91,6 @@ window.addEventListener("scroll", () =>{
     }
 })
 
-
-/* -------------------------- sccroll top section start -----------------------------*/
-// $(document).ready(function () {
-
-//     // click to scroll top
-//     $('.move-up span').click(function () {
-//         $('html, body').animate({
-//             scrollTop: 0
-//         }, 1000);
-//     })
-// });
 
 function scrollTop(){
     const scrollTop = document.getElementById("move-up");
@@ -159,13 +148,6 @@ document.addEventListener("click", () =>{
         if(event.target.hash !==""){
             event.preventDefault();
             const hash = event.target.hash;
-            // //  deactivate existing active section
-            // document.querySelector(".section.active").classList.add("hide");
-            // document.querySelector(".section.active").classList.remove("active");
-
-            // // activate new section
-            // document.querySelector(hash).classList.add("active");
-            // document.querySelector(hash).classList.remove("hide");
 
             // deactivate existing active navigation menu 'link-item'
             navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
@@ -180,17 +162,6 @@ document.addEventListener("click", () =>{
 
                 // hide navigation menu
                 hideNavMenu();
-            }
-            else{
-                let navItems = navMenu.querySelectorAll(".link-item");
-                navItems.forEach((item) =>{
-                    if(hash === item.hash){
-                        // activate new navigation menu 'link-item'
-                        item.classList.add("active","inner-shadow");
-                        item.classList.add("active","hover-in-shadow");
-                    }
-                })
-                fadeOutEffect();
             }
             // add hash (#) to url
             window.location.hash = hash;
@@ -274,17 +245,26 @@ function bodyScrollToggle(){
 
             // get the portfolioItem index
             itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
-            screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
+
+            if (portfolioItems[itemIndex].querySelector(".portfolio-item-img img")) {
+                screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
+            } else {
+                if (portfolioItems[itemIndex].querySelector(".portfolio-item-img video")) {
+                    screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img video").getAttribute("data-screenshots");
+                }
+            }
             
             // convert screenshots into array
             screenshots = screenshots.split(",");
             if(screenshots.length === 1){
                 prevBtn.style.display = "none";
                 nextBtn.style.display = "none";
+                popup.querySelector(".pp-counter").style.display = "none";
             }
             else{
                 prevBtn.style.display = "block";
                 nextBtn.style.display = "block";
+                popup.querySelector(".pp-counter").style.display = "block";
             }
             slideIndex = 0;
             popupToggle();
@@ -299,6 +279,8 @@ function bodyScrollToggle(){
         if(projectDetailsContainer.classList.contains("active")){
             popupDetailsToggle();
         }
+        const popupVideo = popup.querySelector("video.pp-img");
+        popupVideo.src = '';
     })
 
     function popupToggle(){
@@ -312,11 +294,12 @@ function bodyScrollToggle(){
 
         // activate loader until the popupImg load
         popup.querySelector(".pp-loader").classList.add("active");
-        popupImg.src = imgSrc;
-        popupImg.onload = () =>{
+        setTimeout(() => {
+            popupImg.src = imgSrc;
+
             // deactivate loader after the popupImg is loaded
-            popup.querySelector(".pp-loader").classList.remove("active")
-        }
+            popup.querySelector(".pp-loader").classList.remove("active");
+        }, 2000);
         popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;
 
     }
@@ -375,6 +358,7 @@ function bodyScrollToggle(){
 
             projectDetailsContainer.classList.remove("active");
             projectDetailsContainer.style.maxHeight = 0 + "px";
+            popup.scrollTo(0, projectDetailsContainer.offsetTop);
         } 
         else{
             projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
@@ -383,9 +367,14 @@ function bodyScrollToggle(){
             projectDetailsContainer.classList.add("active");
             projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
             popup.scrollTo(0, projectDetailsContainer.offsetTop);
+
+            const popupVideo = popup.querySelector("video.pp-img");
         }
     }
 })();
+
+
+
 
 
 /* -------------------------- testimonial section -----------------------------*/
@@ -408,8 +397,8 @@ function bodyScrollToggle(){
         }
         slider(); 
     })
-
-
+    
+    
     // prev slide effect 
     prevBtn.addEventListener("click", () =>{
         if(slideIndex === 0){ 
@@ -420,17 +409,77 @@ function bodyScrollToggle(){
         }
         slider();
     })
-
+    
     // make each slide display none after deactivation
     function slider(){
         // deactivate existing active slides 
         sliderContainer.querySelector(".testi-item.active").classList.remove("active")
-
+        
         // activate new slide 
         slides[slideIndex].classList.add("active");
     }
     slider();
-
+    
 })();
+
+
+
+
+
+/* -------------------------- course section ----------------------------- */
+(() =>{
+    const courseSection = document.querySelector('.course-section'),
+    courseForm = document.querySelector('.course-form'),
+    formComplete = document.querySelector('.success'),
+    formDenied = document.querySelector('.accessdenied'),
+    submitForm = document.querySelector('.course-submit'),
+    inputControl = document.querySelectorAll('.input-control');
+
+    if (document.querySelector('.course-section')) {
+        bodyScrollToggle();
+    }
+
+    if (localStorage.getItem('courseCode') == '1e2uv44n79uf' || localStorage.getItem('courseCode') == 'webeditcourse') {
+        courseSection.classList.add('hide-form');
+        bodyScrollToggle();
+    }
+
+    
+    submitForm.addEventListener('click', ()=>{
+        const courseCode = document.querySelector('.course-code');
+        
+        if (courseCode.value == '1e2uv44n79uf' || courseCode.value == 'webeditcourse') {
+            courseForm.classList.add('hide');
+            formComplete.classList.add('show');
+
+            localStorage.setItem('courseCode', courseCode.value)
+            
+            setTimeout(() => {
+                courseForm.classList.add('hide');
+                formComplete.classList.add('show');
+                inputControl.forEach(input => {
+                    input.value = '';
+                });
+                courseSection.classList.add('hide-form');
+                bodyScrollToggle();
+            }, 4000);
+        } else {
+            courseForm.classList.add('hide');
+            formDenied.classList.add('show');
+
+            setTimeout(() => {
+                courseForm.classList.remove('hide');
+                formDenied.classList.remove('show');
+                inputControl.forEach(input => {
+                    input.value = '';
+                });
+            }, 4000);
+
+        }
+    })
+})();
+
+
+
 
 
