@@ -279,8 +279,8 @@ function bodyScrollToggle(){
         if(projectDetailsContainer.classList.contains("active")){
             popupDetailsToggle();
         }
-        const popupVideo = popup.querySelector("video.pp-img");
-        popupVideo.src = '';
+        const popupImg = popup.querySelector(".pp-img");
+        popupImg.src = '';
     })
 
     function popupToggle(){
@@ -299,7 +299,7 @@ function bodyScrollToggle(){
 
             // deactivate loader after the popupImg is loaded
             popup.querySelector(".pp-loader").classList.remove("active");
-        }, 2000);
+        }, 500);
         popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;
 
     }
