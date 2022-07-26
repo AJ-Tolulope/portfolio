@@ -280,7 +280,7 @@ function bodyScrollToggle(){
             popupDetailsToggle();
         }
         const popupImg = popup.querySelector(".pp-img");
-        popupImg.src = '';
+        popupImg.src = " ";
     })
 
     function popupToggle(){
@@ -291,15 +291,15 @@ function bodyScrollToggle(){
     function popupSlideshow(){
         const imgSrc = screenshots[slideIndex];
         const popupImg = popup.querySelector(".pp-img");
+        
+        popupImg.src = imgSrc;
 
         // activate loader until the popupImg load
         popup.querySelector(".pp-loader").classList.add("active");
         setTimeout(() => {
-            popupImg.src = imgSrc;
-
             // deactivate loader after the popupImg is loaded
             popup.querySelector(".pp-loader").classList.remove("active");
-        }, 500);
+        }, 300);
         popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;
 
     }
