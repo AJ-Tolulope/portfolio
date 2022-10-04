@@ -19,13 +19,7 @@ function bodyScrollToggle(){
     }
 
     if (localStorage.getItem('ewrcmenlqe') == ctred.value || localStorage.getItem('courseCode') == 'webeditcourse') {
-        const welText = document.querySelector('.wel-text'),
-        welContainer = document.querySelector('.wel-container');
-
         courseSection.classList.add('hide-form');
-
-        welContainer.classList.add('open');
-        welText.innerHTML = 'welcome ' + localStorage.getItem('kjfdvjfadkfjkbhvn'); 
 
 
         bodyScrollToggle();
