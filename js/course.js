@@ -1,9 +1,30 @@
 
+
+/* ============================= preloader start =============================*/ 
+function preloader() {
+    // preloader
+    setTimeout(() =>{
+        document.querySelector(".preloader").classList.add("fade-out");
+    }, 300)
+}
+preloader();
+// AOS Instance
+AOS.init();
+/* ============================= preloader end =============================*/ 
+
 function bodyScrollToggle(){
     document.body.classList.toggle("hidden-scrolling");
 }
 
+const ctred = document.querySelector(".ctred");
 
+if (localStorage.getItem('ewrcmenlqe') == ctred.value || localStorage.getItem('courseCode') == 'webeditcourse') {
+    const welText = document.querySelector('.wel-text'),
+    welContainer = document.querySelector('.wel-container');
+
+    welContainer.classList.add('open');
+    welText.innerHTML = 'welcome ' + localStorage.getItem('kjfdvjfadkfjkbhvn'); 
+}
 
 /*---------------------- portfolio filter page ----------------------*/
 
