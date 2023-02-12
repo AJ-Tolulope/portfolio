@@ -21,14 +21,14 @@ general
     --code-text: rgb(255, 222, 211);
     --code-text-val: rgb(211, 255, 253);
     --code-bg: rgba(112, 112, 112, 0.2);
-    --outer-shadow: 0px 0px 3px rgba(0,0,0,.3), -2px -2px 3px rgba(0,0,0,.3);
+    --outer-shadow: 0px 0px 3px rgba(0,0,0,.5), -2px -2px 3px rgba(0,0,0,.5);
     --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
-    --inner-shadow: inset 0px 0px 3px rgba(0,0,0,.3), inset -2px -2px 3px rgba(0,0,0,.3); 
+    --inner-shadow: inset 0px 0px 3px rgba(0,0,0,.5), inset -2px -2px 3px rgba(0,0,0,.5); 
     --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
     --transition: all .4s ease-in-out;
 
     /*      theme font-family   */
-    --Abel: 'Abel', cursive;
+    --Abel: 'Abel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 /* override custom css variables for theme */
@@ -130,14 +130,14 @@ section{
 }
 .btn{
     padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--main-color);
     background-color: var(--bg-black-50);
     text-transform: uppercase;
     letter-spacing: 2.2px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: var(--transition);
     display: inline-block;
     border: none;
@@ -580,8 +580,8 @@ navigation menu
 ------------------------ */
 .nav-menu{
     position: fixed;
-    top: -100%;
-    left: 0;
+    right: -110%;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -594,7 +594,7 @@ navigation menu
     transition: all 0.3s ease-in;
 }
 .nav-menu.open{
-    top: 0;
+    right: 0;
     z-index: 999;
 }
 /* ----------------------------------- */
@@ -642,7 +642,7 @@ nav links
     justify-content: center;
 }
 .nav-menu ul{
-    padding: 15px;
+    padding: 12px;
 }
 .nav-links ul li .active{
     box-shadow: var(--inner-shadow);
@@ -661,13 +661,12 @@ nav links
 }
 .nav-links ul li a{
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
-    letter-spacing: 2.2px;
     color: var(--text-black-600);
     padding: 5px 30px;
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: var(--outer-shadow);
     transition: var(--transition);
 }
@@ -686,9 +685,10 @@ nav links
 .nav-menu .copyright{
     position: absolute;
     top: 50%;
-    left: -100px;
-    font-size: 15px;
+    left: -40%;
+    font-size: 14px;
     color: var(--text-black-600);
+    letter-spacing: 4px;
     transform: translateY(-50%) rotate(-90deg);
 }
 /* -------------------------------------------- */
@@ -771,12 +771,11 @@ home
     color: var(--text-black-600);
     margin: 0;
 }
-.home-section .home-text h2{
-    font-size: 18px;
+.home-section .home-text p{
     font-weight: 500;
     color: var(--text-black-600);
     display: inline-block;
-    margin: 0 0 20px;
+    margin: 20px 0;
 }
 .home-section .home-text .btn{
     margin-top: 5px;
@@ -924,7 +923,7 @@ about
     margin: 0 5px 10px;
     cursor: pointer;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: var(--transition);
     font-size: 16px;
     letter-spacing: 2.2px;
@@ -1179,7 +1178,7 @@ portfolio-section
 }
 .portfolio-section .filter-item{
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
     color: var(--text-black-600);
@@ -1428,7 +1427,7 @@ portfolio-popup
     background-color: var(--code-bg);
     border: 1px solid var(--bg-black-100);
     border-left: 5px solid var(--main-color);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .portfolio-popup .info{
     flex: 0 0 35%;
@@ -1465,7 +1464,8 @@ portfolio-popup
     background-color: var(--bg-black-100);
 }
 .portfolio-popup .pp-main{
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    max-width: 100vh;
     width: 60%;
     margin: auto;
     display: flex;
@@ -1501,7 +1501,7 @@ portfolio-popup
     position: absolute;
     left: 0;
     top: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 16px;
     letter-spacing: 2px;
     font-weight: 500;
@@ -1560,7 +1560,7 @@ portfolio-popup
 .portfolio-popup .pp-prev,
 .portfolio-popup .pp-next{
     position: fixed;
-    top: 50%;
+    bottom: 50px;
     height: 45px;
     width: 45px;
     text-align: center;
@@ -1574,7 +1574,7 @@ portfolio-popup
     box-shadow: var(--outer-shadow);
     border: 1px solid var(--bg-black-100);
     transition: all 0.3 ease;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .portfolio-popup .pp-prev:hover,
 .portfolio-popup .pp-next:hover{
@@ -1589,10 +1589,10 @@ portfolio-popup
     transform: rotate(180deg);
 }
 .portfolio-popup .pp-prev{
-    left: 1.5rem;
+    left: 35%;
 }
 .portfolio-popup .pp-next{
-    right: 1.5rem;
+    right: 35%;
 }
 /* ----------------------------- */
 
@@ -1937,8 +1937,8 @@ footer section
         border-radius: 5px;
     }
     .effect-3{
-        height: 180px;
-        width: 180px;
+        height: 160px;
+        width: 160px;
         border: 25px solid var(--main-color);
         border-radius: 50%;
         left: 20%;
@@ -1956,6 +1956,10 @@ footer section
         min-width: 100%;
         max-width: 100%;
         margin: 0 auto;
+    }
+
+    .about-section .timeline .timeline-item-inner{
+        padding: 20px;
     }
 }
 
@@ -2000,12 +2004,19 @@ footer section
         margin: 0 auto;
     }
     .home-section .home-img .img-box{
-        max-width: 400px;
+        max-width: 350px;
     }
     .home-section .home-text h1{
-        font-size: 42px;
+        font-size: 40px;
+    }
+    .home-section .home-text h3{
+        font-size: 22px;
     }
 
+
+    .about-section .timeline .timeline-item-inner{
+        padding: 20px 10px;
+    }
 
     .effect-3{
         left: 60%;
@@ -2069,6 +2080,10 @@ footer section
         left: -30px;
         right: auto;
     }
+
+    .portfolio-popup .pp-main{
+        min-height: 99.9vh;
+    }
     
     
     .portfolio-section .water-mark{
@@ -2096,9 +2111,6 @@ footer section
     }
     .home-section .home-img .img-box{
         max-width: 330px;
-    }
-    .home-section .home-text h3{
-        font-size: 40px;
     }
     .service-section .service-item{
         flex: 0 0 100%;
