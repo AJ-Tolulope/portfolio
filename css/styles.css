@@ -1977,7 +1977,7 @@ footer section
         width: 60%;
     }
     .nav-menu .copyright{
-        left: -50%;
+        left: 50px;
     }
     .contact-section .w-50,
     .contact-section .contact-item,
