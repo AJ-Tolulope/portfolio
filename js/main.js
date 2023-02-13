@@ -2,83 +2,39 @@
 AOS.init();
 
 
-/* ============================= theme light and dark mode =============================*/
-
-const dayNight = document.querySelector(".day-night");
-
-function themeMode(){
-    if(localStorage.getItem("theme") !== null){
-        if(localStorage.getItem("theme") === "light-mode"){
-            document.body.classList.add("light-mode");
-        }
-        else{
-            document.body.classList.remove("light-mode");
-        }
-    }
-    updateIcon();
-}
-themeMode();
-
-dayNight.addEventListener("click", () =>{
-    document.body.classList.toggle("light-mode");
-    if(document.body.classList.contains("light-mode")){
-        localStorage.setItem("theme", "light-mode");
-    }
-    else{
-        localStorage.setItem("theme", "dark-mode");
-    }
-    updateIcon();
-})
-function updateIcon(){
-    if(document.body.classList.contains("light-mode")){
-        dayNight.querySelector("i").classList.remove("fa-sun");
-        dayNight.querySelector("i").classList.add("fa-moon");
-    }
-    else{
-        dayNight.querySelector("i").classList.remove("fa-moon");
-        dayNight.querySelector("i").classList.add("fa-sun");
-    }
-}
-
-
 /* ============================= theme color start ============================= */ 
 
 const alternativeStyles = document.querySelectorAll(".alternate-style")
 
-if(localStorage.getItem("color") !== null){
-    changeColor();
-}
 
-function setActiveStyle(color){
-    localStorage.setItem("color", color);
-    changeColor();
-}
+const colorStyle = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5']
 
-function changeColor(){
-    alternativeStyles.forEach((style) =>{
-        if(localStorage.getItem("color") === style.getAttribute("title")){
-            style.removeAttribute("disabled");
+var colorCounter = 0;
+
+setInterval(() => {
+    setColorStyle(colorCounter);
+}, 15000);
+
+function setColorStyle(counter) {
+    if(counter <= 4){
+        const color = colorStyle[counter];
+        alternativeStyles.forEach((style) =>{
+            if(color === style.getAttribute("title")){
+                style.removeAttribute("disabled");
+            }
+            else{
+                style.setAttribute("disabled", "true")
+            }
+        })
+
+        colorCounter = colorCounter + 1;
+
+        if(counter == 4){
+            colorCounter = 0;
         }
-        else{
-            style.setAttribute("disabled", "true")
-        }
-    })
+    }
 }
 /* ============================= theme color end ============================= */ 
-
-/* ============================= toggle style switcher =============================*/ 
-const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
-
-styleSwitcherToggler.addEventListener("click", () =>{
-    document.querySelector(".style-switcher").classList.toggle("open");
-})
-
-// hide style-switcher on scroll
-window.addEventListener("scroll", () =>{
-    if(document.querySelector(".style-switcher").classList.contains("open")){
-        document.querySelector(".style-switcher").classList.remove("open")
-    }
-})
 
 
 /* -------------------------- scroll top section start -----------------------------*/
@@ -278,7 +234,7 @@ if (tabsContainer) {
             popupDetailsToggle();
         }
         const popupVideo = popup.querySelector("video.pp-img");
-        popupVideo.src = ' ';
+        popupVideo.src = '../';
     })
 
     function popupToggle(){
