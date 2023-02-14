@@ -13,7 +13,7 @@ var colorCounter = 0;
 
 setInterval(() => {
     setColorStyle(colorCounter);
-}, 15000);
+}, 30000);
 
 function setColorStyle(counter) {
     if(counter <= 4){
