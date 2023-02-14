@@ -65,6 +65,7 @@ body{
     background-color: var(--bg-black-50);
     width: 100% !important;
     scroll-behavior: smooth;
+    font-weight: 500;
 }
 body.hidden-scrolling{
     overflow-y: hidden;
@@ -212,6 +213,7 @@ effect
     right: 10%;
     top: -20px;
     animation: bounceLeft 3s infinite ease-in-out;
+    opacity: .2;
 }
 @keyframes bounceLeft{
     0%, 100%{
@@ -695,8 +697,15 @@ home
 }
 .home-section .home-text p{
     color: var(--text-black-600);
+    font-weight: 400;
     font-size: 14px;
     text-transform: capitalize;
+    margin: 20px 0;
+}
+.home-section .home-text h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--text-black-600);
     margin: 0;
 }
 .home-section .home-text h1{
@@ -742,19 +751,7 @@ home
         opacity: 0;
     }
 }
-.home-section .home-text h3{
-    font-size: 25px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--text-black-600);
-    margin: 0;
-}
-.home-section .home-text p{
-    font-weight: 500;
-    color: var(--text-black-600);
-    display: inline-block;
-    margin: 20px 0;
-}
+
 .home-section .home-text .btn{
     margin-top: 5px;
     border: 1px solid var(--bg-black-100);
@@ -1264,6 +1261,19 @@ portfolio-popup
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    overflow: hidden;
+}
+.portfolio-popup::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 0;
+    bottom: 10%;
+    border: 1px solid var(--bg-black-100);
+    border-radius: 50%;
+    background: transparent;
+    z-index: -1;
 }
 .portfolio-popup.open{
     visibility: visible;
@@ -2059,9 +2069,16 @@ footer section
         right: auto;
     }
 
+
+    .portfolio-popup::after{
+        width: 300px;
+        height: 300px;
+        left: -30px;
+    }
     .portfolio-popup .pp-main{
         min-height: 99.9vh;
     }
+    
     
     
     .portfolio-section .water-mark{
