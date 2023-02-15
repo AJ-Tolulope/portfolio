@@ -1333,25 +1333,26 @@ portfolio-popup
     margin: 0 0 5px;
 }
 .portfolio-popup .pp-title p{
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 400;
     color: var(--text-black-700);
     margin: 0 0 15px;
     border-bottom: 1px solid var(--bg-black-100);
     padding-bottom: 10px;
-}
-.portfolio-popup .pp-title p span{
-    font-weight: 500;
     text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 400;
 }
 .portfolio-popup .pp-project-details h2{
     font-size: 18px;
+    font-weight: 400;
     color: var(--text-black-600);
     margin: 0 0 10px;
     text-transform: capitalize;
 }
 .portfolio-popup .pp-project-details h3{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-black-700);
     margin: 0 0 5px;
     text-transform: capitalize;
@@ -1430,7 +1431,6 @@ portfolio-popup
 .portfolio-popup .info ul li{
     display: block;
     margin-bottom: 10px;
-    font-weight: 600;
     color: var(--text-black-600);
     font-size: 16px;
 }
@@ -1455,8 +1455,6 @@ portfolio-popup
     background-color: var(--bg-black-100);
 }
 .portfolio-popup .pp-main{
-    /* min-height: 100vh; */
-    max-width: 100vh;
     width: 60%;
     margin: auto;
     display: flex;
@@ -1544,7 +1542,8 @@ portfolio-popup
     height: 40px;
     line-height: 40px;
     bottom: 5px;
-    font-size: 16px;
+    font-size: 13px;
+    font-family: 400;
     color: var(--text-black-600);
 }
 
@@ -1555,7 +1554,6 @@ portfolio-popup
     height: 45px;
     width: 45px;
     text-align: center;
-    line-height: 45px;
     font-size: 25px;
     border-radius: 50%;
     cursor: pointer;
@@ -1581,9 +1579,11 @@ portfolio-popup
 }
 .portfolio-popup .pp-prev{
     left: 35%;
+    padding: 3px 5px 0 0;
 }
 .portfolio-popup .pp-next{
     right: 35%;
+    padding: 3px 0 0 5px;
 }
 /* ----------------------------- */
 
@@ -1612,7 +1612,7 @@ testimonial-section
     align-items: center;
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 320px;
     overflow: hidden;
 }
 .testimonial-section .testi-item{
@@ -1625,7 +1625,7 @@ testimonial-section
     height: 100%;
     margin-top: -40px;
     opacity: 0;
-    transition: .4s ease-in;
+    transition: all .4s ease-in-out;
 }
 .testimonial-section .testi-item.active{
     margin-top: 0px;
@@ -1648,8 +1648,7 @@ testimonial-section
     bottom: 5px;
 }
 .testimonial-section .testi-item p{
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
     color: var(--text-black-600);
     margin: 0 0 30px;
 }
@@ -1663,7 +1662,7 @@ testimonial-section
 .testimonial-section .testi-item span{
     display: block;
     margin: 10px 0 0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--text-black-700);
     text-transform: capitalizes;
@@ -1688,7 +1687,7 @@ testimonial-section
     border-radius: 50%;
 }
 .testimonial-section .testi-slider-nav span i{
-    line-height: 40px;
+    line-height: 2;
 }
 .testimonial-section .testi-slider-nav .prev,
 .testimonial-section .testi-slider-nav .next{
@@ -2079,7 +2078,8 @@ footer section
         left: -30px;
     }
     .portfolio-popup .pp-main{
-        min-height: 99.9vh;
+        min-height: 99vh;
+        width: 90%;
     }
     
     
@@ -2090,9 +2090,6 @@ footer section
     }
     
     .portfolio-popup .pp-details{
-        width: 90%;
-    }
-    .portfolio-popup .pp-main{
         width: 90%;
     }
     
