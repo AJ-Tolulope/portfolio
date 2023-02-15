@@ -1,4 +1,4 @@
-
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap'); */
 /* ----------------
 general 
 ----------------- */
@@ -23,7 +23,7 @@ general
     --transition: all .4s ease-in-out;
 
     /*      theme font-family   */
-    --Poppins: 'Poppins', sans-serif;;
+    --Roboto: 'Roboto', sans-serif;;
 
 }
 
@@ -47,7 +47,7 @@ html{
     border: 2px solid var(--main-color);
 }
 *:not(i){
-    font-family: var(--Poppins);
+    font-family: var(--Roboto);
     font-weight: 500;
 }
 *{
@@ -668,7 +668,7 @@ nav links
 .nav-menu .copyright{
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 7%;
     transform: translate(-50%, -50%) rotate(-90deg);
     font-size: 12px;
     text-align: center;
