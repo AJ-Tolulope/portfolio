@@ -252,9 +252,10 @@ if (tabsContainer) {
             popupImg.src = imgSrc;
 
             // deactivate loader after the popupImg is loaded
-            popup.querySelector(".pp-loader").classList.remove("active");
-        }, 2000);
-        popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;
+            popup.querySelector(".pp-loader").classList.remove("active")
+            
+            popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;;
+        }, 1500);
 
     }
 
