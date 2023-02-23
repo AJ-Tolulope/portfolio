@@ -74,6 +74,7 @@ a{
 }
 p{
     color: var(--text-black-600);
+    font-size: 16px;
     line-height: 1.4;
 }
 ul{
@@ -503,7 +504,7 @@ menu btn
     border: var(--border);
     border-radius: 50%;
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     transition: var(--transition);
     position: relative;
 }
@@ -735,13 +736,16 @@ home
 .home-section .home-img .img-box .quotes{
     position: absolute;
     width: 180px;
+    height: fit-content;
     top: -10px;
     right: -30px;
     padding: 1rem;
-    font-size: 10px;
     background: rgba(146, 31, 31, 0.01);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     border: var(--border);
+}
+.home-section .home-img .img-box .quotes p{
+    font-size: 10px;
 }
 .home-section .home-img .img-box img{
     width: 100%;
@@ -845,7 +849,6 @@ about
     padding: 0 15px;
 }
 .about-section .about-info p{
-    font-size: 16px;
     line-height: 26px;
     margin-bottom: 15px;
     color: var(--text-black-600);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
@@ -864,6 +867,7 @@ about
 }
 .about-section .about-tabs span{
     box-shadow: var(--outer-shadow);
+    backdrop-filter: blur(10px);
 }
 .about-section .about-tabs .tab-item{
     display: inline-block;
@@ -946,7 +950,7 @@ about
     position: relative;
     box-shadow: var(--outer-shadow);
     border: var(--border);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px)
 }
 .about-section .timeline .timeline-item-inner:before{
     content: '';
@@ -993,17 +997,18 @@ about
     font-size: 20px;
     font-weight: 400;
     color: var(--text-black-700);
-    margin: 0 0 5px;
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
+    border-bottom: var(--border);
 }
 .about-section .timeline .timeline-item-inner h4{
-    font-size: 16px;
+    font-size: 14px;
     font-style: italic;
     color: var(--text-black-600);
     margin: 0;
 
 }
 .about-section .timeline .timeline-item-inner p{
-    font-size: 16px;
     color: var(--text-black-600);
     line-height: 26px;
     margin: 15px 0 0;
@@ -1021,7 +1026,7 @@ service-section
 
 .service-section .service-item .service-item-inner{
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px)
 }
 .service-section .service-item .service-item-inner .icon{
     box-shadow: var(--inner-shadow);
@@ -1088,7 +1093,6 @@ service-section
     text-transform: capitalize;
 }
 .service-section .service-item-inner p{
-    font-size: 16px;
     color: var(--text-black-600);
     line-height: 26px;
 }
@@ -1208,7 +1212,6 @@ portfolio-section
     display: none;
 }
 .portfolio-section .portfolio-item-inner p{
-    font-size: 16px;
     margin: 10px 0 0;
     color: var(--text-black-600);
     text-transform: capitalize;
@@ -1446,7 +1449,7 @@ portfolio-popup
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     z-index: 1;
 }
 .portfolio-popup .pp-project-details-btn{
@@ -1585,7 +1588,7 @@ testimonial-section
     width: 100%;
     height: 100%;
     margin-top: -40px;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
     opacity: 0;
     transition: all .4s ease-in-out;
 }
@@ -1687,7 +1690,7 @@ contact-section
     box-shadow: var(--outer-shadow);
     border: var(--border);
     position: relative;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px)
 }
 .contact-section .contact-item-inner i{
     font-size: 25px;
@@ -1738,7 +1741,7 @@ contact-section
     color: var(--text-black-700);
     outline: none;
     transition: var(--transition);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px)
 }
 .contact-section .input-group .input-control:focus{
     border-bottom: 1px solid var(--main-color);
@@ -1756,7 +1759,7 @@ contact-section
 }
 .contact-section .submit-btn button{
     border: var(--border);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px)
 }
 .contact-section .contact-form .input-group{
     box-shadow: var(--outer-shadow);
@@ -1786,7 +1789,7 @@ footer section
     border-radius: 5px;
     border: var(--border);
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     text-align: center;
 }
 
@@ -1847,7 +1850,7 @@ footer section
         border-radius: 5px;
         box-shadow: var(--outer-shadow);
         transition: var(--transition);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(10px);
     }
     .links ul li a:after{
         border-radius: 5px;
@@ -1894,7 +1897,7 @@ footer section
         box-shadow: var(--outer-shadow);
         border: var(--border);
         transition: var(--transition);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(10px);
     }
     .links ul li a:after{
         border-radius: 5px;
