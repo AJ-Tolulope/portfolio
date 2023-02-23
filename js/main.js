@@ -1,7 +1,6 @@
 // AOS Instance
 AOS.init();
 
-
 /* ============================= theme color start ============================= */ 
 
 const alternativeStyles = document.querySelectorAll(".alternate-style")
@@ -18,17 +17,22 @@ setInterval(() => {
 function setColorStyle(counter) {
     if(counter <= 4){
         const color = colorStyle[counter];
+
+        // loop through all alternativeStyles (link tag) 
         alternativeStyles.forEach((style) =>{
             if(color === style.getAttribute("title")){
+                // disable if the attribute matches the color
                 style.removeAttribute("disabled");
             }
             else{
+                // set disabled attribute to the rest
                 style.setAttribute("disabled", "true")
             }
         })
 
         colorCounter = colorCounter + 1;
 
+        // reset counter
         if(counter == 4){
             colorCounter = 0;
         }
@@ -142,7 +146,7 @@ if (tabsContainer) {
             // deactivate existing active 'tab-content'
             aboutSection.querySelector(".tab-content.active").classList.remove("active");
             
-            // activate new 'tab-conent'
+            // activate new 'tab-content'
             aboutSection.querySelector(target).classList.add("active");
         }
     });
@@ -252,9 +256,9 @@ if (tabsContainer) {
             popupImg.src = imgSrc;
 
             // deactivate loader after the popupImg is loaded
-            popup.querySelector(".pp-loader").classList.remove("active")
+            popup.querySelector(".pp-loader").classList.remove("active");
             
-            popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;;
+            popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " of " + screenshots.length;
         }, 1500);
 
     }
