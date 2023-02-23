@@ -1013,7 +1013,9 @@ about
     line-height: 26px;
     margin: 15px 0 0;
 }
-
+.about-section .timeline .timeline-item-inner .btn{
+    border: var(--border);
+}
 
 /* ----------------------
 service-section
