@@ -9,6 +9,10 @@
 
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script> -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
     <!--==================================== font awesome ====================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -21,9 +25,6 @@
     <!--==================================== default color colorswitch ====================================-->
     <link rel="stylesheet" href="./css/colorswitch/color-1.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">    
 
     <!--==================================== style switcher ====================================-->
     <link rel="stylesheet" type="text/css" class="alternate-style" title="color-1" href="css/colorswitch/color-1.css" disabled>
@@ -37,11 +38,11 @@
 <body>
 
     <!-- ==================================== preloader start ====================================-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="box">
             <div></div><div></div><div></div>
         </div>
-    </div> 
+    </div>  -->
     <!--==================================== preloader end ==================================== -->
 
     
@@ -89,9 +90,9 @@
                 <li><a href="#contact" class="link-item">Contact</a></li>
                 <li><a href="./webedit_course.html">Webedit Course</a></li>
             </ul>
+            <!-- copyright text-->
+            <p class="copyright">&copy <span class="year"></span>, webedit <br> tolulopetimilehin124@gmail.com</p>
         </div>
-        <!-- copyright text-->
-        <p class="copyright">&copy <span class="year"></span>, webedit tolulopetimilehin124@gmail.com</p>
     </nav>
     <!--==================================== navigation end ====================================-->
     
@@ -125,13 +126,17 @@
             <div class="home-text">
                 <p>Welcome to</p>
                 <h3>webedit</h3>
-                <p class="typing-text"> Front-end Web Development </p>
+                <p class="typing-text"></p>
                 <h1>Where You Get Your <span style="color: var(--main-color);font-family: 'Courier New', Courier, monospace;">Website</span> Creatively Designed</h1>
                 <a href="#portfolio" class="btn">View Projects</a>
             </div>
             <div class="home-img">
                 <div class="img-box">
                     <img src="./images/profile-pic.png" alt="profile-pic">
+
+                    <div class="quotes">
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,10 +182,10 @@
                     </div>
                     <!-- social links start-->
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://www.twitter.com/tolex_tolulope"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/aj.tolulope"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.github.com/aj-tolulope"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.whatsapp.me/08076277688"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <!-- social links end-->
                 </div>
@@ -191,6 +196,7 @@
                     <p data-aos='fade-up' data-aos-delay='100'>Cheers!.</p>
                 </div>
             </div>
+            
             <!-- about tabs start-->
             <div class="row">
                 <div class="about-tabs">
@@ -465,6 +471,7 @@
                         images/projects/project-3/3.png,
                         images/projects/project-3/4.png,
                         images/projects/project-3/5.png,
+                        images/projects/project-3/6.png,
                         images/projects/project-3/6.png">
                         <!-- View Course btn -->
                         <span class="view-project">View Project</span>
@@ -654,24 +661,10 @@
         <div class="pp-details-inner">
             <div class="pp-title">
                 <h2>personal portfolio</h2>
-                <p>Category - <span class="pp-project-category">personal website</span></p>
+                <p>Category - <span class="pp-project-category"></span></p>
             </div>
             <div class="pp-project-details">
-                <div class="row">
-                    <div class="description">
-                        <h2>Project Brief:</h2>
-                        <p></p>
-                    </div>
-                    <div class="info">
-                        <h2>Project Info</h2>
-                        <ul>
-                            <li>Data - <span></span></li>
-                            <li>Client - <span></span></li>
-                            <li>Tools - <span></span></li>
-                            <li>Web - <span><a href="#"></a></span></li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -905,6 +898,7 @@
    <script src="./js/aos.js"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
    <script src="./js/mail.js"></script>
+   <script src="./js/autotype.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/testi.js"></script>
 </body>
