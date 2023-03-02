@@ -1122,12 +1122,12 @@ portfolio-section
     margin-bottom: 40px;
 }
 .portfolio-section .portfolio-filter{
-    flex: 0 0 100%;
-    max-width: 100%;
-    text-align: center;
     line-height: 2.5;
     margin-bottom: 50px;
-    padding: 20px 15px;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
 }
 .portfolio-section .filter-item{
     padding: 5px 10px;
