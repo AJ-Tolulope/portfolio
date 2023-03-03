@@ -1122,7 +1122,7 @@ portfolio-section
     margin-bottom: 40px;
 }
 .portfolio-section .portfolio-filter{
-    line-height: 2.5;
+    line-height: 2;
     margin-bottom: 50px;
     padding: 20px 10px;
     display: flex;
@@ -1130,13 +1130,15 @@ portfolio-section
     overflow-x: scroll;
 }
 .portfolio-section .filter-item{
-    padding: 5px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 10px;
+    margin-right: .5rem;
     border-radius: 5px;
     cursor: pointer;
     color: var(--text-black-600);
     text-transform: capitalize;
     font-size: 16px;
-    letter-spacing: 2.2px;
     transition: var(--transition);
 }
 .portfolio-section .filter-item:hover:not(.active){
