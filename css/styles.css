@@ -1137,6 +1137,7 @@ portfolio-section
     color: var(--text-black-600);
     text-transform: capitalize;
     font-size: 16px;
+    border: 1px solid transparent;
     transition: var(--transition);
 }
 .portfolio-section .filter-item:hover:not(.active){
