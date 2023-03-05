@@ -876,6 +876,8 @@ about
     transition: var(--transition);
     font-size: 16px;
     letter-spacing: 2.2px;
+    border: var(--border);
+    border-color: transparent;
     color: var(--text-black-600);
     text-transform: capitalize;
 }
