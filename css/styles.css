@@ -568,10 +568,10 @@ navigation menu
     padding: 0 15px;
     background-color: var(--bg-black-50);
     transition: all 0.3s ease-in;
+    z-index: 999;
 }
 .nav-menu.open{
     right: 0;
-    z-index: 999;
 }
 /* ----------------------------------- */
 
