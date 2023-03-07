@@ -6,12 +6,12 @@ general
 :root{
     --bg-black-900: #ffffff;
     --bg-black-100: #444444;
-    --bg-black-50: #0a1218;
-    --bg-opacity: rgba(43, 44, 47, .6);
+    --bg-black-50: #0a0e11;
+    --bg-opacity: #2b2c2f99;
     --border: 1px solid var(--bg-black-100);
     --text-black-900: #fafafa;
     --text-black-700: #f1f1f1;
-    --text-black-600: #efefef;
+    --text-black-600: #f1f1f1;
     --code-tag: #d3d3ff;
     --code-text: rgb(255, 222, 211);
     --code-text-val: rgb(211, 255, 253);
