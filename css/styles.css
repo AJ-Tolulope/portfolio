@@ -42,10 +42,6 @@ html{
     background-color: var(--main-color);
     border-radius: 100vw;
 }
-::-webkit-scrollbar-thumb:hover{
-    background-color: transparent;
-    border: 2px solid var(--main-color);
-}
 *:not(i){
     font-family: var(--Roboto);
     font-weight: 300;
@@ -121,7 +117,7 @@ section{
     border: none;
 }
 .btn:after{
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .outer-shadow{
     box-shadow: var(--outer-shadow);
@@ -365,52 +361,6 @@ section
     color: var(--main-color);
 }
 
-/* ---------- 
-preloader 
--------- */
-.preloader{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1500;
-    background-color: var(--bg-black-50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: visible;
-    opacity: 1;
-    transition: var(--transition);
-}
-.preloader.fade-out{
-    visibility: hidden;
-    opacity: 0;
-}
-.preloader .box{
-    width: 65px;
-    display: flex;
-    justify-content: space-between;
-}
-.preloader .box div{
-    width: 15px;
-    height: 15px;
-    background-color: var(--main-color);
-    border-radius: 50%;
-    animation: loader 1s ease infinite;
-}
-.preloader .box div:nth-child(2){
-    animation-delay: 0.2s;
-}
-@keyframes loader{
-    0%,100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-30px);
-    }
-}
-/* ------------------------------------- */
 
 
 /* ----------------
@@ -586,8 +536,6 @@ close btn
     cursor: pointer;
     width: 40px;
     height: 40px;
-    display: block;
-    padding: 3px;
     font-size: 35px;
     line-height: 35px;
     text-align: center;
@@ -646,9 +594,6 @@ nav links
     border-radius: 5px;
     box-shadow: var(--outer-shadow);
     transition: var(--transition);
-}
-.nav-links ul li a:after{
-    border-radius: 30px;
 }
 .nav-links ul li:hover a{
     box-shadow: var(--inner-shadow);
@@ -1478,7 +1423,7 @@ portfolio-popup
     margin-left: 4px;
 }
 .portfolio-popup .pp-project-details-btn:after{
-    border-radius: 30px;
+    border-radius: 5px;
 }
 .portfolio-popup .pp-project-details-btn:hover{
     box-shadow: var(--inner-shadow);
@@ -1729,18 +1674,18 @@ contact-section
 }
 .contact-section .input-group{
     margin: 0 0 25px;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: var(--transition);
 }
 .contact-section .input-group:after{
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .contact-section .input-group .input-control{
     height: 45px;
     display: block;
     width: 100%;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: transparent;
     font-size: 16px;
     padding: 0 15px;
