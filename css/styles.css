@@ -1186,6 +1186,9 @@ portfolio-popup
     visibility: hidden;
     transition: var(--transition)
 }
+.portfolio-popup::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
 .portfolio-popup::after{
     content: '';
     position: absolute;
@@ -1452,14 +1455,15 @@ portfolio-popup
     animation: close-btn-rotate 0.4s linear;
 }
 
-.portfolio-popup .pp-counter{
+.portfolio-popup .pp-main-inner p{
     position: absolute;
     right: 0;
     height: 40px;
     line-height: 40px;
+    display: flex;
+    gap: 1rem;
     bottom: 5px;
     font-size: 13px;
-    font-family: 400;
     color: var(--text-black-600);
 }
 
