@@ -93,6 +93,7 @@ h1,h2,h3,h4{
 }
 h1{
     font-size: 50px;
+    font-weight: 400;
 }
 h2{
     font-size: 30px;
@@ -1893,8 +1894,14 @@ footer section
     .home-section .home-text h1{
         font-size: 32px;
     }
+    h1{
+        font-weight: 300;
+    }
     h2{
         font-size: 28px;
+    }
+    h3{
+        font-size: 18px;
     }
 
     .timeline:before{
