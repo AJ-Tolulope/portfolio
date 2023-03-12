@@ -31,6 +31,15 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: var(--bg-black-50);
+    width: 100% !important;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+body.hidden-scrolling{
+    overflow-y: hidden;
+}
 ::-webkit-scrollbar{
     width: .4rem;
 }
@@ -45,25 +54,18 @@ html{
     font-family: var(--Roboto);
     font-weight: 300;
 }
+i.fab,i.fas{
+    line-height: 2.4;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    word-spacing: 2px;
-    letter-spacing: 1.2px;
     outline: none;
 }
+
 :before,:after{
     box-sizing: border-box;
-}
-body{
-    background-color: var(--bg-black-50);
-    width: 100% !important;
-    scroll-behavior: smooth;
-    line-height: 1.4;
-}
-body.hidden-scrolling{
-    overflow-y: hidden;
 }
 
 .progress{
@@ -388,7 +390,7 @@ logo
     color: var(--main-color);
     border-radius: 50%;
     border: 4px solid var(--main-color);
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
 }
 .header .logo:hover a{
@@ -628,7 +630,7 @@ home
     border-radius: 50%;
     padding: 15px;
     box-shadow: var(--inner-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: var(--border);
     position: relative;
 }
@@ -655,6 +657,7 @@ home
 /* -------------------------------------- */
 
 
+
  /* ----------------
 about
 ------------------- */
@@ -676,7 +679,7 @@ about
     padding: 15px;
     border-radius: 5px;
     box-shadow: var(--inner-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: var(--border);
 }
 .about-section .about-img .img-box:before{
@@ -729,12 +732,9 @@ about
     margin: 0 4px;
     border-radius: 50%;
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: var(--border);
     transition: var(--transition);
-}
-.about-section .about-img .social-links a i{
-    line-height: 2;
 }
 .about-section .about-img .social-links a:after{
     border-radius: 50%;
@@ -872,7 +872,6 @@ about
     text-align: center;
     background-color: var(--bg-black-50);
     border: var(--border);
-    line-height: 2;
     border-radius: 50%;
     font-size: 16px;
     color: var(--main-color);
@@ -958,7 +957,6 @@ service-section
 }
 .service-section .service-item-inner .icon i{
     font-size: 25px;
-    line-height: 2;
     transition: all 0.3s ease-in-out;
 }
 .service-section .service-item-inner:hover .icon i{
@@ -1308,7 +1306,7 @@ portfolio-popup
     cursor: pointer;
     padding: 10px 15px;
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: var(--border);
     transition: var(--transition);
 }
@@ -1333,7 +1331,7 @@ portfolio-popup
     cursor: pointer;
     color: var(--text-black-600);
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: var(--border);
     transition: var(--transition);
 }
@@ -1377,10 +1375,6 @@ portfolio-popup
 .portfolio-popup .pp-next:hover{
     opacity: 1;
     box-shadow: var(--inner-shadow);
-}
-.portfolio-popup .pp-prev i,
-.portfolio-popup .pp-next i{
-    line-height: 2;
 }
 .portfolio-popup .pp-prev i{
     transform: rotate(180deg);
@@ -1493,9 +1487,6 @@ testimonial-section
 .testimonial-section .testi-slider-nav span:after{
     border-radius: 50%;
 }
-.testimonial-section .testi-slider-nav span i{
-    line-height: 2;
-}
 .testimonial-section .testi-slider-nav .prev,
 .testimonial-section .testi-slider-nav .next{
     box-shadow: var(--outer-shadow);
@@ -1532,7 +1523,7 @@ contact-section
     box-shadow: var(--outer-shadow);
     border: var(--border);
     position: relative;
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
 }
 .contact-section .contact-item-inner i{
     font-size: 25px;
@@ -1649,13 +1640,13 @@ footer section
     gap: 10px;
     margin-bottom: 50px;
 }
-.footer-section .container ul li a{
+.footer-section .container a{
     font-size: 16px;
     color: var(--text-black-600);
     word-wrap: break-word;
 }
 
-.footer-section .container ul li a:hover{
+.footer-section .container a:hover{
     color: var(--main-color);
     text-decoration: underline;
 }
@@ -1665,7 +1656,6 @@ footer section
 .footer-section .copyright p{
     font-size: 12px;
 }
-
 /* ---------------------------------------- */
 
 @media(min-width: 1020px){
@@ -1893,9 +1883,6 @@ footer section
 
     .home-section .home-text h1{
         font-size: 32px;
-    }
-    h1{
-        font-weight: 300;
     }
     h2{
         font-size: 28px;
