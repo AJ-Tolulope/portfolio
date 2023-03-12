@@ -1,6 +1,17 @@
 // AOS Instance
 AOS.init();
 
+
+// progress bar
+window.addEventListener('scroll', ()=>{
+    const windowHeight = window.innerHeight;
+    const fullHeight = document.body.clientHeight;
+    const scrollTop = window.pageYOffset;
+
+    const percent = (scrollTop / (fullHeight - windowHeight)) * 100;
+    document.getElementById('myBar').style.width = percent + '%';
+})
+
 /* ============================= theme color start ============================= */ 
 
 const alternativeStyles = document.querySelectorAll(".alternate-style")
