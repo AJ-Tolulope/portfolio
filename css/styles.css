@@ -55,7 +55,7 @@ body.hidden-scrolling{
     font-weight: 300;
 }
 i.fab,i.fas{
-    line-height: 2.6;
+    line-height: 2.4;
 }
 *{
     margin: 0;
@@ -1312,6 +1312,7 @@ portfolio-popup
 }
 .portfolio-popup .pp-project-details-btn i{
     margin-left: 4px;
+    line-height: 1;
 }
 .portfolio-popup .pp-project-details-btn:after{
     border-radius: 5px;
@@ -1328,13 +1329,15 @@ portfolio-popup
     top: 15px;
     text-align: center;
     font-size: 30px;
-    line-height: 2.2;
     cursor: pointer;
     color: var(--text-black-600);
     box-shadow: var(--outer-shadow);
     backdrop-filter: blur(10px);
     border: var(--border);
     transition: var(--transition);
+}
+.portfolio-popup .pp-main-inner .pp-close i{
+    line-height: 1;
 }
 .portfolio-popup .pp-main-inner .pp-close:after{
     border-radius: 50%;
@@ -1362,7 +1365,6 @@ portfolio-popup
     width: 45px;
     text-align: center;
     font-size: 25px;
-    line-height: 2.2;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1010;
@@ -1377,6 +1379,10 @@ portfolio-popup
 .portfolio-popup .pp-next:hover{
     opacity: 1;
     box-shadow: var(--inner-shadow);
+}
+.portfolio-popup .pp-prev i,
+.portfolio-popup .pp-next i{
+    line-height: 1;
 }
 .portfolio-popup .pp-prev i{
     transform: rotate(180deg);
