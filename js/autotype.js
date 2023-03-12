@@ -1,23 +1,29 @@
 const textData = {
     quote: ["The greatest glory in living lies not in never falling, but in rising every time we fall.","The way to get started is to quit talking and begin doing.","Your time is limited, so don't waste it living someone else's life.","If life were predictable it would cease to be life, and be without flavor.","If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough."],
-    typingText: "Front-end Web Development"
+    typingText: "Front-end Web Development",
+    name: "ajala tolulope"
 }
 
-var quoteArreyIndex = 0;
+var quoteArrayIndex = 0;
 
 
-const quotes = document.querySelector('.quotes p'),
-type = document.querySelector('.typing-text'),
-typingW = textData.typingText.split("");
-
+const quotes = document.querySelector('.quotes p');
 var quoteText = '';
-var typeText = '';
-
 var quoteIndex = 0;
+
+
+const type = document.querySelector('.typing-text'),
+typingW = textData.typingText.split("");
+var typeText = '';
 var typeTextIndex = 0;
 
+const name = document.querySelector('.name'),
+nameLetters = textData.name.split("");
+var typeName = 'my name is ',typeNameIndex = 0;
+
+
 setInterval(() => {
-    var quotesW = textData.quote[quoteArreyIndex].split("");
+    var quotesW = textData.quote[quoteArrayIndex].split("");
     if(quoteIndex < quotesW.length){
         quoteText = quoteText + quotesW[quoteIndex];
         quotes.textContent = quoteText;
@@ -28,10 +34,10 @@ setInterval(() => {
     if (quoteIndex == quotesW.length) {
         quoteIndex = 0;
         quoteText = '';
-        quoteArreyIndex++;
+        quoteArrayIndex++;
         
-        if (quoteArreyIndex == textData.quote.length) {
-            quoteArreyIndex = 0;
+        if (quoteArrayIndex == textData.quote.length) {
+            quoteArrayIndex = 0;
         }
     }
 }, 200);
@@ -48,3 +54,16 @@ setInterval(() => {
         typeText = '';
     }
 }, 200);
+setInterval(() => {
+    if(typeNameIndex < nameLetters.length){
+        typeName = typeName + nameLetters[typeNameIndex];
+        name.textContent = typeName;
+    }
+
+    typeNameIndex++;
+
+    if (typeNameIndex == nameLetters.length) {
+        typeNameIndex = 0;
+        typeName = 'my name is ';
+    }
+}, 500);
