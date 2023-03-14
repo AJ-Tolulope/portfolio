@@ -13,11 +13,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
 
     <!--==================================== font awesome ====================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    
+
     <link rel="stylesheet" href="./css/preloader.css">
 
     <!--==================================== main css ====================================-->
@@ -56,6 +56,12 @@
         </div>
     </div>
     <!--==================================== preloader end ==================================== -->
+
+    <!-- =================== scroll bar ================= -->
+    <div class="progress">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!-- =================== scroll bar ================= -->
 
 
     <!--==================================== move-up end ====================================-->
@@ -109,7 +115,7 @@
                 <div class="home-text">
                     <p>Welcome to</p>
                     <h3>webedit</h3>
-                    <p class="typing-text"> Front-end Web Development </p>
+                    <p class="typing-text"></p>
                     <h1>Start Your <span style="color: var(--main-color);font-family: 'Courier New', Courier, monospace;">Frontend</span> Development Journey Today</h1>
                     <a href="#about" class="btn">Start Now</a>
                 </div>
@@ -125,7 +131,7 @@
 
 
     <!--==================================== about-secton start ====================================-->
-    <section class="about-section section" id="about">
+    <section class="about-section course-section section" id="about">
 
         <!--effect wrap start-->
         <div class="effect-wrap">
@@ -167,19 +173,128 @@
                         <a href="#"><i class="fab fa-github"></i></a>
                     </div>
                     <!-- social links end-->
+
+                    <div class="about-course">
+                        <h4>Course Features:</h4>
+                        <ul>
+                            <li>- Easy-to-follow step-by-step lessons</li>
+                            <li>- Hands-on projects to apply your knowledge</li>
+                            <li>- Access to an online community for support and feedback</li>
+                            <li>- Lifetime access to the course material</li>
+                        </ul>
+
+                        <h4>Course Benefits:</h4>
+                        <ul>
+                            <li>- Learn the fundamentals of front-end web development</li>
+                            <li>- Build a basic website from scratch</li>
+                            <li>- Gain practical experience working with HTML, CSS, and JavaScript</li>
+                            <li>- Understand responsive design and website performance optimization</li>
+                            <li>- Gain exposure to popular front-end frameworks and libraries</li>
+                            <li>- Be able to deploy your website to a hosting service</li>
+                        </ul>
+
+                        <p class="more">With this course, anyone with no coding experience can learn front-end web development and build a basic website from scratch. The step-by-step lessons and hands-on projects make it easy to understand and apply your knowledge. The course is also designed to be self-paced, so you can learn at your own speed and get support from an online community. By the end of the course, you'll have the skills and knowledge to create a basic website and understand the fundamentals of front-end web development.</p>
+                    </div>
                 </div>
                 <div class="about-info">
-                    <p data-aos='fade-up' data-aos-delay='100'>Are you seeking a new and rewarding skill to learn? Look no further! Join us as we guide you through the basics of front-end web development. Take the first step towards becoming the programmer you've always wanted to be.</p>
-                    <p data-aos='fade-up' data-aos-delay='100'>The world is rapidly advancing and now is the time to acquire a valuable skill in the digital space. Front-end developers are in high demand and are making a significant impact in the digital world. Don't wait any longer, take action and start your journey now.</p>
-                    <p data-aos='fade-up' data-aos-delay='100'>Our course will cover essential topics such as HTML (Hypertext Markup Language) for website structure, CSS (Cascading Style Sheets) for website styling, and a brief introduction to JavaScript. This skill set is worth your time and investment.</p>
-                    <p data-aos='fade-up' data-aos-delay='100'>Each course module will be accompanied by practical exercises to reinforce your learning. This comprehensive course will provide you with all the tools and knowledge you need to embark on your web development journey.</p>
-                    <p data-aos='fade-up' data-aos-delay='100'>Start your journey today and let's get to work!</p>
+                    <p>Course Overview: Get ready to embark on a new journey in web development. This course is designed to teach anyone with no coding experience the fundamentals of front-end web development. Through a series of step-by-step lessons, students will learn how to build a basic website using HTML, CSS, and JavaScript.</p>
+                    <p class="outline">Course Outline</p>
+                    <h4>Introduction to Front-End Web Development</h4>
+                    <ul>
+                        <li>- What is front-end web development?</li>
+                        <li>- Overview of HTML, CSS, and JavaScript</li>
+                    </ul>
+                    <h4>Building Your First Website</h4>
+                    <ul>
+                        <li>- Setting up your development environment</li>
+                        <li>- Understanding HTML tags and structure</li>
+                        <li>- Adding CSS styles to your website</li>
+                    </ul>
+                    <h4>Building Responsive Websites</h4>
+                    <ul>
+                        <li>- Understanding responsive design</li>
+                        <li>- Creating responsive layouts using CSS</li>
+                    </ul>
+                    <h4>Adding Interactivity with JavaScript</h4>
+                    <ul>
+                        <li>- Introduction to JavaScript</li>
+                        <li>- Adding interactivity to your website with JavaScript</li>
+                    </ul>
+                    <h4>Working with Frameworks and Libraries</h4>
+                    <ul>
+                        <li>- Introduction to front-end frameworks and libraries</li>
+                        <li>- Overview of popular frameworks such as React and Vue.js</li>
+                        <li>- How to use a front-end framework to build a website</li>
+                    </ul>
+                    <h4>Optimizing Website Performance</h4>
+                    <ul>
+                        <li>- Understanding website performance</li>
+                        <li>- Best practices for optimizing website performance</li>
+                        <li>- Tools for measuring website performance</li>
+                    </ul>
                 </div>
             </div>
+
+
+            <div class="course-brief grid grid-col-3">
+                <div class="intro">
+                    <h4>Introduction to Front-End Web Development</h4>
+                    <p>
+                    Front-end web development involves designing and building the parts of a website that users interact with directly. This includes everything from the layout and structure of the site (using HTML) to the visual design and styling (using CSS), as well as any interactivity or functionality (using JavaScript).</p>
+                    <p>HTML (Hypertext Markup Language) is the backbone of front-end development and is used to structure content on a web page. It provides a set of predefined tags that define how content should be displayed in a web browser. CSS (Cascading Style Sheets) is used to add styling and visual design to the HTML elements. JavaScript is used to add interactivity and dynamic functionality to the website.</p>
+                    <p>In this course, you will learn the fundamentals of front-end web development and how to use HTML, CSS, and JavaScript to build a basic website from scratch. You'll start by setting up your development environment and learning the basics of HTML and CSS, and then move on to more advanced topics like responsive design and JavaScript interactivity. By the end of the course, you'll have a solid foundation in front-end web development and the skills to build your own website.</p>
+                </div>
+
+                <div class="first-website">
+                    <h4>Building Your First Website</h4>
+                    <p>Building your first website can seem intimidating, but it doesn't have to be. In this section of the course, we will guide you through the process of building your very own website from scratch.</p>
+                    <p>To begin, we'll walk you through setting up your development environment, including installing a code editor and a web browser. Then, we'll cover the basics of HTML, including the most common tags and elements used in web development. You'll learn how to structure your content using headings, paragraphs, lists, and more.</p>
+                    <p>Next, we'll introduce you to CSS and show you how to add visual styling to your website. We'll cover topics such as selecting elements, adding colors, adjusting font styles, and using CSS frameworks.</p>
+                    <p>By the end of this section, you'll have built a basic website with HTML and CSS, and you'll understand the fundamentals of front-end web development. You'll be able to create a website with text, images, links, and basic styling, and you'll be ready to move on to more advanced topics like responsive design and JavaScript interactivity.</p>
+                </div>
+
+                <div class="responsive">
+                    <h4>Building Responsive Websites</h4>
+                    <p>In this section, we'll teach you how to create responsive websites that adapt to different screen sizes and devices. With the increasing use of mobile devices to access the internet, it's crucial that websites are optimized for smaller screens.</p>
+                    <p>We'll start by explaining the concept of responsive design and why it's important. Then, we'll teach you how to use CSS to create responsive layouts. You'll learn how to use media queries to target specific screen sizes and adjust the layout accordingly. We'll also cover topics like flexible images and fluid typography.</p>
+                    <p>By the end of this section, you'll be able to create websites that look great on any device, from desktops to smart phones.</p>
+                </div>
+
+                <div class="script">
+                    <h4>Adding Interactivity with JavaScript</h4>
+                    <p>In this section, we'll introduce you to JavaScript and teach you how to use it to add interactivity and dynamic functionality to your website.</p>
+                    <p>We'll start with the basics of JavaScript syntax and data types, and then move on to more advanced topics like functions, loops, and objects. You'll learn how to manipulate HTML and CSS with JavaScript, and how to handle user events like clicks and keystrokes.</p>
+                    <p>By the end of this section, you'll be able to add interactivity to your website, like dropdown menus, slideshow galleries, and form validation.</p>
+                </div>
+
+                <div class="frameworks">
+                    <h4>Working with Frameworks and Libraries</h4>
+                    <p>In this section, we'll introduce you to front-end frameworks and libraries, and show you how they can make your development process faster and more efficient.</p>
+                    <p>We'll cover popular front-end frameworks like React and Vue.js, and show you how to use them to build a website. We'll also cover libraries like jQuery and Bootstrap, and show you how to use them to add interactivity and styling to your website.</p>
+                    <p>By the end of this section, you'll have exposure to some of the most popular front-end frameworks and libraries and the skills to use them in your own projects.</p>
+                </div>
+
+                <div class="optimizing">
+                    <h4>Optimizing Website Performance</h4>
+                    <p>In this section, we'll teach you how to optimize your website for performance. Website performance is crucial for user experience and search engine optimization, so it's important to understand how to optimize your website.</p>
+                    <p>We'll cover topics like optimizing images and videos, reducing HTTP requests, and minifying code. We'll also introduce you to tools for measuring website performance, like Google PageSpeed Insights.</p>
+                    <p>By the end of this section, you'll understand best practices for optimizing website performance and how to apply them to your own website.</p>
+                </div>
+
+                <div class="deploy">
+                    <h4>Deploying Your Website</h4>
+                    <p>In this final section, we'll teach you how to deploy your website to a hosting service so that it can be accessed by anyone on the internet.</p>
+                    <p>We'll cover different hosting options, like shared hosting and cloud hosting, and show you how to deploy your website using popular services like GitHub Pages and Netlify. We'll also cover topics like domain registration and SSL certificates.</p>
+                    <p>By the end of this section, you'll be able to deploy your website to a hosting service and share it with the world.</p>
+                    <p>That concludes our front-end web development course for beginners. We hope you've found it informative and enjoyable, and we wish you the best of luck in your front-end web development journey!</p>
+                </div>
+            </div>
+
+
             <!-- about tabs start-->
             <div class="row">
                 <div class="about-tabs">
-                    <span class="tab-item active" data-target=".education">education</span>
+                    <span class="tab-item active" data-target=".education">learning</span>
                 </div>
             </div>
             <!-- about tabs end-->
@@ -192,7 +307,7 @@
                             <div class="row">
                                 <div class='timeline-item'>
                                     <div class='timeline-item-inner'>
-                                        <i class='fas fa-graduation-cap icon'></i>
+                                        <i class='fab fa-html5 icon'></i>
                                         <h3>HTML</h3>
                                         <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages. It provides the structure for a website and is used to define the content and organization of a page.</p>
                                         <p><a href='./webedit/html_course/html-course.html' class='btn outer-shadow hover-in-shadow'>let's begin</a></p>
@@ -200,7 +315,7 @@
                                 </div>
                                 <div class='timeline-item'>
                                     <div class='timeline-item-inner'>
-                                        <i class='fas fa-graduation-cap icon'></i>
+                                        <i class='fab fa-css3 icon'></i>
                                         <h3>CSS</h3>
                                         <p>CSS (Cascading Style Sheets) is a styling language used to describe the look and formatting of a web page. It allows you to control the layout, color, and font of a page and gives it its visual appeal.</p>
                                         <p><a href='./webedit/css_course/css-course.html' class='btn outer-shadow'>let's begin</a></p>
@@ -208,7 +323,7 @@
                                 </div>
                                 <div class='timeline-item'>
                                     <div class='timeline-item-inner'>
-                                        <i class='fas fa-graduation-cap icon'></i>
+                                        <i class='fab fa-javascript icon'></i>
                                         <h3>Javascript</h3>
                                         <p>JavaScript is a high-level, dynamic programming language that is widely used for creating interactive effects within web browsers. It allows for the creation of dynamic web pages and provides an easy way to manipulate HTML and CSS. Whether it's adding animations, creating interactive forms, or making fetch requests, JavaScript has a wide range of capabilities that make it an essential tool for any front-end web developer.</p>
                                         <p><a href='./webedit/javascript_course/javascript-course.html' class='btn outer-shadow'>let's begin</a></p>
@@ -426,6 +541,7 @@
 
 
     <script src="./js/aos.js"></script>
+    <script src="./js/autotype.js"></script>
     <script src="./js/main.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
     <script src="./js/testi.js"></script>
