@@ -7,7 +7,7 @@ general
     --bg-black-900: #ffffff;
     --bg-black-100: #444444;
     --bg-black-50: #0a0e11;
-    --bg-opacity: #2b2c2f99;
+    --bg-opacity: #2b2c2f28;
     --border: 1px solid var(--bg-black-100);
     --text-black-900: #f5f5f5;
     --text-black-700: #dddddd;
@@ -23,7 +23,7 @@ general
     --transition: all .4s ease-in-out;
 
     /*      theme font-family   */
-    --Roboto: 'Roboto', sans-serif;
+    --Roboto: sans-serif;
 
 }
 
@@ -42,6 +42,7 @@ body.hidden-scrolling{
 }
 ::-webkit-scrollbar{
     width: .4rem;
+    height: .3rem;
 }
 ::-webkit-scrollbar-track{
     background: transparent;
@@ -92,6 +93,7 @@ p{
 
 h1,h2,h3,h4{
     color: var(--text-black-900);
+    /* text-transform: uppercase; */
 }
 h1{
     font-size: 50px;
@@ -109,7 +111,7 @@ h4{
 ul{
     list-style: none;
     margin: 0;
-    padding: o;
+    padding: 0;
 
 }
 img{
@@ -671,6 +673,7 @@ about
     flex: 0 0 40%;
     max-width: 40%;
     position: relative;
+    padding-right: 20px;
 }
 .about-section .about-img .img-box{
     max-width: 450px;
@@ -747,8 +750,75 @@ about
     flex: 0 0 60%;
     max-width: 60%;
 }
-.about-section .about-info p{
-    margin-bottom: 15px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+.about-section p{
+    margin: 10px 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+}
+.about-section h4{
+    margin: 1.5rem 0 .5rem;
+}
+.about-section .course-brief > div,
+.about-section p.more,
+.about-section p.outline,
+.about-section ul{
+    background-color: var(--bg-opacity);
+    border: var(--border);
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+}
+.about-section p.outline{
+    margin-top: 2rem;
+}
+.about-section ul{
+    color: var(--text-black-700);
+}
+.about-section .course-brief{
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: var(--border);
+    gap: 2rem;
+}
+.about-section .course-brief > div h4{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: var(--border);
+}
+.about-section .course-brief > div{
+    position: relative;
+}
+.about-section .course-brief > div::after{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: var(--border);
+    border-radius: 50%;
+    top: -14px;
+    right: 0;
+    color: var(--text-black-900);
+    display: grid;
+    place-content: center;
+    backdrop-filter: blur(10px);
+}
+.about-section .course-brief > div:nth-child(1):after{
+    content: '1';
+}
+.about-section .course-brief > div:nth-child(2):after{
+    content: '2';
+}
+.about-section .course-brief > div:nth-child(3):after{
+    content: '3';
+}
+.about-section .course-brief > div:nth-child(4):after{
+    content: '4';
+}
+.about-section .course-brief > div:nth-child(5):after{
+    content: '5';
+}
+.about-section .course-brief > div:nth-child(6):after{
+    content: '6';
+}
+.about-section .course-brief > div:nth-child(7):after{
+    content: '7';
 }
 .about-section .about-info span{
     font-weight: 400;
@@ -849,7 +919,8 @@ about
     position: relative;
     box-shadow: var(--outer-shadow);
     border: var(--border);
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
+    background-color: var(--bg-opacity);
 }
 .timeline .timeline-item-inner:before{
     content: '';
@@ -919,7 +990,8 @@ service-section
 }
 .service-section .service-item .service-item-inner{
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
+    background-color: var(--bg-opacity);
 }
 .service-section .service-item .service-item-inner .icon{
     box-shadow: var(--inner-shadow);
@@ -1187,6 +1259,8 @@ portfolio-popup
     flex: 0 0 65%;
     padding: 15px;
     border: var(--border);
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
 }
 .portfolio-popup .description ul{
     margin-left: 20px;
@@ -1765,10 +1839,7 @@ footer section
         display: none;
     }
     .container{
-        width: 90%;
-    }
-    .course-section .container{
-        width: 60%;
+        width: 80%;
     }
     .contact-section .w-50,
     .contact-section .contact-item,
@@ -1801,6 +1872,7 @@ footer section
     }
 
 
+
     
     .effect-4{
         left: 5%;
@@ -1812,7 +1884,8 @@ footer section
     
     
     
-    .about-img{
+    .about-section .about-img{
+        padding-right: 0;
         padding-bottom: 30px;
     }
     .about-img .img-box{
@@ -1882,8 +1955,8 @@ footer section
 }
 
 @media(max-width: 574px){
-    .course-section .container{
-        width: 80%;
+    .container{
+        width: 90%;
     }
     .home-section .home-img .img-box{
         max-width: 300px;
@@ -1900,7 +1973,7 @@ footer section
     }
 
     .timeline:before{
-        left: 0px;
+        display: none;
     }
 
     .timeline .timeline-item{
@@ -1908,16 +1981,23 @@ footer section
     }
     .timeline .timeline-item:nth-child(odd){
         padding-right: 0px;
-        padding-left: 45px;
+        padding-left: 0;
     }
     .timeline .timeline-item:nth-child(even){
-        padding-left: 45px;
+        padding-left: 0;
     }
 
     .timeline .timeline-item:nth-child(odd) .icon{
-        left: -45px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%,-50%);
     }
     .timeline .timeline-item:nth-child(even) .icon{
-        left: -45px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%,-50%);
+    }
+    .timeline .timeline-item-inner{
+        padding: 10px;
     }
 }
