@@ -17,9 +17,6 @@ general
     --code-text-val: rgb(211, 255, 253);
     --code-bg: rgba(112, 112, 112, 0.2);
     --outer-shadow: 0px 0px 7px rgba(0,0,0,.1), -1px -1px 7px rgba(0,0,0,.1);
-    --outer-shadow-0: 0 0 0 #22232780, 0 0 0 #36363680;
-    --inner-shadow: inset 0px 0px 7px rgba(0,0,0,.1), inset -1px -1px 7px rgba(0,0,0,.1); 
-    --inner-shadow-0: inset 0 0 0 #22232780, inset 0 0 0 #36363680;
     --transition: all .4s ease-in-out;
 
     /*      theme font-family   */
@@ -160,31 +157,14 @@ section{
 .btn:after{
     border-radius: 5px;
 }
+.btn:active{
+    transform: scale(.8579);
+}
+.btn:hover{
+    background-color: var(--bg-opacity);
+}
 .outer-shadow{
     box-shadow: var(--outer-shadow);
-}
-.inner-shadow{
-    box-shadow: var(--inner-shadow);
-}
-.hover-in-shodow{
-    position: relative;
-    z-index: 1;
-}
-.hover-in-shodow:hover{
-    box-shadow: var(--outer-shadow-0);
-}
-.hover-in-shodow:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: var(--transition);
-    z-index: -1;
-}
-.hover-in-shodow:hover:after{
-    box-shadow: var(--inner-shadow);
 }
 /* ---------------- general close -------------- */
 
@@ -422,23 +402,6 @@ menu btn
     transition: var(--transition);
     position: relative;
 }
-.header .menu-btn:hover{
-    box-shadow: var(--inner-shadow);
-}
-
-.header .menu-btn:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transition: var(--transition);
-}
-.header .menu-btn:hover:after{
-    box-shadow: var(--inner-shadow);
-}
 
 .header .menu-btn span{
     display: block;
@@ -449,6 +412,7 @@ menu btn
     position: relative;
     transition: all 0.5s ease;
 }
+
 .header .menu-btn:hover span{
     margin: 3px auto;
     background-color: var(--main-color);
@@ -504,15 +468,13 @@ close btn
     text-align: center;
     border-radius: 50%;
     color: var(--text-black-600);
-    box-shadow: var(--outer-shadow);
+    display: grid;
+    place-content: center;
     border: var(--border);
     transition: var(--transition);
 }
-.nav-menu .nav-close-btn:after{
-    border-radius: 50%;
-}
 .nav-menu .nav-close-btn:hover{
-    box-shadow: var(--inner-shadow);
+    background-color: var(--bg-opacity);
     transform: rotate(-90deg);
 }
 /* ----------------------------------- */
@@ -532,7 +494,6 @@ nav links
     padding: 12px;
 }
 .nav-links ul li .active{
-    box-shadow: var(--inner-shadow);
     border: var(--border);
     color: var(--main-color);
 }
@@ -556,12 +517,13 @@ nav links
     box-shadow: var(--outer-shadow);
     transition: var(--transition);
 }
+.nav-links ul li a:hover{
+    background-color: var(--bg-opacity);
+}
 .nav-links ul li:hover a{
-    box-shadow: var(--inner-shadow);
     color: var(--main-color);
 }
 .links ul li:hover a{
-    box-shadow: var(--inner-shadow);
     color: var(--main-color);
 }
 
@@ -590,9 +552,6 @@ home
 }
 .home-section .home-text a{
     box-shadow: var(--outer-shadow);
-}
-.home-section .home-text a:hover{
-    box-shadow: var(--inner-shadow);
 }
 .home-section .home-text, 
 .home-section .home-img{
@@ -631,7 +590,6 @@ home
     margin: auto;
     border-radius: 50%;
     padding: 15px;
-    box-shadow: var(--inner-shadow);
     backdrop-filter: blur(10px);
     border: var(--border);
     position: relative;
@@ -643,7 +601,7 @@ home
     top: -10px;
     right: -30px;
     padding: 1rem;
-    background: rgba(146, 31, 31, 0.01);
+    background-color: var(--bg-opacity);
     backdrop-filter: blur(10px);
     border: var(--border);
 }
@@ -681,7 +639,6 @@ about
     margin: auto;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: var(--inner-shadow);
     backdrop-filter: blur(10px);
     border: var(--border);
 }
@@ -744,14 +701,13 @@ about
 }
 .about-section .about-img .social-links a:hover{
     color: var(--main-color);
-    box-shadow: var(--inner-shadow);
+}
+.about-section .about-course{
+    margin-top: 3rem;
 }
 .about-section .about-info{
     flex: 0 0 60%;
     max-width: 60%;
-}
-.about-section .about-course{
-    margin-top: 3rem;
 }
 .about-section p{
     margin: 10px 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
@@ -860,7 +816,6 @@ about
     opacity: 0.6;
 }
 .about-section .about-tabs .active{
-    box-shadow: var(--inner-shadow);
     border: var(--border);
     color: var(--main-color);
 }
@@ -999,9 +954,6 @@ service-section
     backdrop-filter: blur(10px);
     background-color: var(--bg-opacity);
 }
-.service-section .service-item .service-item-inner .icon{
-    box-shadow: var(--inner-shadow);
-}
 
 .service-section .service-items{
     gap: 1rem;
@@ -1029,9 +981,6 @@ service-section
     position: relative;
     color: var(--text-black-600);
     border: var(--border);
-}
-.service-section .service-item-inner:hover .icon{
-    box-shadow: var(--inner-shadow-0);
 }
 .service-section .service-item-inner .icon i{
     font-size: 25px;
@@ -1397,9 +1346,6 @@ portfolio-popup
 .portfolio-popup .pp-project-details-btn:after{
     border-radius: 5px;
 }
-.portfolio-popup .pp-project-details-btn:hover{
-    box-shadow: var(--inner-shadow);
-}
 .portfolio-popup .pp-main-inner .pp-close{
     position: absolute;
     right: 0;
@@ -1423,7 +1369,6 @@ portfolio-popup
     border-radius: 50%;
 }
 .portfolio-popup .pp-main-inner .pp-close:hover{
-    box-shadow: var(--inner-shadow);
     transform: rotate(-90deg);
 }
 
@@ -1458,7 +1403,6 @@ portfolio-popup
 .portfolio-popup .pp-prev:hover,
 .portfolio-popup .pp-next:hover{
     opacity: 1;
-    box-shadow: var(--inner-shadow);
 }
 .portfolio-popup .pp-prev i,
 .portfolio-popup .pp-next i{
@@ -1514,6 +1458,7 @@ testimonial-section
     height: 100%;
     margin-top: -40px;
     backdrop-filter: blur(10px);
+    background-color: var(--bg-opacity);
     opacity: 0;
     transition: all .4s ease-in-out;
 }
@@ -1527,7 +1472,6 @@ testimonial-section
     position: absolute;
     font-size: 30px;
     color: var(--text-black-600);
-    opacity: 0.1;
 }
 .testimonial-section .testi-item i.left{
     left: 5px;
@@ -1571,17 +1515,10 @@ testimonial-section
     border-radius: 50%;
     margin: 0 40px;
     border: var(--border);
-}
-.testimonial-section .testi-slider-nav span:after{
-    border-radius: 50%;
-}
-.testimonial-section .testi-slider-nav .prev,
-.testimonial-section .testi-slider-nav .next{
-    box-shadow: var(--outer-shadow);
-}
-.testimonial-section .testi-slider-nav .prev:hover,
-.testimonial-section .testi-slider-nav .next:hover{
-    box-shadow: var(--inner-shadow);
+    /* display: grid;
+    place-content: center; */
+}.testimonial-section .testi-slider-nav span:hover{
+    background-color: var(--bg-opacity);
 }
 /* ------------------------------------ */
 
@@ -1612,6 +1549,7 @@ contact-section
     border: var(--border);
     position: relative;
     backdrop-filter: blur(10px);
+    background-color: var(--bg-opacity);
 }
 .contact-section .contact-item-inner i{
     font-size: 25px;
@@ -1684,14 +1622,8 @@ contact-section
     box-shadow: var(--outer-shadow);
     border: var(--border);
 }
-.contact-section .contact-form .input-group:hover{
-    box-shadow: var(--inner-shadow);
-}
 .contact-section .contact-form .btn{
     box-shadow: var(--outer-shadow);
-}
-.contact-section .contact-form .btn:hover{
-    box-shadow: var(--inner-shadow);
 }
 /* --------------------------------------------- */
 
@@ -1767,14 +1699,13 @@ footer section
         transition: var(--transition);
         backdrop-filter: blur(10px);
     }
+    .links ul li a:hover{
+        background-color: var(--bg-opacity);
+    }
     .links ul li a:after{
         border-radius: 5px;
     }
-    .links ul li:hover a{
-        box-shadow: var(--inner-shadow);
-    }
     .links ul li .active{
-        box-shadow: var(--inner-shadow);
         color: var(--main-color);
     }
     .effect-3{
