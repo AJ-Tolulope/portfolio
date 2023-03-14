@@ -750,6 +750,9 @@ about
     flex: 0 0 60%;
     max-width: 60%;
 }
+.about-section .about-course{
+    margin-top: 3rem;
+}
 .about-section p{
     margin: 10px 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
