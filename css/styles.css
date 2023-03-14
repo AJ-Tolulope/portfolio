@@ -823,6 +823,9 @@ about
 .about-section .about-info span{
     font-weight: 400;
 }
+.about-section .about-info p span{
+    font-weight: 700;
+}
 .about-section .about-info .btn{
     margin: 30px 20px 0 0;
 }
