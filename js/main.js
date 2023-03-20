@@ -162,7 +162,8 @@ if (tabsContainer) {
         }
     });
 }
-/*----------------------- about section start -------------------------*/
+/*----------------------- about section end -------------------------*/
+
 
 
 /*---------------------- portfolio filter page ----------------------*/
@@ -186,61 +187,61 @@ if (tabsContainer) {
 
         
         // filter portfolio items
-    filterContainer.addEventListener("click", (event) =>{
-        if(event.target.classList.contains("filter-item") && !event.target.classList.contains("active")){
-            // deactivate existing active 'filter-item'
-            filterContainer.querySelector(".active").classList.remove("active");
+        filterContainer.addEventListener("click", (event) =>{
+            if(event.target.classList.contains("filter-item") && !event.target.classList.contains("active")){
+                // deactivate existing active 'filter-item'
+                filterContainer.querySelector(".active").classList.remove("active");
 
-            // activate new 'filter-items'
-            event.target.classList.add("active");
-            const target = event.target.getAttribute("data-target");
-            portfolioItems.forEach((item) =>{
-                if (target === item.getAttribute("data-category") || target === "all"){
-                    item.classList.remove("hide");
-                    item.classList.add("show");
+                // activate new 'filter-items'
+                event.target.classList.add("active");
+                const target = event.target.getAttribute("data-target");
+                portfolioItems.forEach((item) =>{
+                    if (target === item.getAttribute("data-category") || target === "all"){
+                        item.classList.remove("hide");
+                        item.classList.add("show");
 
+                    }
+                    else{
+                        item.classList.remove("show");
+                        item.classList.add("hide");
+                    }
+                })
+            }
+        })
+
+        portfolioItemsContainer.addEventListener("click", (event) =>{
+            if(event.target.closest(".portfolio-item-inner")){
+                const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
+    
+            // get the portfolioItem index
+                itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
+    
+                if (portfolioItems[itemIndex].querySelector(".portfolio-item-img img")) {
+                    screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
+                } else {
+                    if (portfolioItems[itemIndex].querySelector(".portfolio-item-img video")) {
+                        screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img video").getAttribute("data-screenshots");
+                }
+                }
+                
+                // convert screenshots into array
+                screenshots = screenshots.split(",");
+                if(screenshots.length === 1){
+                    prevBtn.style.display = "none";
+                    nextBtn.style.display = "none";
+                    popup.querySelector(".pp-counter").style.display = "none";
                 }
                 else{
-                    item.classList.remove("show");
-                    item.classList.add("hide");
-                }
-            })
-        }
-    })
-
-    portfolioItemsContainer.addEventListener("click", (event) =>{
-        if(event.target.closest(".portfolio-item-inner")){
-            const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
-
-            // get the portfolioItem index
-            itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
-
-            if (portfolioItems[itemIndex].querySelector(".portfolio-item-img img")) {
-                screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
-            } else {
-                if (portfolioItems[itemIndex].querySelector(".portfolio-item-img video")) {
-                    screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img video").getAttribute("data-screenshots");
-                }
-            }
-            
-            // convert screenshots into array
-            screenshots = screenshots.split(",");
-            if(screenshots.length === 1){
-                prevBtn.style.display = "none";
-                nextBtn.style.display = "none";
-                popup.querySelector(".pp-counter").style.display = "none";
-            }
-            else{
-                prevBtn.style.display = "block";
-                nextBtn.style.display = "block";
+                    prevBtn.style.display = "block";
+                    nextBtn.style.display = "block";
                 popup.querySelector(".pp-counter").style.display = "block";
+                }
+                slideIndex = 0;
+                popupToggle();
+                popupSlideshow();
+                popupDetails() 
+    
             }
-            slideIndex = 0;
-            popupToggle();
-            popupSlideshow();
-            popupDetails() 
-
-        }
     })
     
     closeBtn.addEventListener("click", () =>{
@@ -334,3 +335,48 @@ if (tabsContainer) {
     }
 
 })();
+
+
+
+
+
+
+/*---------------------- course section start ----------------------*/
+const courseItems = document.querySelectorAll('.brief');
+
+courseItems.forEach(item => {
+    item.addEventListener('click', (event)=>{
+        if (event.target.classList.contains('btn')) {
+            event.target.parentElement.querySelector('.more').classList.toggle('active');
+            event.target.querySelector('i').classList.toggle('fa-angle-up');
+            event.target.querySelector('i').classList.toggle('fa-angle-down');
+        }
+    })
+});
+
+
+
+/*---------------------- course section end ----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
