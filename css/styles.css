@@ -1140,9 +1140,9 @@ portfolio-popup
     visibility: hidden;
     transition: var(--transition)
 }
-.portfolio-popup::-webkit-scrollbar-thumb{
+/* .portfolio-popup::-webkit-scrollbar-thumb{
     background-color: transparent;
-}
+} */
 .portfolio-popup::after{
     content: '';
     position: absolute;
@@ -1238,6 +1238,7 @@ portfolio-popup
     text-decoration: underline;
 }
 .portfolio-popup .description p.code{
+    font-size: 14px;
     padding: .5rem;
     margin: 1rem 0;
     background-color: var(--code-bg);
@@ -1248,16 +1249,17 @@ portfolio-popup
     border: var(--border);
 }
 .portfolio-popup .description p.code span.atrr {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--code-text);
     text-transform: lowercase;
 }
 .portfolio-popup .description p.code span.val{
-    font-size: 18px;
+    font-size: 14px;
     color: var(--code-text-val);
     text-transform: lowercase;
 }
 .portfolio-popup .description .note{
+    font-size: 14px;
     padding: 1rem;
     margin: 2rem 0;
     background-color: var(--code-bg);
