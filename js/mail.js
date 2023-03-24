@@ -23,8 +23,8 @@ function sendMail(){
   document.querySelectorAll('.input-control').forEach(input => {
     if(input.value !== ''){
         var templateParams = {
-          to_name: 'WEBEDIT',
-          from_name: userName.value,
+          to_name: 'thewebedits',
+          user_name: userName.value,
           user_email: userEmail.value,
           subject: subject.value,
           message: body.value
@@ -36,6 +36,7 @@ function sendMail(){
         }, function(error) {
           alert('Failed to send message...', error);
         });
+        
         userName.value = ''
         userEmail.value = ''
         subject.value = ''
