@@ -1862,6 +1862,10 @@ footer section
     .portfolio-popup .pp-details{
         width: 90%;
     }
+
+    .contact-section .contact-item{
+        padding: 0;
+    }
     
     .contact-section .submit-btn{
         text-align: left;
@@ -1916,4 +1920,5 @@ footer section
     .timeline .timeline-item-inner{
         padding: 10px;
     }
+
 }
