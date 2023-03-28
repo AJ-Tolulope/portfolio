@@ -746,7 +746,6 @@ about
     margin: 10px 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
 .about-section h4{
-    font-size: 14px;
     margin: 1.5rem 0 .5rem;
 }
 .about-section .course-brief > div,
@@ -974,6 +973,7 @@ about
 }
 .timeline .timeline-item-inner h4{
     color: var(--text-black-600);
+    font-size: 14px;
     margin: 0;
 }
 .timeline .timeline-item-inner p{
