@@ -20,7 +20,7 @@ general
     --transition: all .4s ease-in-out;
 
     /*      theme font-family   */
-    --Roboto: sans-serif;
+    --Roboto: 'Poppins', sans-serif;
 
 }
 
