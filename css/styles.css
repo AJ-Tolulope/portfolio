@@ -1607,7 +1607,7 @@ contact-section
     display: block;
     font-size: 18px;
     font-weight: 400;
-    color: var(--text-black-700);
+    color: var(--text-black-900);
     margin: 15px 10px;
     text-transform: capitalize;
 }
