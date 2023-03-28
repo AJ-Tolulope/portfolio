@@ -6,7 +6,7 @@ general
 
 /* ---------------- custom variables --------------*/
 :root{
-    --bg-black-900: #3f3f3f;
+    --bg-black-900: #3b3b3b;
     --bg-black-100: #292929;
     --bg-black-50: #0b0b0c;
     --bg-opacity: #2b2c2f18;
@@ -440,7 +440,7 @@ menu btn
     display: block;
     height: 2px;
     width: 16px;
-    background-color: var(--bg-black-900);
+    background-color: var(--text-black-900);
     margin: 2px auto;
     position: relative;
     transition: all 0.5s ease;
@@ -457,7 +457,7 @@ menu btn
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-black-900);
+    background-color: var(--text-black-900);
 }
 /* ---------------------------------------- */
 
@@ -1765,7 +1765,7 @@ footer section
         margin: 0 auto;
     }
     .home-section .row{
-        gap: 2.5em
+        gap: 2.5em;
     }
     .home-section .justify-content-between{
         justify-content: center;
@@ -1835,6 +1835,10 @@ footer section
         right: auto;
     }
 
+    .portfolio-section .portfolio-items{
+        gap: 20px;
+    }
+
     .portfolio-section .portfolio-item{
         padding: 0;
     }
@@ -1861,12 +1865,19 @@ footer section
         width: 90%;
     }
 
+
+    .contact-section .w-50{
+        padding: 0;
+    }
+    .contact-section .row{
+        gap: 20px;
+    }
     .contact-section .contact-item{
         padding: 0;
     }
-    
     .contact-section .submit-btn{
         text-align: left;
+        padding: 0;
     }
 
     
