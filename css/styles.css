@@ -1778,6 +1778,7 @@ footer section
         margin: 0 auto;
     }
     .home-section .home-img .img-box{
+        padding: 8px;
         max-width: 330px;
     }
 
@@ -1888,6 +1889,7 @@ footer section
         width: 90%;
     }
     .home-section .home-img .img-box{
+        padding: 0;
         max-width: 300px;
     }
 
