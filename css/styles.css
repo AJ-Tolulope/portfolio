@@ -6,11 +6,11 @@ general
 
 /* ---------------- custom variables --------------*/
 :root{
-    --bg-black-900: #ffffff;
+    --bg-black-900: #3f3f3f;
     --bg-black-100: #292929;
     --bg-black-50: #0b0b0c;
     --bg-opacity: #2b2c2f18;
-    --border: 1px solid var(--bg-black-100);
+    --border: 1px solid var(--bg-black-900);
     --text-black-900: #fff;
     --text-black-700: #c5c6c9;
     --text-black-600: #8b8b8b;
@@ -92,7 +92,6 @@ p{
 
 h1,h2,h3,h4{
     color: var(--text-black-900);
-    /* text-transform: uppercase; */
 }
 h1{
     font-size: 50px;
@@ -148,7 +147,7 @@ section{
     color: var(--main-color);
     background-color: var(--bg-black-50);
     text-transform: uppercase;
-    letter-spacing: 2.2px;
+    letter-spacing: 2px;
     cursor: pointer;
     border-radius: 5px;
     transition: var(--transition);
@@ -626,7 +625,6 @@ home
     border: var(--border);
     position: relative;
 }
-
 .home-section .home-img .img-box .quotes{
     position: absolute;
     width: 180px;
@@ -848,9 +846,9 @@ about
     border-radius: 5px;
     transition: var(--transition);
     font-size: 16px;
-    letter-spacing: 2.2px;
+    letter-spacing: 2px;
     border: var(--border);
-    border-color: transparent;
+    border-color: var(--bg-black-100);
     color: var(--text-black-600);
     text-transform: capitalize;
 }
@@ -858,7 +856,7 @@ about
     opacity: 0.6;
 }
 .about-section .about-tabs .active{
-    border: var(--border);
+    border-color: var(--bg-black-900);
     color: var(--main-color);
 }
 /* ---------------------------------------------- */
@@ -1060,7 +1058,7 @@ portfolio-section
 .portfolio-section .portfolio-filter{
     line-height: 2;
     margin-bottom: 50px;
-    padding: 20px 10px;
+    padding: 10px 0;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -1076,7 +1074,7 @@ portfolio-section
     text-transform: capitalize;
     font-size: 16px;
     border: var(--border);
-    border-color: transparent;
+    border-color: var(--bg-black-100);
     transition: var(--transition);
 }
 .portfolio-section .filter-item:hover:not(.active){
@@ -1084,8 +1082,7 @@ portfolio-section
 }
 .portfolio-section .filter-item.active{
     color: var(--main-color);
-    box-shadow: var(--outer-shadow);
-    border: var(--border);
+    border-color: var(--bg-black-900);
 }
 
 .portfolio-section .welcome{
