@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+
 /* ----------------
 general 
 ----------------- */
@@ -9,9 +11,9 @@ general
     --bg-black-50: #0a0e11;
     --bg-opacity: #2b2c2f18;
     --border: 1px solid var(--bg-black-100);
-    --text-black-900: #f5f5f5;
-    --text-black-700: #dddddd;
-    --text-black-600: #bebebe;
+    --text-black-900: #fff;
+    --text-black-700: #c5c6c9;
+    --text-black-600: #b3adad;
     --code-tag: #d3d3ff;
     --code-text: rgb(255, 222, 211);
     --code-text-val: rgb(211, 255, 253);
@@ -49,7 +51,7 @@ body.hidden-scrolling{
     border-radius: 100vw;
 }
 *:not(i){
-    font-family: var(--Roboto);
+    font-family: var(--Poppins);
     font-weight: 300;
 }
 i.fab,i.fas{
@@ -103,7 +105,7 @@ h3{
     font-size: 22px;
 }
 h4{
-    font-size: 18px;
+    font-size: 16px;
 }
 ul{
     list-style: none;
@@ -711,6 +713,7 @@ about
     margin: 10px 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
 .about-section h4{
+    font-size: 14px;
     margin: 1.5rem 0 .5rem;
 }
 .about-section .course-brief > div,
@@ -1761,10 +1764,6 @@ footer section
         min-width: 100%;
         max-width: 100%;
         margin: 0 auto;
-    }
-
-    .about-section .timeline .timeline-item-inner{
-        padding: 20px;
     }
 
     .grid-col-3{
