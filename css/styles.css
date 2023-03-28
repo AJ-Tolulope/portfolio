@@ -626,6 +626,7 @@ home
     border: var(--border);
     position: relative;
 }
+
 .home-section .home-img .img-box .quotes{
     position: absolute;
     width: 180px;
