@@ -12,45 +12,6 @@ window.addEventListener('scroll', ()=>{
     document.getElementById('myBar').style.width = percent + '%';
 })
 
-/* ============================= theme color start ============================= */ 
-
-const alternativeStyles = document.querySelectorAll(".alternate-style")
-
-
-const colorStyle = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5']
-
-var colorCounter = 0;
-
-setInterval(() => {
-    setColorStyle(colorCounter);
-}, 180000);
-
-function setColorStyle(counter) {
-    if(counter <= 4){
-        const color = colorStyle[counter];
-
-        // loop through all alternativeStyles (link tag) 
-        alternativeStyles.forEach((style) =>{
-            if(color === style.getAttribute("title")){
-                // disable if the attribute matches the color
-                style.removeAttribute("disabled");
-            }
-            else{
-                // set disabled attribute to the rest
-                style.setAttribute("disabled", "true")
-            }
-        })
-
-        colorCounter = colorCounter + 1;
-
-        // reset counter
-        if(counter == 4){
-            colorCounter = 0;
-        }
-    }
-}
-/* ============================= theme color end ============================= */ 
-
 
 /* -------------------------- scroll top section start -----------------------------*/
 function scrollTop(){
@@ -357,26 +318,3 @@ courseItems.forEach(item => {
 
 
 /*---------------------- course section end ----------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
