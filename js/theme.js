@@ -48,12 +48,10 @@ const icon = themeIcon.querySelector('i');
 
 if (localStorage.getItem('icon') == 'fa-moon') {
     icon.classList.replace('fa-sun', 'fa-moon')
-    console.log(localStorage.getItem('themeMode'))
     document.querySelector('body').classList.replace('dark', localStorage.getItem('themeMode'));
 } else {
     if (localStorage.getItem('icon') == 'fa-sun') {
         icon.classList.replace('fa-moon', 'fa-sun')
-        console.log(localStorage.getItem('themeMode'))
         document.querySelector('body').classList.replace('light-mode', localStorage.getItem('themeMode'));
     } 
 }
