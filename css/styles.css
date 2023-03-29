@@ -9,7 +9,7 @@ general
     --bg-black-900: #3b3b3b;
     --bg-black-100: #292929;
     --bg-black-50: #0b0b0c;
-    --bg-opacity: #2b2c2f18;
+    --bg-opacity: #34353a18;
     --border: 1px solid var(--bg-black-900);
     --text-black-900: #fff;
     --text-black-700: #c5c6c9;
@@ -18,7 +18,7 @@ general
     --code-text: rgb(255, 222, 211);
     --code-text-val: rgb(211, 255, 253);
     --code-bg: rgba(112, 112, 112, 0.2);
-    --outer-shadow: 0px 0px 7px rgba(0,0,0,.1), -1px -1px 7px rgba(0,0,0,.1);
+    --outer-shadow: 3px 3px 18px rgba(0, 0, 0, 0.1);
     --transition: all .4s ease-in-out;
 
     /*      theme font-family   */
@@ -36,6 +36,23 @@ body{
     scroll-behavior: smooth;
     line-height: 1.5;
 }
+body.light-mode{
+    --bg-black-900: #d3d3d3;
+    --bg-black-100: #eee;
+    --bg-black-50: #fff;
+    --bg-opacity: #e7e7e718;
+    --border: 1px solid var(--bg-black-900);
+    --text-black-900: #161616;
+    --text-black-700: #1b1b1b;
+    --text-black-600: #313131;
+    --code-tag: #08080a;
+    --code-text: rgb(7, 6, 6);
+    --code-text-val: rgb(22, 26, 25);
+    --code-bg: rgba(112, 112, 112, 0.2);
+    --outer-shadow: 3px 3px 18px rgba(77, 77, 77, 0.1);
+}
+
+
 body.hidden-scrolling{
     overflow-y: hidden;
 }
@@ -356,6 +373,18 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header .theme{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    border: var(--border);
+    border-radius: 50%;
+    color: var(--text-black-900);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
 }
 /* -------------------------- */
 
