@@ -42,9 +42,9 @@ body.light-mode{
     --bg-black-50: #fff;
     --bg-opacity: #e7e7e718;
     --border: 1px solid var(--bg-black-900);
-    --text-black-900: #161616;
-    --text-black-700: #1b1b1b;
-    --text-black-600: #313131;
+    --text-black-900: #0a0a0a;
+    --text-black-700: #2f2f2f;
+    --text-black-600: #444444;
     --code-tag: #08080a;
     --code-text: rgb(7, 6, 6);
     --code-text-val: rgb(22, 26, 25);
@@ -1057,7 +1057,6 @@ service-section
     color: var(--main-color);
 }
 .service-section .service-item-inner h3{
-    font-weight: 400;
     margin: 0 0 10px;
     text-transform: capitalize;
 }
