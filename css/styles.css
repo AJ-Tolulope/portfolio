@@ -12,7 +12,7 @@ general
     --bg-opacity: #34353a18;
     --border: 1px solid var(--bg-black-900);
     --text-black-900: #fff;
-    --text-black-700: #c5c6c9;
+    --text-black-700: #dfdfdf;
     --text-black-600: #8b8b8b;
     --code-tag: #d3d3ff;
     --code-text: rgb(255, 222, 211);
@@ -41,15 +41,15 @@ body.light-mode{
     --bg-black-100: #eee;
     --bg-black-50: #fff;
     --bg-opacity: #e7e7e718;
-    --border: 1px solid var(--bg-black-900);
+    --border: 1px solid #cecece;
     --text-black-900: #0a0a0a;
-    --text-black-700: #2f2f2f;
+    --text-black-700: #242424;
     --text-black-600: #444444;
     --code-tag: #08080a;
     --code-text: rgb(7, 6, 6);
     --code-text-val: rgb(22, 26, 25);
     --code-bg: rgba(112, 112, 112, 0.2);
-    --outer-shadow: 3px 3px 18px rgba(77, 77, 77, 0.1);
+    --outer-shadow: 3px 3px 18px #dfdfdf21;
 }
 
 
@@ -109,6 +109,7 @@ p{
 
 h1,h2,h3,h4{
     color: var(--text-black-900);
+    text-transform: capitalize;
 }
 h1{
     font-size: 50px;
@@ -179,6 +180,9 @@ section{
 }
 .btn:hover{
     background-color: var(--bg-opacity);
+}
+.btn.category{
+    padding: 5px 10px;
 }
 .outer-shadow{
     box-shadow: var(--outer-shadow);
@@ -648,7 +652,7 @@ home
     max-width: 500px;
     display: block;
     margin: auto;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     padding: 15px;
     backdrop-filter: blur(10px);
     border: var(--border);
@@ -670,7 +674,7 @@ home
 }
 .home-section .home-img .img-box img{
     width: 100%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     box-shadow: var(--outer-shadow);
     border: 10px solid transparent;
 }
@@ -1750,6 +1754,99 @@ footer section
 
 
 
+
+
+/* -------------
+blog section
+---------------*/
+.blog-logo{
+    border-bottom: var(--border);
+    margin-bottom: 1rem;
+    display: grid;
+    place-content: center;
+}
+
+.blog-logo img{
+    margin: 0 auto;
+    height: 80px;
+    width: 200px;
+    object-fit: cover;
+}
+.blog-section.grid{
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+.blog-section .categories{
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: var(--border);
+}
+.blog-section .btn.category{
+    margin: .3rem .2rem;
+    font-size: 12px;
+}
+
+.blog-section .blog{
+    padding-bottom: 1rem;
+    border-bottom: var(--border);
+}
+.blog-section .blog p{
+    margin-top: 1rem;
+}
+.blog-section .blog img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.blog-section .blog a{
+    color: var(--main-color);
+}
+.blog-section .blog h2{
+    margin-top: 2rem;
+}
+.blog-section .author-date span{
+    color: var(--text-black-600);
+    font-family: 'Poppins';
+    font-size: 13px;
+    word-spacing: 5px;
+    margin: 0 .5rem 1rem 0;
+}
+
+.blog-section .recent-post h2{
+    margin-bottom: 1rem;
+}
+.blog-section .recent-post .post{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: var(--border);
+}
+.blog-section .recent-post .post .post-tags{
+    margin-bottom: 5px;
+}
+.blog-section .recent-post .post .post-tags span{
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.blog-section .recent-post .post .post-text{
+    font-size: 12px;
+}
+/* ---------------------------------------------- */
+
+
+
+
+
+
+
 @media(max-width: 900px){
     .about-section .about-info,
     .about-section .about-img,
@@ -1777,7 +1874,7 @@ footer section
         display: none;
     }
     .container{
-        width: 80%;
+        width: 90%;
     }
     .contact-section .w-50,
     .contact-section .contact-item,
@@ -1909,13 +2006,14 @@ footer section
         padding: 0;
     }
 
+    .blog-section.grid{
+        grid-template-columns: 1fr;
+    }
+
     
 }
 
-@media(max-width: 574px){
-    .container{
-        width: 90%;
-    }
+@media(max-width: 480px){
     .home-section .home-img .img-box{
         padding: 0;
         max-width: 300px;
@@ -1960,4 +2058,8 @@ footer section
         padding: 10px;
     }
 
+
+    .blog-section .recent-post .post{
+        grid-template-columns: 1fr;
+    }
 }
