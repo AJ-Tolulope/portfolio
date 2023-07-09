@@ -26,6 +26,7 @@ general
 
 }
 
+
 body{
     background-color: var(--bg-black-50);
     width: 100% !important;
@@ -1788,6 +1789,12 @@ blog section
 }
 .blog-section .blog p{
     margin-top: 1rem;
+}
+.blog-section .blog p span{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .blog-section .blog img{
     height: 200px;
