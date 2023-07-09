@@ -1788,6 +1788,7 @@ blog section
 
 .blog-section .blog{
     padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border-bottom: var(--border);
 }
 .blog-section .blog p{
