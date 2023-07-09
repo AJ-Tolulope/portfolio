@@ -26,14 +26,9 @@ general
 
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     background-color: var(--bg-black-50);
     width: 100% !important;
-    scroll-behavior: smooth;
     line-height: 1.5;
 }
 body.light-mode{
