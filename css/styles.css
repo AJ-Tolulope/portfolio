@@ -12,8 +12,8 @@ general
     --bg-opacity: #34353a18;
     --border: 1px solid var(--bg-black-900);
     --text-black-900: #fff;
-    --text-black-700: #efefef;
-    --text-black-600: #8d8d8d;
+    --text-black-700: #dfdfdf;
+    --text-black-600: #8b8b8b;
     --code-tag: #d3d3ff;
     --code-text: rgb(255, 222, 211);
     --code-text-val: rgb(211, 255, 253);
