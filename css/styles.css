@@ -38,7 +38,7 @@ body.light-mode{
     --bg-black-50: #fff;
     --bg-opacity: #e7e7e718;
     --border: 1px solid #d8d8d8;
-    --text-black-900: #0a0a0a;
+    --text-black-900: #1d1d1d;
     --text-black-700: #242424;
     --text-black-600: #444444;
     --code-tag: #08080a;
@@ -627,7 +627,7 @@ home
     font-weight: 300;
     font-size: 14px;
     text-transform: capitalize;
-    margin: 20px 0 30px;
+    margin: 20px 0;
 }
 .home-section .home-text h3{
     text-transform: uppercase;
