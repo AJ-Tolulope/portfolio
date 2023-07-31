@@ -1,4 +1,4 @@
-
+@import url('../css/fonts.css');
 
 /* ----------------
 general 
@@ -6,46 +6,48 @@ general
 
 /* ---------------- custom variables --------------*/
 :root{
-    --bg-black-900: #3b3b3b;
-    --bg-black-100: #292929;
-    --bg-black-50: #0b0b0c;
-    --bg-opacity: #34353a18;
-    --border: 1px solid var(--bg-black-900);
-    --text-black-900: #fff;
-    --text-black-700: #e8e8e8;
-    --text-black-600: #8b8b8b;
-    --code-tag: #d3d3ff;
-    --code-text: rgb(255, 222, 211);
-    --code-text-val: rgb(211, 255, 253);
-    --code-bg: rgba(112, 112, 112, 0.2);
-    --outer-shadow: 3px 3px 18px rgba(0, 0, 0, 0.1);
-    --transition: all .4s ease-in-out;
-
-    /*      theme font-family   */
-    --Poppins: 'Poppins', sans-serif;
-
-}
-
-
-body{
-    background-color: var(--bg-black-50);
-    width: 100% !important;
-    line-height: 1.5;
-}
-body.light-mode{
     --bg-black-900: #d3d3d3;
     --bg-black-100: #eee;
     --bg-black-50: #fff;
     --bg-opacity: #e7e7e718;
     --border: 1px solid #d8d8d8;
-    --text-black-900: #1d1d1d;
+    --text-black-900: #0a0a0a;
     --text-black-700: #242424;
     --text-black-600: #444444;
     --code-tag: #08080a;
-    --code-text: rgb(7, 6, 6);
-    --code-text-val: rgb(22, 26, 25);
-    --code-bg: rgba(112, 112, 112, 0.2);
+    --code-text: #070606;
+    --code-text-val: #161a19;
+    --code-bg: #70707033;
     --outer-shadow: 3px 3px 18px #dfdfdf21;
+    
+    --transition: all .4s ease-in-out;
+
+    /*      theme font-family   */
+    --Poppins: 'Poppins', sans-serif;
+    --Anton: 'Abel', sans-serif;
+}
+
+
+body{
+    background-color: var(--bg-black-50);
+    width: 100%;
+    line-height: 1.6;
+
+}
+body.light-mode{
+    --bg-black-900: #3b3b3b;
+    --bg-black-100: #292929;
+    --bg-black-50: #0b0b0c;
+    --bg-opacity: #34353a18;
+    --border: 1px solid #292929;
+    --text-black-900: #fff;
+    --text-black-700: #ebebeb;
+    --text-black-600: #666;
+    --code-tag: #d3d3ff;
+    --code-text: #ffded3;
+    --code-text-val: #d3fffd;
+    --code-bg: #70707033;
+    --outer-shadow: 3px 3px 18px #0000001a;
 }
 
 
@@ -100,12 +102,12 @@ a{
 }
 p{
     color: var(--text-black-700);
-    font-size: 16px;
 }
 
 h1,h2,h3,h4{
     color: var(--text-black-900);
     text-transform: capitalize;
+    font-family: var(--Anton);
 }
 h1{
     font-size: 50px;
@@ -160,7 +162,7 @@ section{
     font-weight: 400;
     color: var(--main-color);
     background-color: var(--bg-black-50);
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 5px;
@@ -312,7 +314,7 @@ section
 .section-title h2{
     display: inline-block;
     font-weight: 400;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 0;
 }
 .section-title h2:before{
@@ -383,7 +385,7 @@ header
     border: var(--border);
     border-radius: 50%;
     color: var(--text-black-900);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     cursor: pointer;
 }
 /* -------------------------- */
@@ -430,7 +432,7 @@ logo
     border-radius: 5px;
     box-shadow: var(--outer-shadow);
     transition: var(--transition);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 .links ul li a:hover{
     background-color: var(--bg-opacity);
@@ -460,7 +462,7 @@ menu btn
     border: var(--border);
     border-radius: 50%;
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     transition: var(--transition);
     position: relative;
 }
@@ -547,8 +549,7 @@ nav links
 --------------------- */
 .nav-links{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: right;
     width: 100%;
     position: relative;
 }
@@ -556,15 +557,12 @@ nav links
     padding: 12px;
 }
 .nav-links ul li .active{
-    border: var(--border);
     color: var(--main-color);
 }
 .nav-links ul li{
     display: block;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-    padding: 8px;
+    text-align: right;
+    padding: 8px 0;
 }
 .nav-links ul li:last-child{
     margin-bottom: 0;
@@ -572,11 +570,9 @@ nav links
 .nav-links ul li a{
     display: inline-block;
     font-size: 16px;
-    color: var(--text-black-600);
+    color: var(--text-black-700);
     padding: 5px 30px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: var(--transition);
+    text-transform: capitalize;
 }
 .nav-links ul li a:hover{
     background-color: var(--bg-opacity);
@@ -622,12 +618,13 @@ home
 .home-section .home-text h1{
     margin: 0 0 20px;
     padding: 5px 0;
+    line-height: 1.5;
 }
 .home-section .home-text p{
     font-weight: 300;
     font-size: 14px;
     text-transform: capitalize;
-    margin: 20px 0;
+    margin: 20px 0 30px;
 }
 .home-section .home-text h3{
     text-transform: uppercase;
@@ -650,7 +647,7 @@ home
     margin: auto;
     /* border-radius: 50%; */
     padding: 15px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: var(--border);
     position: relative;
 }
@@ -662,7 +659,7 @@ home
     right: -30px;
     padding: 1rem;
     background-color: var(--bg-opacity);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: var(--border);
 }
 .home-section .home-img .img-box .quotes p{
@@ -699,7 +696,7 @@ about
     margin: auto;
     padding: 15px;
     border-radius: 5px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: var(--border);
 }
 .about-section .about-img .img-box:before{
@@ -752,7 +749,7 @@ about
     margin: 0 4px;
     border-radius: 50%;
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: var(--border);
     transition: var(--transition);
 }
@@ -770,7 +767,7 @@ about
     max-width: 60%;
 }
 .about-section p{
-    margin: 10px 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    margin: 0 0 20px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
 .about-section h4{
     margin: 1.5rem 0 .5rem;
@@ -782,7 +779,7 @@ about
     background-color: var(--bg-opacity);
     border: var(--border);
     padding: 1rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 .about-section p.outline{
     margin-top: 2rem;
@@ -828,7 +825,7 @@ about
     color: var(--text-black-900);
     display: grid;
     place-content: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 .about-section .course-brief > div:nth-child(1):after{
     content: '1';
@@ -865,7 +862,7 @@ about
 }
 .about-section .about-tabs span{
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 .about-section .about-tabs .tab-item{
     display: inline-block;
@@ -949,7 +946,7 @@ about
     position: relative;
     box-shadow: var(--outer-shadow);
     border: var(--border);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     background-color: var(--bg-opacity);
 }
 .timeline .timeline-item-inner:before{
@@ -1002,6 +999,7 @@ about
     color: var(--text-black-600);
     font-size: 14px;
     margin: 0;
+    letter-spacing: 3px;
 }
 .timeline .timeline-item-inner p{
     margin: 15px 0 0;
@@ -1018,7 +1016,7 @@ service-section
 }
 .service-section .service-item .service-item-inner{
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     background-color: var(--bg-opacity);
 }
 
@@ -1098,7 +1096,7 @@ portfolio-section
     margin-right: .5rem;
     border-radius: 5px;
     cursor: pointer;
-    color: var(--text-black-600);
+    color: var(--text-black-700);
     text-transform: capitalize;
     font-size: 16px;
     border: var(--border);
@@ -1244,13 +1242,12 @@ portfolio-popup
 }
 .portfolio-popup .pp-title p{
     font-size: 13px;
-    font-weight: 400;
     margin: 0 0 15px;
     border-bottom: var(--border);
     padding-bottom: 10px;
     text-transform: capitalize;
     font-size: 13px;
-    font-weight: 400;
+    color: var(--text-black-600);
 }
 .portfolio-popup .pp-project-details h4{
     font-weight: 400;
@@ -1258,7 +1255,6 @@ portfolio-popup
     text-transform: capitalize;
 }
 .portfolio-popup .pp-project-details h3{
-    color: var(--text-black-700);
     margin: 0 0 5px;
     text-transform: capitalize;
 }
@@ -1272,7 +1268,6 @@ portfolio-popup
 }
 .portfolio-popup .pp-project-details .description > p{
     margin: 0 0 15px;
-    color: var(--text-black-600);
 }
 .portfolio-popup .pp-project-details .description img{
     margin: 1.2rem 0;
@@ -1338,7 +1333,7 @@ portfolio-popup
 .portfolio-popup .info ul li{
     display: block;
     margin-bottom: 10px;
-    color: var(--text-black-600);
+    color: var(--text-black-700);
     font-size: 16px;
 }
 .portfolio-popup .info ul li:last-child{
@@ -1346,7 +1341,6 @@ portfolio-popup
 }
 .portfolio-popup .info ul li span{
     font-size: small;
-    font-weight: 400;
 }
 .portfolio-popup .info ul li a{
     color: var(--text-black-600);
@@ -1390,7 +1384,7 @@ portfolio-popup
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     z-index: 1;
 }
 .portfolio-popup .pp-project-details-btn{
@@ -1404,7 +1398,7 @@ portfolio-popup
     cursor: pointer;
     padding: 10px 15px;
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: var(--border);
     transition: var(--transition);
 }
@@ -1428,7 +1422,7 @@ portfolio-popup
     cursor: pointer;
     color: var(--text-black-600);
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: var(--border);
     transition: var(--transition);
 }
@@ -1529,7 +1523,7 @@ testimonial-section
     height: 100%;
     margin-top: -40px;
     border-radius: 5px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     background-color: var(--bg-opacity);
     opacity: 0;
     transition: all .4s ease-in-out;
@@ -1622,7 +1616,7 @@ contact-section
     box-shadow: var(--outer-shadow);
     border: var(--border);
     position: relative;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     background-color: var(--bg-opacity);
 }
 .contact-section .contact-item-inner i{
@@ -1631,7 +1625,7 @@ contact-section
 }
 .contact-section .contact-item-inner span{
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--text-black-900);
     margin: 15px 10px;
@@ -1672,7 +1666,7 @@ contact-section
     color: var(--text-black-700);
     outline: none;
     transition: var(--transition);
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(5px)
 }
 .contact-section .input-group .input-control:focus{
     border-bottom: 1px solid var(--main-color);
@@ -1689,7 +1683,7 @@ contact-section
     padding: 0 15px;
 }
 .contact-section .submit-btn button{
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(5px)
 }
 .contact-section .contact-form .input-group{
     box-shadow: var(--outer-shadow);
@@ -1710,7 +1704,7 @@ footer section
     border-radius: 5px;
     border: var(--border);
     box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     text-align: center;
 }
 
@@ -2029,7 +2023,7 @@ blog section
         font-size: 28px;
     }
     h3{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .timeline:before{
@@ -2056,9 +2050,6 @@ blog section
         left: 50%;
         top: 0;
         transform: translate(-50%,-50%);
-    }
-    .timeline .timeline-item-inner{
-        padding: 10px;
     }
 
 
