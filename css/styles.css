@@ -108,7 +108,7 @@ h1,h2,h3,h4{
     color: var(--text-black-900);
     text-transform: capitalize;
     font-family: var(--Anton);
-    font-weight: 700;
+    font-weight: 600;
 }
 h1{
     font-size: 50px;
@@ -314,7 +314,6 @@ section
 }
 .section-title h2{
     display: inline-block;
-    font-weight: 400;
     text-transform: capitalize;
     margin: 0;
 }
