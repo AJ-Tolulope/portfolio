@@ -8,7 +8,7 @@ general
 :root{
     --bg-black-900: #d3d3d3;
     --bg-black-100: #eee;
-    --bg-black-50: #fff;
+    --bg-black-50: #fdfdfd;
     --bg-opacity: #e7e7e718;
     --border: 1px solid #d8d8d8;
     --text-black-900: #0a0a0a;
@@ -18,7 +18,7 @@ general
     --code-text: #070606;
     --code-text-val: #161a19;
     --code-bg: #70707033;
-    --outer-shadow: 3px 3px 18px #dfdfdf21;
+    --outer-shadow: 3px 3px 15px #22222210;
     
     --transition: all .4s ease-in-out;
 
@@ -47,7 +47,7 @@ body.light-mode{
     --code-text: #ffded3;
     --code-text-val: #d3fffd;
     --code-bg: #70707033;
-    --outer-shadow: 3px 3px 18px #0000001a;
+    --outer-shadow: 3px 3px 18px #00000057;
 }
 
 
@@ -1702,8 +1702,6 @@ footer section
     padding: 30px 10px;
     border-radius: 5px;
     border: var(--border);
-    box-shadow: var(--outer-shadow);
-    backdrop-filter: blur(5px);
     text-align: center;
 }
 
