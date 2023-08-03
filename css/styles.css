@@ -111,7 +111,7 @@ h1,h2,h3,h4{
     font-weight: 600;
 }
 h1{
-    font-size: 50px;
+    font-size: 58px;
 }
 h2{
     font-size: 30px;
@@ -624,7 +624,7 @@ home
     font-weight: 300;
     font-size: 14px;
     text-transform: capitalize;
-    margin: 20px 0 30px;
+    margin-bottom: .5rem;
 }
 .home-section .home-text h3{
     text-transform: uppercase;
@@ -1858,7 +1858,7 @@ blog section
 
 @media(max-width: 768px){
     h1{
-        font-size: 40px;
+        font-size: 48px;
     }
     
     .header .menu-btn{
@@ -2014,7 +2014,7 @@ blog section
     }
 
     .home-section .home-text h1{
-        font-size: 32px;
+        font-size: 38px;
     }
     h2{
         font-size: 28px;
