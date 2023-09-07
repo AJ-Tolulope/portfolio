@@ -174,7 +174,7 @@ if (tabsContainer) {
             if(event.target.closest(".portfolio-item-inner")){
                 const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
     
-            // get the portfolioItem index
+                // get the portfolioItem index
                 itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
     
                 if (portfolioItems[itemIndex].querySelector(".portfolio-item-img img")) {
@@ -200,9 +200,10 @@ if (tabsContainer) {
                 slideIndex = 0;
                 popupToggle();
                 popupSlideshow();
-                popupDetails() 
+                popupDetails();
+                
     
-            }
+        }
     })
     
     closeBtn.addEventListener("click", () =>{
@@ -303,14 +304,24 @@ if (tabsContainer) {
 
 
 /*---------------------- course section start ----------------------*/
-const courseItems = document.querySelectorAll('.brief');
+const readMoreBtn = document.querySelectorAll('.course-brief button');
 
-courseItems.forEach(item => {
-    item.addEventListener('click', (event)=>{
-        if (event.target.classList.contains('btn')) {
-            event.target.parentElement.querySelector('.more').classList.toggle('active');
-            event.target.querySelector('i').classList.toggle('fa-angle-up');
-            event.target.querySelector('i').classList.toggle('fa-angle-down');
+readMoreBtn.forEach(btn => {
+    btn.addEventListener('click', ()=>{
+
+        if (btn.querySelector('i').classList.contains('fa-angle-down')) {
+            console.log(btn)
+
+            btn.parentElement.querySelector('.more').classList.add('active')
+
+            btn.innerHTML = '<span>read less</span> <i class="fas fa-angle-up"></i>';
+
+        } else if (btn.querySelector('i').classList.contains('fa-angle-up')) {
+            console.log(btn)
+
+            btn.parentElement.querySelector('.more').classList.remove('active')
+
+            btn.innerHTML = '<span>read more</span> <i class="fas fa-angle-down"></i>';
         }
     })
 });
@@ -318,3 +329,4 @@ courseItems.forEach(item => {
 
 
 /*---------------------- course section end ----------------------*/
+

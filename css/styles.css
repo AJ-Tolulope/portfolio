@@ -31,7 +31,7 @@ general
 body{
     background-color: var(--bg-black-50);
     width: 100%;
-    line-height: 1.6;
+    line-height: 1.4;
 
 }
 body.light-mode{
@@ -1779,9 +1779,7 @@ blog section
     border-bottom: var(--border);
 }
 .blog-section .blog p{
-    margin-top: 1rem;
-}
-.blog-section .blog p span{
+    margin-bottom: .5rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -1795,19 +1793,23 @@ blog section
 .blog-section .blog a{
     color: var(--main-color);
 }
+.blog-section .blog h3,
 .blog-section .blog h2{
-    margin-top: 2rem;
+    margin-top: .5rem;
+}
+.blog-section .author-date{
+    margin: .5rem 0 1.5rem;
 }
 .blog-section .author-date span{
     color: var(--text-black-600);
     font-family: 'Poppins';
     font-size: 13px;
     word-spacing: 5px;
-    margin: 0 .5rem 1rem 0;
+    margin-right: .5rem;
 }
 
-.blog-section .recent-post h2{
-    margin-bottom: 1rem;
+.blog-section .recent-post h3{
+    margin-bottom: .5rem;
 }
 .blog-section .recent-post .post{
     display: grid;

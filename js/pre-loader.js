@@ -1,10 +1,9 @@
 
 /* ============================= preloader start =============================*/ 
-preloader();
-function preloader() {
+(function preloader() {
     // preloader
     setTimeout(() =>{
         document.querySelector(".preloader").classList.add("fade-out");
-    }, 4000)
-}
+    }, 3000)
+})();
 /* ============================= preloader end =============================*/ 

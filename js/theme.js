@@ -9,7 +9,7 @@ var colorCounter = 0;
 
 setInterval(() => {
     setColorStyle(colorCounter);
-}, 180000);
+}, 120000);
 
 function setColorStyle(counter) {
     if(counter <= 4){
@@ -64,14 +64,12 @@ themeIcon.addEventListener('click', ()=>{
 
 function updateIcon(){
     if (icon.classList.contains('fa-moon')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+        icon.classList.replace('fa-moon', 'fa-sun')
 
         localStorage.setItem('icon', 'fa-sun')
         localStorage.setItem('themeMode', 'dark')
     } else {
-        icon.classList.add('fa-moon');
-        icon.classList.remove('fa-sun');
+        icon.classList.replace('fa-sun', 'fa-moon')
 
         localStorage.setItem('icon', 'fa-moon')
         localStorage.setItem('themeMode', 'light-mode')
