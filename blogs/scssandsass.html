@@ -1,161 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SCSS and Sass</title>
-    <link rel="shortcut icon" href="../assets/profile-pic.png" type="image/vnd.microsoft.icon">
+    <link
+      rel="shortcut icon"
+      href="../assets/profile-pic.png"
+      type="image/vnd.microsoft.icon"
+    />
 
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!--==================================== font awesome ====================================-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
 
-    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/all.css" />
 
     <!--==================================== main css ====================================-->
-    <link rel="stylesheet" href="../css/styles.css">
-
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
 
     <!--==================================== default color colorswitch ====================================-->
-    <link rel="stylesheet" href="../css/colorswitch/color-1.css">
+    <link rel="stylesheet" href="../css/colorswitch/color-1.css" />
 
     <!--==================================== style switcher ====================================-->
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-1" href="../css/colorswitch/color-1.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-2" href="../css/colorswitch/color-2.css" >
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-3" href="../css/colorswitch/color-3.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-4" href="../css/colorswitch/color-4.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="../css/colorswitch/color-5.css" disabled>
-
-
-</head>
-<body >
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-1"
+      href="../css/colorswitch/color-1.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-2"
+      href="../css/colorswitch/color-2.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-3"
+      href="../css/colorswitch/color-3.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-4"
+      href="../css/colorswitch/color-4.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      class="alternate-style"
+      title="color-5"
+      href="../css/colorswitch/color-5.css"
+      disabled
+    />
+  </head>
+  <body>
     <header>
-        <div class="blog-logo">
-            <a href="../index.html"><img src="../assets/blogs/logo.png" alt="logo"></a>
-        </div>
+      <div class="blog-logo">
+        <a href="../index.html"
+          ><img src="../assets/blogs/logo.png" alt="logo"
+        /></a>
+      </div>
     </header>
 
-
     <div class="container blog-section grid">
-        <div class="blog">
-            <img src="../assets/blogs/post-one.jpeg" alt="blog post">
-            <h2>Decoding the 'SCSS' vs. 'Sass' conundrum: Unvailing the surprising different</h2>
-            <div class="author-date">
-                <span class="author"><i class="fas fa-user"></i> thewebedits</span>
-                <span class="date"><i class="fas fa-calendar"></i> 1st Jul 2023</span>
-            </div>
-            <p>Have you ever had one of those moments where you think you know something inside out, only to discover that you've been living a lie? Well, my dear fellow developers, I recently had one of those moments, and it was nothing short of mind-blowing. I can't believe I just found out that 'SCSS' and 'Sass' are completely different beasts!</p>
-
-            <p>Let me set the stage for you. I've been in the web development game for quite some time now. I'm comfortable with HTML, CSS, and JavaScript, and I thought I had a pretty good handle on the CSS preprocessing world. After all, I'd been using 'Sass' for years—or so I thought.</p>
-            
-            <p>It all started innocently enough. I was working on a new project and decided to use 'Sass' to streamline my CSS workflow. As I began setting up my environment, I noticed something peculiar: the file extensions were .scss instead of .sass. My first thought was, "Wait, did I miss something?" So, naturally, I did what any curious developer would do—I Googled it.</p>
-
-            <p>As it turns out, 'Sass' and 'SCSS' are two distinct syntaxes within the same preprocessor family. Now, you might be thinking, "But aren't they essentially the same thing?" Well, yes and no. Here's the scoop:</p>
-
-            <p>Sass (Syntactically Awesome Style Sheets):</p>
-            <ul>
-                <li>'Sass' uses an indentation-based syntax, similar to Python.</li>
-                <li>It's super minimalistic and doesn't require curly braces or semicolons.</li>
-                <li>Variables, mixins, and functions are declared without the need for brackets.</li>
-                <li>Perfect for those who appreciate a clean and concise coding style.</li>
-            </ul>
-            <p>SCSS (Sassy CSS):</p>
-            <ul>
-                <li>'SCSS,' on the other hand, employs a more traditional CSS-like syntax.</li>
-                <li>You'll find curly braces, semicolons, and everything else you're used to in regular CSS.</li>
-                <li>If you're transitioning from CSS to 'SCSS,' the learning curve is practically non-existent.</li>
-            </ul>
-
-            <p>So, why the two flavors of 'Sass'? Well, it all comes down to personal preference and project requirements. 'Sass' purists adore the elegance of the indented syntax, while those migrating from vanilla CSS may find 'SCSS' to be a smoother transition.</p>
-
-            <p>As I delved deeper into the world of 'Sass' and 'SCSS,' I realized that my choice of syntax could impact my development process. Suddenly, the decision of whether to use 'Sass' or 'SCSS' became more nuanced than I had ever imagined.</p>
-
-            <p>In the end, both 'Sass' and 'SCSS' have their merits. Whether you opt for the minimalist elegance of 'Sass' or the familiarity of 'SCSS,' what truly matters is the efficiency and maintainability of your code. So, don't sweat the small stuff—choose the syntax that suits your style and gets the job done.</p>
-
-            <p>So, there you have it, my fellow developers. The shocking revelation that 'SCSS' and 'Sass' are not the same has left me both amused and enlightened. It just goes to show that the world of web development is full of surprises, and there's always something new to learn—even if it's as simple as distinguishing between two similar-sounding acronyms.</p>
-
-            <p>Remember, it's not about which one is better; it's about using the right tool for the right job. So, whether you're Team 'Sass' or Team 'SCSS,' keep on coding and stay open to the delightful quirks and discoveries of our ever-evolving field. Happy coding!</p>
+      <div class="blog">
+        <img src="../assets/blogs/post-one.jpeg" alt="blog post" />
+        <h2>
+          Decoding the 'SCSS' vs. 'Sass' conundrum: Unvailing the surprising
+          different
+        </h2>
+        <div class="author-date">
+          <span class="author"><i class="fas fa-user"></i> thewebedits</span>
+          <span class="date"><i class="fas fa-calendar"></i> 1st Jul 2023</span>
         </div>
+        <p>
+          Have you ever had one of those moments where you think you know
+          something inside out, only to discover that you've been living a lie?
+          Well, my dear fellow developers, I recently had one of those moments,
+          and it was nothing short of mind-blowing. I can't believe I just found
+          out that 'SCSS' and 'Sass' are completely different beasts!
+        </p>
 
-        <div class="recent-post">
-            <h2>recent post</h2>
-            <div class="posts">
-                
-                <div class="post">
-                    <div class="post-img">
-                        <a href="./takingthefirststep.html">
-                           <img src="../assets/blogs/post-two.jpeg" alt="post-image">
-                        </a>
-                    </div>
-                    <div class="post-info">
-                        <div class="post-tags">
-                            <span>beginner</span>
-                            <span>web development</span>
-                        </div>
-                        <a href="./takingthefirststep.html">
-                           <h3 class="post-title">Taking The First Step : Frontend Development Journey</h3>
-                        </a>
-                        <div class="author-date">
-                            <span class="author"><i class="fas fa-user"></i> thewebedits</span>
-                            <span class="date"><i class="fas fa-calendar"></i> 1st Jul 2023</span>
-                        </div>
-                    </div>
-                </div>
+        <p>
+          Let me set the stage for you. I've been in the web development game
+          for quite some time now. I'm comfortable with HTML, CSS, and
+          JavaScript, and I thought I had a pretty good handle on the CSS
+          preprocessing world. After all, I'd been using 'Sass' for years—or so
+          I thought.
+        </p>
 
-                <div class="post">
-                    <div class="post-img">
-                        <a href="./unmasking-the-web-development-dilemma.html">
-                           <img src="../assets/blogs/post-three.jpeg" alt="post-image">
-                        </a>
-                    </div>
-                    <div class="post-info">
-                        <div class="post-tags">
-                            <span>beginner</span>
-                            <span>web development</span>
-                        </div>
-                        <a href="./unmasking-the-web-development-dilemma.html">
-                            <h3 class="post-title">Unmasking the web development dilemma: free VS. paid courses</h3>
-                        </a>
-                        <div class="author-date">
-                            <span class="author"><i class="fas fa-user"></i> thewebedits</span>
-                            <span class="date"><i class="fas fa-calendar"></i> 9th Sept 2023</span>
-                        </div>
-                    </div> 
-                </div>
+        <p>
+          It all started innocently enough. I was working on a new project and
+          decided to use 'Sass' to streamline my CSS workflow. As I began
+          setting up my environment, I noticed something peculiar: the file
+          extensions were .scss instead of .sass. My first thought was, "Wait,
+          did I miss something?" So, naturally, I did what any curious developer
+          would do—I Googled it.
+        </p>
+
+        <p>
+          As it turns out, 'Sass' and 'SCSS' are two distinct syntaxes within
+          the same preprocessor family. Now, you might be thinking, "But aren't
+          they essentially the same thing?" Well, yes and no. Here's the scoop:
+        </p>
+
+        <p>Sass (Syntactically Awesome Style Sheets):</p>
+        <ul>
+          <li>'Sass' uses an indentation-based syntax, similar to Python.</li>
+          <li>
+            It's super minimalistic and doesn't require curly braces or
+            semicolons.
+          </li>
+          <li>
+            Variables, mixins, and functions are declared without the need for
+            brackets.
+          </li>
+          <li>
+            Perfect for those who appreciate a clean and concise coding style.
+          </li>
+        </ul>
+        <p>SCSS (Sassy CSS):</p>
+        <ul>
+          <li>
+            'SCSS,' on the other hand, employs a more traditional CSS-like
+            syntax.
+          </li>
+          <li>
+            You'll find curly braces, semicolons, and everything else you're
+            used to in regular CSS.
+          </li>
+          <li>
+            If you're transitioning from CSS to 'SCSS,' the learning curve is
+            practically non-existent.
+          </li>
+        </ul>
+
+        <p>
+          So, why the two flavors of 'Sass'? Well, it all comes down to personal
+          preference and project requirements. 'Sass' purists adore the elegance
+          of the indented syntax, while those migrating from vanilla CSS may
+          find 'SCSS' to be a smoother transition.
+        </p>
+
+        <p>
+          As I delved deeper into the world of 'Sass' and 'SCSS,' I realized
+          that my choice of syntax could impact my development process.
+          Suddenly, the decision of whether to use 'Sass' or 'SCSS' became more
+          nuanced than I had ever imagined.
+        </p>
+
+        <p>
+          In the end, both 'Sass' and 'SCSS' have their merits. Whether you opt
+          for the minimalist elegance of 'Sass' or the familiarity of 'SCSS,'
+          what truly matters is the efficiency and maintainability of your code.
+          So, don't sweat the small stuff—choose the syntax that suits your
+          style and gets the job done.
+        </p>
+
+        <p>
+          So, there you have it, my fellow developers. The shocking revelation
+          that 'SCSS' and 'Sass' are not the same has left me both amused and
+          enlightened. It just goes to show that the world of web development is
+          full of surprises, and there's always something new to learn—even if
+          it's as simple as distinguishing between two similar-sounding
+          acronyms.
+        </p>
+
+        <p>
+          Remember, it's not about which one is better; it's about using the
+          right tool for the right job. So, whether you're Team 'Sass' or Team
+          'SCSS,' keep on coding and stay open to the delightful quirks and
+          discoveries of our ever-evolving field. Happy coding!
+        </p>
+      </div>
+
+      <div class="recent-post">
+        <h3>recent post</h3>
+        <div class="posts">
+          <div class="post">
+            <div class="post-img">
+              <a href="./takingthefirststep.html">
+                <img src="../assets/blogs/post-two.jpeg" alt="post-image" />
+              </a>
             </div>
+            <div class="post-info">
+              <div class="post-tags">
+                <span>beginner</span>
+                <span>web development</span>
+              </div>
+              <a href="./takingthefirststep.html">
+                <h3 class="post-title">
+                  Taking The First Step : Frontend Development Journey
+                </h3>
+              </a>
+              <div class="author-date">
+                <span class="author"
+                  ><i class="fas fa-user"></i> thewebedits</span
+                >
+                <span class="date"
+                  ><i class="fas fa-calendar"></i> 1st Jul 2023</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="post-img">
+              <a href="./unmasking-the-web-development-dilemma.html">
+                <img src="../assets/blogs/post-three.jpeg" alt="post-image" />
+              </a>
+            </div>
+            <div class="post-info">
+              <div class="post-tags">
+                <span>beginner</span>
+                <span>web development</span>
+              </div>
+              <a href="./unmasking-the-web-development-dilemma.html">
+                <h3 class="post-title">
+                  Unmasking the web development dilemma: free VS. paid courses
+                </h3>
+              </a>
+              <div class="author-date">
+                <span class="author"
+                  ><i class="fas fa-user"></i> thewebedits</span
+                >
+                <span class="date"
+                  ><i class="fas fa-calendar"></i> 9th Sept 2023</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-
 
     <!--==================================== footer section start ====================================-->
     <section class="footer-section section" id="footer">
-        <div class="container">
-           <h2>quick links</h2>
-           <ul>
-               <li><a href="../index.html">Home</a></li>
-               <li><a href="../blogs.html">Blog</a></li>
-               <li><a href="../webedit_course.html">Webedit-Course</a></li>
-            </ul>
-    
-            <div class="copyright">
-                <p>&copy <span class="year"></span>, contactthewebedits@gmail.com</p>
-                <p>Made with <i class="fas fa-heart" style="color: red;"></i> by aj.tolulope Follow | <a href="https://instagram.com/thewebedits">@thewebedits</a></p>
-            </div>
+      <div class="container">
+        <h2>quick links</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blogs.html">Blog</a></li>
+          <li><a href="../webedit_course.html">Webedit-Course</a></li>
+        </ul>
+
+        <div class="copyright">
+          <p>&copy <span class="year"></span>, contactthewebedits@gmail.com</p>
+          <p>
+            Made with <i class="fas fa-heart" style="color: red"></i> by
+            aj.tolulope Follow |
+            <a href="https://instagram.com/thewebedits">@thewebedits</a>
+          </p>
         </div>
+      </div>
     </section>
     <!--==================================== footer section end ====================================-->
 
-
-  
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
- </body>
- </html>
- 
+  </body>
+</html>

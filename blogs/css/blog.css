@@ -1,0 +1,135 @@
+/* -------------
+blog section
+---------------*/
+.blog-logo {
+  border-bottom: var(--border);
+  margin-bottom: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.blog-logo img {
+  margin: 0 auto;
+  height: 80px;
+  width: 200px;
+  object-fit: cover;
+}
+.blog-section.grid {
+  grid-template-columns: 65% 35%;
+  gap: 2rem;
+}
+.blog-section .categories {
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: var(--border);
+}
+.blog-section .btn.category {
+  margin: 0.3rem 0.2rem;
+  font-size: 12px;
+}
+
+.blog-section .sub {
+  font-weight: 600;
+  margin-top: 3.5rem;
+}
+
+.blog-section ul,
+.blog-section ol {
+  list-style-type: circle;
+  margin-left: 1.3rem;
+  margin-bottom: 3.1rem;
+}
+.blog-section ul li,
+.blog-section ol li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-section .blog {
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: var(--border);
+}
+.blog-section .blogs p {
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.blog-section .blog p {
+  margin-bottom: 1rem;
+}
+.blog-section .blog img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.blog-section .blog a {
+  color: var(--main-color);
+}
+.blog-section .blog h3,
+.blog-section .blog h2 {
+  margin-top: 0.5rem;
+}
+.blog-section .author-date {
+  margin: 0.5rem 0 1.5rem;
+}
+.blog-section .author-date span {
+  color: var(--text-black-600);
+  font-family: "Poppins";
+  font-size: 13px;
+  word-spacing: 5px;
+  margin-right: 0.5rem;
+}
+
+.blog-section .recent-post h3 {
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.blog-section .recent-post .post {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  border-bottom: var(--border);
+}
+.blog-section .recent-post .post .post-img {
+  height: 150px;
+}
+.blog-section .recent-post .post .post-img img {
+  height: 100%;
+  object-fit: cover;
+}
+.blog-section .recent-post .post .post-info .post-tags {
+  margin-bottom: 5px;
+}
+.blog-section .recent-post .post .post-info .post-tags span {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.blog-section .recent-post .post .post-info .author-date span {
+  font-family: var(--Anton);
+  font-size: 12px;
+}
+/* ---------------------------------------------- */
+
+@media (max-width: 768px) {
+  .blog-section.grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section .recent-post .post {
+    grid-template-columns: 1fr;
+  }
+}
