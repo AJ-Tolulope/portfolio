@@ -43,7 +43,11 @@ blog section
 .blog-section ol li {
   margin-bottom: 0.5rem;
 }
-
+.blog-section .blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
 .blog-section .blog {
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
@@ -126,10 +130,16 @@ blog section
   .blog-section.grid {
     grid-template-columns: 1fr;
   }
+  .blog-section .blogs {
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .blog-section .recent-post .post {
+    grid-template-columns: 1fr;
+  }
+  .blog-section .blogs {
     grid-template-columns: 1fr;
   }
 }
