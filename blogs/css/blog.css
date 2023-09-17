@@ -105,6 +105,7 @@ blog section
 }
 .blog-section .recent-post .post .post-img img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .blog-section .recent-post .post .post-info .post-tags {
