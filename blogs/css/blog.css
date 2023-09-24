@@ -32,7 +32,16 @@ blog section
   font-weight: 600;
   margin-top: 3.5rem;
 }
-
+.blog-section .bonus {
+  margin-top: 2rem;
+  padding: 1rem 0.5rem 0.5rem;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  background-color: var(--bg-black-900);
+}
+.blog-section .bonus .sub {
+  margin-top: 0;
+}
 .blog-section ul,
 .blog-section ol {
   list-style-type: circle;
@@ -43,6 +52,7 @@ blog section
 .blog-section ol li {
   margin-bottom: 0.5rem;
 }
+
 .blog-section .blogs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -80,8 +90,8 @@ blog section
 }
 .blog-section .author-date span {
   color: var(--text-black-600);
-  font-family: "Poppins";
-  font-size: 13px;
+  font-family: var(--Anton);
+  font-size: 14px;
   word-spacing: 5px;
   margin-right: 0.5rem;
 }
