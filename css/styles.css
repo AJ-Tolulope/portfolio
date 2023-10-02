@@ -878,6 +878,7 @@ about
   flex: 0 0 100%;
   max-width: 100%;
   display: none;
+  padding-block: 80px;
 }
 .tab-content.active {
   display: block;
@@ -897,10 +898,7 @@ about
 /* ----------------------------
     experience  education
 ----------------------------- */
-.about-section .education,
-.about-section .experience {
-  padding-bottom: 80px;
-}
+
 .timeline {
   flex: 0 0 100%;
   max-width: 100%;
@@ -995,7 +993,6 @@ service-section
 ----------------------- */
 .service-section {
   padding: 80px 0 80px;
-  min-height: 100vh;
   position: relative;
 }
 .service-section .service-item .service-item-inner {
@@ -1471,7 +1468,6 @@ testimonial-section
 ------------------------------- */
 .testimonial-section {
   padding: 80px 0 80px;
-  min-height: 100vh;
   position: relative;
 }
 .testimonial-section .testi-box {
@@ -1576,7 +1572,6 @@ contact-section
 
 .contact-section {
   padding: 80px 0 80px;
-  min-height: 100vh;
   position: relative;
 }
 .contact-section .contact-item {
