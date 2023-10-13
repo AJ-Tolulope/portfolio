@@ -6,19 +6,19 @@ general
 
 /* ---------------- custom variables --------------*/
 :root {
-  --bg-black-900: #d3d3d3;
-  --bg-black-100: #eee;
-  --bg-black-50: #fdfdfd;
-  --bg-opacity: #e7e7e718;
-  --border: 1px solid #d8d8d8;
-  --text-black-900: #0a0a0a;
-  --text-black-700: #242424;
-  --text-black-600: #444444;
-  --code-tag: #08080a;
-  --code-text: #070606;
-  --code-text-val: #161a19;
+  --bg-black-900: #3b3b3b;
+  --bg-black-100: #292929;
+  --bg-black-50: #0b0b0c;
+  --bg-opacity: #34353a18;
+  --border: 1px solid #292929;
+  --text-black-900: #fff;
+  --text-black-700: #ebebeb;
+  --text-black-600: #666;
+  --code-tag: #d3d3ff;
+  --code-text: #ffded3;
+  --code-text-val: #d3fffd;
   --code-bg: #70707033;
-  --outer-shadow: 3px 3px 15px #a7a7a710;
+  --outer-shadow: 3px 3px 18px #00000028;
 
   --transition: all 0.4s ease-in-out;
 
@@ -32,19 +32,19 @@ body {
   line-height: 1.4;
 }
 body.light-mode {
-  --bg-black-900: #3b3b3b;
-  --bg-black-100: #292929;
-  --bg-black-50: #0b0b0c;
-  --bg-opacity: #34353a18;
-  --border: 1px solid #292929;
-  --text-black-900: #fff;
-  --text-black-700: #ebebeb;
-  --text-black-600: #666;
-  --code-tag: #d3d3ff;
-  --code-text: #ffded3;
-  --code-text-val: #d3fffd;
+  --bg-black-900: #d3d3d3;
+  --bg-black-100: #eee;
+  --bg-black-50: #fdfdfd;
+  --bg-opacity: #e7e7e718;
+  --border: 1px solid #d8d8d8;
+  --text-black-900: #0a0a0a;
+  --text-black-700: #242424;
+  --text-black-600: #444444;
+  --code-tag: #08080a;
+  --code-text: #070606;
+  --code-text-val: #161a19;
   --code-bg: #70707033;
-  --outer-shadow: 3px 3px 18px #00000057;
+  --outer-shadow: 3px 3px 15px #a7a7a710;
 }
 
 body.hidden-scrolling {
