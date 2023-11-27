@@ -8,20 +8,20 @@ var colorCounter = 0;
 
 setInterval(() => {
   setColorStyle(colorCounter);
-}, 30000);
+}, 20000);
 
 function setColorStyle(counter) {
   if (counter <= 4) {
     const color = colorStyle[counter];
 
     // loop through all alternativeStyles (link tag)
-    alternativeStyles.forEach((style) => {
-      if (color === style.getAttribute("title")) {
+    alternativeStyles.forEach((tag) => {
+      if (color === tag.getAttribute("title")) {
         // disable if the attribute matches the color
-        style.removeAttribute("disabled");
+        tag.removeAttribute("disabled");
       } else {
         // set disabled attribute to the rest
-        style.setAttribute("disabled", "true");
+        tag.setAttribute("disabled", "true");
       }
     });
 
