@@ -5,24 +5,24 @@ AOS.init({
 });
 
 /* ------------------------- gsap anination start -------------------- */
-// gsap.registerPlugin(scrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// const animate = document.querySelector(".animate");
+const animate = document.querySelectorAll(".animate");
 
-// gsap.forEach((el) => {
-//   gsap.from(el, {
-//     y: 50,
-//     opacity: 0.4,
-//     stagger: 0.2,
-//     duration: 1,
-//     scrollTrigger: {
-//       trigger: el,
-//       start: "top 80%",
-//       end: "+=200",
-//       scrub: true,
-//     },
-//   });
-// });
+animate.forEach((el) => {
+  gsap.from(el, {
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 2,
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+      end: "+=200",
+      scrub: true,
+    },
+  });
+});
 /* ------------------------- gsap anination end -------------------- */
 
 /* ------------------------- progress bar start -------------------- */
