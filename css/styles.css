@@ -37,9 +37,9 @@ body.light-mode {
   --bg-black-50: #fdfdfd;
   --bg-opacity: #e7e7e718;
   --border: 1px solid #d8d8d8;
-  --text-black-900: #0a0a0a;
-  --text-black-700: #242424;
-  --text-black-600: #444444;
+  --text-black-900: #222222;
+  --text-black-700: #383838;
+  --text-black-600: #575757;
   --code-tag: #08080a;
   --code-text: #070606;
   --code-text-val: #161a19;
