@@ -5,23 +5,25 @@ AOS.init({
 });
 
 /* ------------------------- gsap anination start -------------------- */
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
 
-const animate = document.querySelectorAll(".animate");
+var tl = gsap.timeline(),
+  mySplitText = new SplitText("#quote", { type: "words,chars" }),
+  chars = mySplitText.chars; //an array of all the divs that wrap each character
 
-animate.forEach((el) => {
-  gsap.from(el, {
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    duration: 2,
-    scrollTrigger: {
-      trigger: el,
-      start: "top 80%",
-      end: "+=200",
-      scrub: true,
-    },
-  });
+gsap.set("#quote", { perspective: 400 });
+
+console.log(chars);
+
+tl.from(chars, {
+  duration: 0.8,
+  opacity: 0,
+  scale: 0,
+  y: 80,
+  rotationX: 180,
+  transformOrigin: "0% 50% -50",
+  ease: "back",
+  stagger: 0.01
 });
 /* ------------------------- gsap anination end -------------------- */
 
