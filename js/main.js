@@ -8,10 +8,10 @@ AOS.init({
 gsap.registerPlugin(SplitText);
 
 var tl = gsap.timeline(),
-  mySplitText = new SplitText("#quote", { type: "words,chars" }),
+  mySplitText = new SplitText("#text", { type: "words,chars" }),
   chars = mySplitText.chars; //an array of all the divs that wrap each character
 
-gsap.set("#quote", { perspective: 400 });
+gsap.set("#text", { perspective: 400 });
 
 console.log(chars);
 
