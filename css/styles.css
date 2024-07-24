@@ -1005,12 +1005,12 @@ about
 .timeline .timeline-item:nth-child(even) .icon {
   left: -70px;
 }
-.timeline .timeline-item-inner span {
+/* .timeline .timeline-item-inner span {
   color: var(--main-color);
   display: block;
   margin: 0 0 10px;
   text-transform: capitalize;
-}
+} */
 .timeline .timeline-item-inner h3 {
   margin: 0 0 1rem;
   padding-bottom: 1rem;
@@ -1753,6 +1753,8 @@ footer section
   font-size: 12px;
 }
 /* ---------------------------------------- */
+
+
 
 @media (max-width: 900px) {
   .about-section .about-info,
