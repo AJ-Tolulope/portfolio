@@ -154,13 +154,13 @@
     
     <div class="container">
         <div class="row full-screen justify-content-between align-items">
-            <div class="home-text">
+            <div class="home-text" data-aos="fade-up" data-aos-delay="300">
                 <p>Welcome to thewebedits</p>
                 <p class="typing-text"></p>
                 <h1>Where You Get Your <span style="color: var(--main-color); font-family: var(--Anton);">Website</span> Creatively Designed</h1>
                 <a href="#portfolio" class="btn">View Projects</a>
             </div>
-            <div class="home-img">
+            <div class="home-img" data-aos="fade-up" data-aos-delay="700">
                 <div class="img-box">
                     <img src="./assets/progressive.svg" alt="profile-pic">
 
@@ -208,7 +208,7 @@
             </div>
             <div class="row">
                 <div class="about-img">
-                    <div class="img-box" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="img-box" data-aos="fade-up" data-aos-delay="300">
                         <img src="./assets/proud_coder.svg">
                     </div>
                     <!-- social links start-->
@@ -221,9 +221,9 @@
                     <!-- social links end-->
                 </div>
                 <div class="about-info">
-                    <p id="text"><span style="font-size: 48px; color: var(--main-color); line-height: .5;">s</span>pecializing in creatively designed and developed websites that meet your unique needs. I understand that creating a website for your business can be overwhelming sometimes, especially if you're new to web design. Thinking of how to build a website and also how to run the business can be a rough route you don't want to take. That's where I come in, here to simplify the process for you.</p>
-                    <p id="text">Hi, my name is Ajala Tolulope, very passionate about delivering exceptional website solutions. With expertise in custom website creation, including portfolios, blogs, and landing pages, I ensures that each website is brought to live in order to reflect the vision and goals of your business. Additionally, I offer custom website design services that are tailored to the specific needs of your business.</p>
-                    <p id="text">My goal is to bring your ideas to life, creating an outstanding online presence for your business/brand. Get in touch today and let's collaborate to make your website dreams a reality.</p>
+                    <p class="reveal-text"><span style="font-size: 48px; color: var(--main-color); line-height: .5;">s</span>pecializing in creatively designed and developed websites that meet your unique needs. I understand that creating a website for your business can be overwhelming sometimes, especially if you're new to web design. Thinking of how to build a website and also how to run the business can be a rough route you don't want to take. That's where I come in, here to simplify the process for you.</p>
+                    <p class="reveal-text">Hi, my name is Ajala Tolulope, very passionate about delivering exceptional website solutions. With expertise in custom website creation, including portfolios, blogs, and landing pages, I ensures that each website is brought to live in order to reflect the vision and goals of your business. Additionally, I offer custom website design services that are tailored to the specific needs of your business.</p>
+                    <p class="reveal-text">My goal is to bring your ideas to life, creating an outstanding online presence for your business/brand. Get in touch today and let's collaborate to make your website dreams a reality.</p>
                 </div>
             </div>
             
@@ -1036,12 +1036,46 @@
     
    <script src="./js/theme.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-   <!-- <script src="./js/aos.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://unpkg.com/split-type"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
    <script src="./js/autotype.js"></script>
    <script src="./js/main.js"></script>
    <script src="./js/testi.js"></script>
    <script src="./js/mail.js"></script>
+
+
+   <script>
+
+    /* ------------------------- gsap anination start -------------------- */
+gsap.registerPlugin(ScrollTrigger);
+
+const splitTypes = document.querySelectorAll(".reveal-text");
+
+splitTypes.forEach(char => {
+    console.log(char);
+});
+
+splitTypes.forEach((char, i) => {
+    const  text = new SplitTypes(char, {types: 'chars'})
+});
+/* ------------------------- gsap anination end -------------------- */
+
+// LENIS
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function rat(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+   </script>
 </body>
 </html>
 

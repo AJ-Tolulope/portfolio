@@ -10,7 +10,7 @@ general
   --bg-opacity: #34353a18;
   --border: 1px solid #292929;
   --border-radius: 5px;
-  --text-black-900: #fff;
+  --text-black-900: #f1f1f1;
   --text-black-700: #adadad;
   --text-black-600: #666;
   --code-tag: #d3d3ff;
@@ -30,6 +30,7 @@ body {
   width: 100%;
   line-height: 1.3;
   letter-spacing: 2px;
+  scroll-behavior: smooth;
 }
 body.light-mode {
   --bg-black-900: #d3d3d3;
@@ -1105,6 +1106,9 @@ portfolio-section
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
+}
+.portfolio-section .portfolio-filter::-webkit-scrollbar {
+  display: none;
 }
 .portfolio-section .filter-item {
   display: inline-block;
