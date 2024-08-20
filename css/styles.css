@@ -794,7 +794,7 @@ about
 .about-section p {
   margin: 0 0 20px;
 }
-.about-section h4 {
+.about-section h3 {
   margin: 1.5rem 0 0.5rem;
 }
 .about-section .course-brief > div,
@@ -934,7 +934,7 @@ about
 }
 
 /* ----------------------------
-    experience  education
+    tools  education
 ----------------------------- */
 
 .timeline {
