@@ -7,12 +7,14 @@ general
   --bg-black-900: #3b3b3b;
   --bg-black-100: #292929;
   --bg-black-50: #0b0b0c;
-  --bg-opacity: #34353a18;
+  --bg-opacity: #3b3c3f91;
   --border: 1px solid #292929;
-  --border-radius: 5px;
+  --border-radius: 18px;
+  --border-radius-r: 32px;
+  --blur: blur(10px);
   --text-black-900: #f1f1f1;
-  --text-black-700: #adadad;
-  --text-black-600: #666;
+  --text-black-700: #c9c1c1;
+  --text-black-600: #a0a0a0;
   --code-tag: #d3d3ff;
   --code-text: #ffded3;
   --code-text-val: #d3fffd;
@@ -28,8 +30,8 @@ general
 body {
   background-color: var(--bg-black-50);
   width: 100%;
-  line-height: 1.4;
-  letter-spacing: 2px;
+  line-height: 1.5;
+  font-weight: 500;
   scroll-behavior: smooth;
 }
 body.light-mode {
@@ -393,16 +395,20 @@ header
  ------------- */
 .header {
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
-  padding-top: 30px;
-  z-index: 900;
+
+  z-index: 999;
 }
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius-r);
+  backdrop-filter: var(--blur);
 }
 
 .header .theme {
@@ -413,7 +419,6 @@ header
   border: var(--border);
   border-radius: 50%;
   color: var(--text-black-900);
-  backdrop-filter: blur(5px);
   cursor: pointer;
 }
 /* -------------------------- */
@@ -453,20 +458,11 @@ logo
   letter-spacing: 2px;
 
   color: var(--text-black-900);
-  padding: 5px 10px;
   margin: 0px 10px;
+  padding: 5px;
   text-transform: capitalize;
-  border: var(--border);
-  border-radius: var(--border-radius);
   box-shadow: var(--outer-shadow);
   transition: var(--transition);
-  backdrop-filter: blur(5px);
-}
-.links ul li a:hover {
-  background-color: var(--bg-opacity);
-}
-.links ul li a:after {
-  border-radius: var(--border-radius);
 }
 .links ul li .active {
   color: var(--main-color);
@@ -490,7 +486,6 @@ menu btn
   border: var(--border);
   border-radius: 50%;
   box-shadow: var(--outer-shadow);
-  backdrop-filter: blur(5px);
   transition: var(--transition);
   position: relative;
 }
@@ -673,7 +668,7 @@ home
   max-width: 500px;
   display: block;
   margin: auto;
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
   border: var(--border);
   border-radius: var(--border-radius);
   position: relative;
@@ -686,8 +681,10 @@ home
   right: -30px;
   padding: 1rem;
   background-color: var(--bg-opacity);
-  backdrop-filter: blur(5px);
-  border: var(--border);
+  backdrop-filter: var(--blur);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  z-index: 1;
 }
 .home-section .home-img .img-box .quotes p {
   font-size: 10px;
@@ -709,7 +706,7 @@ about
   position: relative;
 }
 
-.about-section .row{
+.about-section .row {
   align-items: center;
 }
 
@@ -725,7 +722,7 @@ about
   margin: auto;
   padding: 15px;
   border-radius: var(--border-radius);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
   border: var(--border);
 }
 .about-section .about-img .img-box:before {
@@ -778,7 +775,7 @@ about
   margin: 0 4px;
   border-radius: 50%;
   box-shadow: var(--outer-shadow);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
   border: var(--border);
   transition: var(--transition);
 }
@@ -794,6 +791,27 @@ about
 .about-section .about-info {
   flex: 0 0 60%;
   max-width: 60%;
+  position: relative;
+}
+.about-section .about-info:before {
+  position: absolute;
+  content: "";
+  top: -40px;
+  left: 0;
+  width: 80%;
+  height: 3px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  animation: linebounce 3s ease infinite;
+}
+@keyframes linebounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
 }
 .about-section p {
   margin: 0 0 20px;
@@ -808,7 +826,7 @@ about
   background-color: var(--bg-opacity);
   border: var(--border);
   padding: 1rem;
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
 }
 .about-section p.outline {
   margin-top: 2rem;
@@ -854,7 +872,7 @@ about
   color: var(--text-black-900);
   display: grid;
   place-content: center;
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
 }
 .about-section .course-brief > div:nth-child(1):after {
   content: "1";
@@ -885,7 +903,7 @@ about
 }
 .about-section .about-tabs span {
   box-shadow: var(--outer-shadow);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
 }
 .about-section .about-tabs .tab-item {
   display: inline-block;
@@ -946,7 +964,6 @@ about
   height: 100%;
   left: 50%;
   top: 0;
-  background-color: var(--bg-black-100);
   position: absolute;
 }
 .timeline .timeline-item {
@@ -966,15 +983,13 @@ about
   position: relative;
   box-shadow: var(--outer-shadow);
   border: var(--border);
-  backdrop-filter: blur(5px);
-  background-color: var(--bg-opacity);
+  backdrop-filter: var(--blur);
 }
 .timeline .timeline-item-inner:before {
   content: "";
   position: absolute;
   width: 30px;
   height: 1px;
-  background-color: var(--bg-black-100);
   top: 50%;
   z-index: -1;
 }
@@ -1003,12 +1018,6 @@ about
 .timeline .timeline-item:nth-child(even) .icon {
   left: -70px;
 }
-/* .timeline .timeline-item-inner span {
-  color: var(--main-color);
-  display: block;
-  margin: 0 0 10px;
-  text-transform: capitalize;
-} */
 .timeline .timeline-item-inner h3 {
   margin: 0 0 1rem;
   padding-bottom: 1rem;
@@ -1033,8 +1042,7 @@ service-section
 }
 .service-section .service-item .service-item-inner {
   box-shadow: var(--outer-shadow);
-  backdrop-filter: blur(5px);
-  background-color: var(--bg-opacity);
+  backdrop-filter: var(--blur);
 }
 
 .service-section .service-items {
@@ -1113,13 +1121,13 @@ portfolio-section
   white-space: nowrap;
   padding: 0 10px;
   margin-right: 0.5rem;
-  border-radius: var(--border-radius);
   cursor: pointer;
   color: var(--text-black-700);
   text-transform: capitalize;
   font-size: 16px;
   border: var(--border);
   border-color: var(--bg-black-100);
+  border-radius: var(--border-radius);
   transition: var(--transition);
 }
 .portfolio-section .filter-item:hover:not(.active) {
@@ -1222,9 +1230,9 @@ portfolio-popup
 .portfolio-popup::-webkit-scrollbar {
   width: 0;
 }
-/* .portfolio-popup::-webkit-scrollbar-thumb{
-    background-color: transparent;
-} */
+.portfolio-popup::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
 .portfolio-popup::after {
   content: "";
   position: absolute;
@@ -1272,6 +1280,9 @@ portfolio-popup
   font-size: 13px;
   color: var(--text-black-600);
 }
+.portfolio-popup .pp-project-details {
+  backdrop-filter: var(--blur);
+}
 .portfolio-popup .pp-project-details h4 {
   font-weight: 400;
   margin: 0 0 10px;
@@ -1300,7 +1311,6 @@ portfolio-popup
   padding: 15px;
   border: var(--border);
   margin: 0 auto;
-  backdrop-filter: blur(5px);
 }
 .portfolio-popup .description ul {
   margin-left: 20px;
@@ -1407,7 +1417,7 @@ portfolio-popup
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
   z-index: 1;
 }
 .portfolio-popup .pp-project-details-btn {
@@ -1421,7 +1431,7 @@ portfolio-popup
   cursor: pointer;
   padding: 10px 15px;
   box-shadow: var(--outer-shadow);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
   border: var(--border);
   transition: var(--transition);
 }
@@ -1445,7 +1455,7 @@ portfolio-popup
   cursor: pointer;
   color: var(--text-black-600);
   box-shadow: var(--outer-shadow);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
   border: var(--border);
   transition: var(--transition);
 }
@@ -1543,8 +1553,7 @@ testimonial-section
   height: 100%;
   margin-top: -40px;
   border-radius: var(--border-radius);
-  backdrop-filter: blur(5px);
-  background-color: var(--bg-opacity);
+  backdrop-filter: var(--blur);
   opacity: 0;
   transition: all 0.4s ease-in-out;
 }
@@ -1631,8 +1640,7 @@ contact-section
   box-shadow: var(--outer-shadow);
   border: var(--border);
   position: relative;
-  backdrop-filter: blur(5px);
-  background-color: var(--bg-opacity);
+  backdrop-filter: var(--blur);
 }
 .contact-section .contact-item-inner i {
   font-size: 25px;
@@ -1681,7 +1689,7 @@ contact-section
   color: var(--text-black-700);
   outline: none;
   transition: var(--transition);
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
 }
 .contact-section .input-group .input-control:focus {
   border-bottom: 1px solid var(--main-color);
@@ -1698,7 +1706,7 @@ contact-section
   padding: 0 15px;
 }
 .contact-section .submit-btn button {
-  backdrop-filter: blur(5px);
+  backdrop-filter: var(--blur);
 }
 .contact-section .contact-form .input-group {
   box-shadow: var(--outer-shadow);
@@ -1753,8 +1761,6 @@ footer section
   font-size: 12px;
 }
 /* ---------------------------------------- */
-
-
 
 @media (max-width: 900px) {
   .about-section .about-info,

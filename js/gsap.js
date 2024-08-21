@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
       { opacity: 0.3 },
       {
         opacity: 1,
-        stagger: 0.02,
+        stagger: 0.01,
         scrollTrigger: {
           trigger: text,
           start: "top 80%",
           end: "bottom 20%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       }
     );
