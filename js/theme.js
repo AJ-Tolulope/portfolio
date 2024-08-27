@@ -1,39 +1,3 @@
-/* ============================= theme color start ============================= */
-
-const alternativeStyles = document.querySelectorAll(".alternate-style");
-
-const colorStyle = ["color-1", "color-2", "color-3", "color-4", "color-5"];
-
-var colorCounter = 0;
-
-setInterval(() => {
-  setColorStyle(colorCounter);
-}, 20000);
-
-function setColorStyle(counter) {
-  if (counter <= 4) {
-    const color = colorStyle[counter];
-
-    // loop through all alternativeStyles (link tag)
-    alternativeStyles.forEach((tag) => {
-      if (color === tag.getAttribute("title")) {
-        // disable if the attribute matches the color
-        tag.removeAttribute("disabled");
-      } else {
-        // set disabled attribute to the rest
-        tag.setAttribute("disabled", "true");
-      }
-    });
-
-    colorCounter = colorCounter + 1;
-
-    // reset counter
-    if (counter == 4) {
-      colorCounter = 0;
-    }
-  }
-}
-
 // theme update
 
 const themeIcon = document.querySelector(".theme");
