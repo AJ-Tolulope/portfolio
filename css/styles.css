@@ -1704,7 +1704,8 @@ footer section
     margin: 0 auto;
   }
   .home-section .home-img .img-box {
-    max-width: 330px;
+    height: 330px;
+    max-width: 100%;
   }
 
   .effect-4 {
@@ -1720,6 +1721,7 @@ footer section
     padding-bottom: 30px;
   }
   .about-img .img-box {
+    height: 330px;
     min-width: 100%;
   }
 
@@ -1805,7 +1807,6 @@ footer section
 @media (max-width: 480px) {
   .home-section .home-img .img-box {
     padding: 0;
-    max-width: 300px;
   }
 
   .home-section .home-text h1 {
