@@ -4,7 +4,6 @@ AOS.init({
   once: true,
 });
 
-
 /* ------------------------- progress bar start -------------------- */
 window.addEventListener("scroll", () => {
   const windowHeight = window.innerHeight;
@@ -144,16 +143,12 @@ if (tabsContainer) {
   const filterContainer = document.querySelector(".portfolio-filter"),
     portfolioItemsContainer = document.querySelector(".portfolio-items");
 
+  const portfolioContainer = document.getElementById("portfolioContainer");
+
   if (filterContainer && portfolioItemsContainer) {
     const portfolioItems = document.querySelectorAll(".portfolio-item"),
       popup = document.querySelector(".portfolio-popup"),
-      prevBtn = document.querySelector(".pp-prev"),
-      nextBtn = document.querySelector(".pp-next"),
-      backBtn = document.querySelector(".pp-back"),
-      projectDetailsContainer = popup.querySelector(".pp-details"),
-      projectDetailsBtn = popup.querySelector(".pp-project-details-btn");
-
-    let itemIndex, slideIndex, screenshots;
+      backBtn = document.querySelector(".pp-back");
 
     // filter portfolio items
     filterContainer.addEventListener("click", (event) => {
@@ -193,6 +188,9 @@ if (tabsContainer) {
           portfolioItem
         );
 
+        // get the portfolio object
+        const portfolio = portfolioData.portfolio[itemIndex];
+
         // Set dynamic text content
         document.getElementById("portfolioTitle").textContent =
           portfolio.description.title;
@@ -212,8 +210,6 @@ if (tabsContainer) {
         portfolioWebLink.href = portfolio.description.web;
 
         // Inject images into the portfolio container
-        const portfolioContainer =
-          document.getElementById("portfolioContainer");
         portfolio.imageSrc.forEach((img) => {
           const imageElement = document.createElement("img");
           imageElement.src = img;
@@ -224,23 +220,23 @@ if (tabsContainer) {
 
           portfolioContainer.appendChild(imageElement);
         });
+
+        popupToggle();
       }
     });
 
     backBtn.addEventListener("click", () => {
       popupToggle();
-      if (projectDetailsContainer.classList.contains("active")) {
-        popupDetailsToggle();
-      }
-      const popupVideo = popup.querySelector("video.pp-img");
-      popupVideo.src = "../";
     });
 
     function popupToggle() {
-      popup.classList.toggle("open");
+      popup.classList.toggle("active");
+      // remove the images when the popup is closed
+      if (!popup.classList.contains("active")) {
+        portfolioContainer.innerHTML = "";
+      }
       bodyScrollToggle();
     }
-
   }
 })();
 
