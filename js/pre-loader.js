@@ -3,6 +3,6 @@
   // preloader
   setTimeout(() => {
     document.querySelector(".preloader").classList.add("fade-out");
-  }, 2000);
+  }, 1000);
 })();
 /* ============================= preloader end =============================*/

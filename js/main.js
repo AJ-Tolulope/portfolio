@@ -149,7 +149,7 @@ if (tabsContainer) {
       popup = document.querySelector(".portfolio-popup"),
       prevBtn = document.querySelector(".pp-prev"),
       nextBtn = document.querySelector(".pp-next"),
-      closeBtn = document.querySelector(".pp-close"),
+      backBtn = document.querySelector(".pp-back"),
       projectDetailsContainer = popup.querySelector(".pp-details"),
       projectDetailsBtn = popup.querySelector(".pp-project-details-btn");
 
@@ -193,41 +193,41 @@ if (tabsContainer) {
           portfolioItem
         );
 
-        if (
-          portfolioItems[itemIndex].querySelector(".portfolio-item-img img")
-        ) {
-          screenshots = portfolioItems[itemIndex]
-            .querySelector(".portfolio-item-img img")
-            .getAttribute("data-screenshots");
-        } else {
-          if (
-            portfolioItems[itemIndex].querySelector(".portfolio-item-img video")
-          ) {
-            screenshots = portfolioItems[itemIndex]
-              .querySelector(".portfolio-item-img video")
-              .getAttribute("data-screenshots");
-          }
-        }
+        // Set dynamic text content
+        document.getElementById("portfolioTitle").textContent =
+          portfolio.description.title;
+        document.getElementById("portfolioCategory").textContent =
+          portfolio.category;
+        document.getElementById("portfolioDescription").textContent =
+          portfolio.description.paragraph;
+        document.getElementById("portfolioYear").textContent =
+          portfolio.description.year;
+        document.getElementById("portfolioClient").textContent =
+          portfolio.description.client;
+        document.getElementById("portfolioTools").textContent =
+          portfolio.description.tools;
 
-        // convert screenshots into array
-        screenshots = screenshots.split(",");
-        if (screenshots.length === 1) {
-          prevBtn.style.display = "none";
-          nextBtn.style.display = "none";
-          popup.querySelector(".pp-counter").style.display = "none";
-        } else {
-          prevBtn.style.display = "block";
-          nextBtn.style.display = "block";
-          popup.querySelector(".pp-counter").style.display = "block";
-        }
-        slideIndex = 0;
-        popupToggle();
-        popupSlideshow();
-        popupDetails();
+        const portfolioWebLink = document.getElementById("portfolioWeb");
+        portfolioWebLink.textContent = portfolio.description.web;
+        portfolioWebLink.href = portfolio.description.web;
+
+        // Inject images into the portfolio container
+        const portfolioContainer =
+          document.getElementById("portfolioContainer");
+        portfolio.imageSrc.forEach((img) => {
+          const imageElement = document.createElement("img");
+          imageElement.src = img;
+          imageElement.width = 1000;
+          imageElement.height = 1000;
+          imageElement.alt = "portfolio image";
+          imageElement.className = "pp-img";
+
+          portfolioContainer.appendChild(imageElement);
+        });
       }
     });
 
-    closeBtn.addEventListener("click", () => {
+    backBtn.addEventListener("click", () => {
       popupToggle();
       if (projectDetailsContainer.classList.contains("active")) {
         popupDetailsToggle();
@@ -241,84 +241,6 @@ if (tabsContainer) {
       bodyScrollToggle();
     }
 
-    function popupSlideshow() {
-      const imgSrc = screenshots[slideIndex];
-      const popupImg = popup.querySelector(".pp-img");
-
-      popupImg.src = imgSrc;
-      popup.querySelector(".pp-counter").innerHTML =
-        slideIndex + 1 + " of " + screenshots.length;
-    }
-
-    // next slide
-    nextBtn.addEventListener("click", () => {
-      if (slideIndex === screenshots.length - 1) {
-        slideIndex = 0;
-      } else {
-        slideIndex++;
-      }
-      popupSlideshow();
-    });
-
-    // prev slide
-    prevBtn.addEventListener("click", () => {
-      if (slideIndex === 0) {
-        slideIndex = screenshots.length - 1;
-      } else {
-        slideIndex--;
-      }
-      popupSlideshow();
-    });
-
-    function popupDetails() {
-      projectDetailsBtn.style.display = "block";
-
-      // get the project details
-      const details = portfolioItems[itemIndex].querySelector(
-        ".portfolio-item-details"
-      ).innerHTML;
-
-      // set the project details
-      popup.querySelector(".pp-project-details").innerHTML = details;
-
-      // get the project title
-      const title = portfolioItems[itemIndex].querySelector(
-        ".portfolio-item-title"
-      ).innerHTML;
-
-      // set the project title
-      popup.querySelector(".pp-title h2").innerHTML = title;
-
-      // get the project category
-      const category = portfolioItems[itemIndex].getAttribute("data-category");
-
-      // set the project category
-      popup.querySelector(".pp-project-category").innerHTML = category
-        .split("-")
-        .join(" ");
-    }
-    projectDetailsBtn.addEventListener("click", () => {
-      popupDetailsToggle();
-    });
-
-    function popupDetailsToggle() {
-      if (projectDetailsContainer.classList.contains("active")) {
-        projectDetailsBtn.querySelector("i").classList.remove("fa-minus");
-        projectDetailsBtn.querySelector("i").classList.add("fa-plus");
-
-        projectDetailsContainer.classList.remove("active");
-        projectDetailsContainer.style.maxHeight = 0 + "px";
-        popup.scrollTo(0, projectDetailsContainer.offsetTop);
-      } else {
-        projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
-        projectDetailsBtn.querySelector("i").classList.add("fa-minus");
-
-        projectDetailsContainer.classList.add("active");
-        projectDetailsContainer.style.maxHeight =
-          projectDetailsContainer.scrollHeight + "px";
-        popup.scrollTo(0, projectDetailsContainer.offsetTop);
-      }
-    }
   }
 })();
 

@@ -1,736 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Personal Portfolio Website | Ajala Tolulope</title>
-    <link rel="shortcut icon" href="./assets/profile-pic.png" type="image/vnd.microsoft.icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/profile_main.jpg"
+      type="image/vnd.microsoft.icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap"
+      rel="stylesheet" />
 
     <!--==================================== font awesome ====================================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
-
-    <link rel="stylesheet" href="./css/preloader.css">
+    <link rel="stylesheet" href="./css/preloader.css" />
 
     <!--==================================== main css ====================================-->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
 
     <!--==================================== aos css ====================================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <!-- <link rel="stylesheet" href="./css/aos.css"> -->
 
-
     <script src="./js/pre-loader.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- ==================================== preloader start ====================================-->
     <div class="preloader">
-        <div class="banter-loader">
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-            <div class="banter-loader__box"></div>
-        </div>
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
     </div>
     <!--==================================== preloader end ==================================== -->
 
     <!-- =================== scroll bar ================= -->
     <div class="progress">
-        <div class="progress-bar" id="myBar"></div>
+      <div class="progress-bar" id="myBar"></div>
     </div>
     <!-- =================== scroll bar ================= -->
 
     <!--==================================== move-up end ====================================-->
-    <div class="move-up"  id="move-up">
-        <span><a href="#home"><i class="fas fa-arrow-circle-up"></i></a></span>
+    <div class="move-up" id="move-up">
+      <span
+        ><a href="#home"><i class="fas fa-arrow-circle-up"></i></a
+      ></span>
     </div>
     <!--==================================== move-up end ====================================-->
 
     <!--==================================== mousemove end ====================================-->
-    <div class="mousemove"  id="mousemove">
-    </div>
+    <div class="mousemove" id="mousemove"></div>
     <!--==================================== mousemove end ====================================-->
 
     <!--==================================== header start ====================================-->
     <div class="header" id="header">
-        <div class="container">
-            <div class="logo"><a href="index.html">W</a></div>
-            <div class="links">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="theme">
-                <i class="fas fa-moon"></i>
-            </div>
-            <div class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="container">
+        <div class="logo"><a href="index.html">W</a></div>
+        <div class="links">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
+        <div class="theme">
+          <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
     <!--==================================== header end ====================================-->
-    
 
     <!--==================================== navigation start ====================================-->
     <nav class="nav-menu">
-        <div class="nav-close-btn">&times;</div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#about" class="link-item">About</a></li>
-                <li><a href="#portfolio" class="link-item">Portfolio</a></li>
-                <li><a href="#contact" class="link-item">Contact</a></li>
-                <li><a href="./blogs.html" class="link-item">Blog</a></li>
-           <!-- <li><a href="./webedit_course.html">thewebedits Course</a></li> -->
-            </ul>
-            <!-- copyright text-->
-            <p class="copyright">&copy <span class="year"></span>, thewebedits <br> contactthewebedits@gmail.com</p>
-        </div>
+      <div class="nav-close-btn">&times;</div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#about" class="link-item">About</a></li>
+          <li><a href="#portfolio" class="link-item">Portfolio</a></li>
+          <li><a href="#contact" class="link-item">Contact</a></li>
+          <li><a href="./blogs.html" class="link-item">Blog</a></li>
+          <!-- <li><a href="./webedit_course.html">thewebedits Course</a></li> -->
+        </ul>
+        <!-- copyright text-->
+        <p class="copyright">
+          &copy <span class="year"></span>, thewebedits <br />
+          contactthewebedits@gmail.com
+        </p>
+      </div>
     </nav>
     <!--==================================== navigation end ====================================-->
-    
-    
+
     <!--==================================== home-section start ====================================-->
     <section class="home-section section active" id="home">
-
-    <!--effect wrap start-->
-    <div class="effect-wrap">
-        
+      <!--effect wrap start-->
+      <div class="effect-wrap">
         <div class="effect effect-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        
-        
-        <div class="effect effect-2">
-            <div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div>
-        </div>
-    </div>
-    <!--effect wrap end--> 
-    
-    <div class="container">
-        <div class="row full-screen justify-content-between align-items">
-            <div class="home-text" data-aos="fade-up" data-aos-delay="300">
-                <p>Hi! My name is Ajala Tolulope</p>
-                <p class="typing-text"></p>
-                <h1>A Creative <span style="color: var(--main-color); font-family: var(--Anton);">Website</span> Developer</h1>
-                <a href="#portfolio" class="btn">View Projects</a>
-            </div>
-            <div class="home-img" data-aos="fade-up" data-aos-delay="700">
-                <div class="img-box">
-                    <img src="./assets/profile_main.jpg" alt="profile-pic">
 
-                    <div class="quotes">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
+        <div class="effect effect-2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-    </div>
+      </div>
+      <!--effect wrap end-->
+
+      <div class="container">
+        <div class="row full-screen justify-content-between align-items">
+          <div class="home-text" data-aos="fade-up" data-aos-delay="300">
+            <p>Hi! My name is Ajala Tolulope</p>
+            <p class="typing-text"></p>
+            <h1>
+              A Creative
+              <span style="color: var(--main-color); font-family: var(--Anton)"
+                >Website</span
+              >
+              Developer
+            </h1>
+            <a href="#portfolio" class="btn">View Projects</a>
+          </div>
+          <div class="home-img" data-aos="fade-up" data-aos-delay="300">
+            <div class="img-box">
+              <img src="./assets/profile_main.jpg" alt="profile-pic" />
+
+              <div class="quotes">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!--==================================== home-section end ====================================-->
 
-
-
     <!--==================================== about-secton start ====================================-->
     <section class="about-section section" id="about">
-
-        <!--effect wrap start-->
-        <div class="effect-wrap">
-            <div class="effect effect-1">
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            </div>
-            <div class="effect effect-2">
-                <div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div>
-            </div>
+      <!--effect wrap start-->
+      <div class="effect-wrap">
+        <div class="effect effect-1">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <!--effect wrap end--> 
-         
-        <div class="container">
-            <div class="row">
-                <div class="section-title" >
-                    <h2 data-heading="main info"> a little about me </h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="about-img">
-                    <div class="img-box" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./assets/profile_1.jpg">
-                    </div>
-                    <!-- social links start-->
-                    <div class="social-links">
-                        <a href="https://www.twitter.com/tolex_tolulope"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/thewebedit"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.github.com/aj-tolulope"><i class="fab fa-github"></i></a>
-                        <a href="https://wa.link/3dnckb"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                    <!-- social links end-->
-                </div>
-                <div class="about-info">
-                    <p class="reveal-text">Ajala Tolulope is a passionate web developer specializing in custom website creation that reflects the unique vision and goals of each business. With expertise in designing and developing various types of websites, including portfolios, blogs, and landing pages, Ajala simplifies the often overwhelming process of building a website, allowing business owners to focus on running their operations. Offering tailored website solutions, Ajala is dedicated to bringing ideas to life and enhancing the online presence of your brand. Reach out today to collaborate and turn your website dreams into reality.</p>
-                </div>
-            </div>
-            
-            <!-- about tabs start-->
-            <div class="row">
-                <div class="about-tabs">
-                    <span class="tab-item active" data-target=".education">education</span>
-                    <span class="tab-item" data-target=".tools">tools</span>
-                </div>
-            </div>
-            <!-- about tabs end-->
-
-            <!-- education start-->
-            <div class="row">
-                <div class="education tab-content active">
-                    <div class="row">
-                        <div class="timeline">
-                            <div class="row">
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-graduation-cap icon'></i>
-                                        <h3>Front-end Developer</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">I believe that great websites are the result of equal parts technical skill and creative vision. That's why, as a front-end web developer, I have dedicated myself to mastering the art and science of HTML, CSS, and JavaScript. Through a combination of classroom education and hands-on experience, I have honed my ability to translate complex concepts into intuitive, bringing your eye-catching designs to life.</p>
-                                    </div>
-                                </div>
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-graduation-cap icon'></i>
-                                        <h3>Web Designer</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">Whether it's creating a visually stunning portfolio site or a high-performing e-commerce platform, I have the technical know-how and design finesse to bring any project to life. But I don't stop at just delivering a functional website. I aim to craft digital experiences that engage, inspire, and captivate.</p>
-                                    </div>
-                                </div>
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-graduation-cap icon'></i>
-                                        <h3>Web Developer</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">From responsive design to dynamic animations, I infuse my work with a touch of creativity and a dash of innovation. So, if you're looking for a web developer who will bring a unique blend of technical acumen and creative vision to your project, look no further. Let's create something amazing together!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- education end-->
-
-
-            <!-- tools start-->
-            <div class="row">
-                <div class="tools tab-content">
-                    <div class="row">
-                        <div class="timeline">
-                            <div class="row">
-                                <!--timeline items start-->
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-briefcase icon'></i>
-                                        <h3>HTML - CSS - JAVASCRIPT</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">HTML, CSS, and JavaScript are the core technologies of web development. HTML structures the content, defining elements like headings, paragraphs, and links. CSS handles the design, controlling the layout, colors, fonts, and overall visual presentation of the website. JavaScript brings interactivity, enabling dynamic content, animations, and responsive user interfaces. Together, these three technologies form the foundation for creating functional, visually appealing, and engaging websites.</p>
-                                    </div>
-                                </div>
-                                <!--timeline items end-->
-                                <!--timeline items start-->
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-briefcase icon'></i>
-                                        <h3>Visual Studio Code (VS Code)</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">A powerful code editor with features like syntax highlighting, debugging, and extensions that support a wide range of programming languages and frameworks. VS Code helps streamline development by providing a robust environment for writing, testing, and refining code efficiently.</p>
-                                    </div>
-                                </div>
-                                <!--timeline items end-->
-                                <!--timeline items start-->
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-briefcase icon'></i>
-                                        <h3>Git & GitHub</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">Git is a version control system that tracks changes in your code, enabling collaboration and maintaining a history of project development. GitHub, a platform for hosting Git repositories, allows you to share your code with others, manage versions, and collaborate on projects. Together, they are essential for managing project workflows and ensuring code integrity.</p>
-                                    </div>
-                                </div>
-                                <!--timeline items end-->
-                                <!--timeline items start-->
-                                <div class='timeline-item'>
-                                    <div class='timeline-item-inner'>
-                                        <i class='fas fa-briefcase icon'></i>
-                                        <h3>React</h3>
-                                        <h4>thewebedits</h4>
-                                        <p class="reveal-text">A popular JavaScript library for building user interfaces, particularly single-page applications (SPAs). React helps in creating dynamic and interactive web applications by allowing developers to build reusable UI components, improving efficiency and consistency in the development process.</p>
-                                    </div>
-                                </div>
-                                <!--timeline items end-->
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- tools end-->
-
-
-
-
-
+        <div class="effect effect-2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
+      </div>
+      <!--effect wrap end-->
+
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 data-heading="main info">a little about me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="about-img">
+            <div class="img-box" data-aos="fade-up" data-aos-delay="300">
+              <img src="./assets/profile_1.jpg" />
+            </div>
+            <!-- social links start-->
+            <div class="social-links">
+              <a href="https://www.twitter.com/tolex_tolulope"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/thewebedit"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.github.com/aj-tolulope"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://wa.link/3dnckb"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+            <!-- social links end-->
+          </div>
+          <div class="about-info">
+            <p class="reveal-text">
+              Ajala Tolulope is a passionate web developer specializing in
+              custom website creation that reflects the unique vision and goals
+              of each business. With expertise in designing and developing
+              various types of websites, including portfolios, blogs, and
+              landing pages, Ajala simplifies the often overwhelming process of
+              building a website, allowing business owners to focus on running
+              their operations. Offering tailored website solutions, Ajala is
+              dedicated to bringing ideas to life and enhancing the online
+              presence of your brand. Reach out today to collaborate and turn
+              your website dreams into reality.
+            </p>
+          </div>
+        </div>
+
+        <!-- about tabs start-->
+        <div class="row">
+          <div class="about-tabs">
+            <span class="tab-item active" data-target=".education"
+              >education</span
+            >
+            <span class="tab-item" data-target=".tools">tools</span>
+          </div>
+        </div>
+        <!-- about tabs end-->
+
+        <!-- education start-->
+        <div class="row">
+          <div class="education tab-content active">
+            <div class="row">
+              <div class="timeline">
+                <div class="row">
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-graduation-cap icon"></i>
+                      <h3>Front-end Developer</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        I believe that great websites are the result of equal
+                        parts technical skill and creative vision. That's why,
+                        as a front-end web developer, I have dedicated myself to
+                        mastering the art and science of HTML, CSS, and
+                        JavaScript. Through a combination of classroom education
+                        and hands-on experience, I have honed my ability to
+                        translate complex concepts into intuitive, bringing your
+                        eye-catching designs to life.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-graduation-cap icon"></i>
+                      <h3>Web Designer</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        Whether it's creating a visually stunning portfolio site
+                        or a high-performing e-commerce platform, I have the
+                        technical know-how and design finesse to bring any
+                        project to life. But I don't stop at just delivering a
+                        functional website. I aim to craft digital experiences
+                        that engage, inspire, and captivate.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-graduation-cap icon"></i>
+                      <h3>Web Developer</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        From responsive design to dynamic animations, I infuse
+                        my work with a touch of creativity and a dash of
+                        innovation. So, if you're looking for a web developer
+                        who will bring a unique blend of technical acumen and
+                        creative vision to your project, look no further. Let's
+                        create something amazing together!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- education end-->
+
+        <!-- tools start-->
+        <div class="row">
+          <div class="tools tab-content">
+            <div class="row">
+              <div class="timeline">
+                <div class="row">
+                  <!--timeline items start-->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-briefcase icon"></i>
+                      <h3>HTML - CSS - JAVASCRIPT</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        HTML, CSS, and JavaScript are the core technologies of
+                        web development. HTML structures the content, defining
+                        elements like headings, paragraphs, and links. CSS
+                        handles the design, controlling the layout, colors,
+                        fonts, and overall visual presentation of the website.
+                        JavaScript brings interactivity, enabling dynamic
+                        content, animations, and responsive user interfaces.
+                        Together, these three technologies form the foundation
+                        for creating functional, visually appealing, and
+                        engaging websites.
+                      </p>
+                    </div>
+                  </div>
+                  <!--timeline items end-->
+                  <!--timeline items start-->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-briefcase icon"></i>
+                      <h3>Visual Studio Code (VS Code)</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        A powerful code editor with features like syntax
+                        highlighting, debugging, and extensions that support a
+                        wide range of programming languages and frameworks. VS
+                        Code helps streamline development by providing a robust
+                        environment for writing, testing, and refining code
+                        efficiently.
+                      </p>
+                    </div>
+                  </div>
+                  <!--timeline items end-->
+                  <!--timeline items start-->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-briefcase icon"></i>
+                      <h3>Git & GitHub</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        Git is a version control system that tracks changes in
+                        your code, enabling collaboration and maintaining a
+                        history of project development. GitHub, a platform for
+                        hosting Git repositories, allows you to share your code
+                        with others, manage versions, and collaborate on
+                        projects. Together, they are essential for managing
+                        project workflows and ensuring code integrity.
+                      </p>
+                    </div>
+                  </div>
+                  <!--timeline items end-->
+                  <!--timeline items start-->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner">
+                      <i class="fas fa-briefcase icon"></i>
+                      <h3>React</h3>
+                      <h4>thewebedits</h4>
+                      <p class="reveal-text">
+                        A popular JavaScript library for building user
+                        interfaces, particularly single-page applications
+                        (SPAs). React helps in creating dynamic and interactive
+                        web applications by allowing developers to build
+                        reusable UI components, improving efficiency and
+                        consistency in the development process.
+                      </p>
+                    </div>
+                  </div>
+                  <!--timeline items end-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- tools end-->
+      </div>
     </section>
     <!--==================================== about-secton end ====================================-->
-    
 
     <!--==================================== service-section start ====================================-->
     <section class="service-section section" id="services">
-
-    <!--effect wrap start-->
-    <div class="effect-wrap">
-        
+      <!--effect wrap start-->
+      <div class="effect-wrap">
         <div class="effect effect-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        
-        
+
         <div class="effect effect-2">
-            <div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-    </div>
-    <!--effect wrap end-->
-    
-    
-    <div class="container">
+      </div>
+      <!--effect wrap end-->
+
+      <div class="container">
         <div class="row">
-            <div class="section-title">
-                <h2 data-heading="services">What I Do</h2>
-            </div>
+          <div class="section-title">
+            <h2 data-heading="services">What I Do</h2>
+          </div>
         </div>
 
         <div class="service-items grid grid-col-3">
-            <!-- service-item start -->
-            <div class='service-item' data-aos='zoom-in' data-aos-delay='100'>
-                <div class='service-item-inner'>
-                    <div class='icon'>
-                        <i class='fas fa-mobile-alt'></i>
-                    </div>
-                    <h3 class="reveal-text">Responsive Website</h3>
-                    <p class="reveal-text">Engaging designs, seamless experience on any device.</p>
-                </div>
+          <!-- service-item start -->
+          <div class="service-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-item-inner">
+              <div class="icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3 class="reveal-text">Responsive Website</h3>
+              <p class="reveal-text">
+                Engaging designs, seamless experience on any device.
+              </p>
             </div>
-            <!-- service-item end -->
-            <!-- service-item start -->
-            <div class='service-item' data-aos='zoom-in' data-aos-delay='100'>
-                <div class='service-item-inner'>
-                    <div class='icon'>
-                        <i class='fas fa-laptop-code'></i>
-                    </div>
-                    <h3 class="reveal-text">Web Design</h3>
-                    <p class="reveal-text">Beautiful, functional websites that make an impact.</p>
-                </div>
+          </div>
+          <!-- service-item end -->
+          <!-- service-item start -->
+          <div class="service-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-item-inner">
+              <div class="icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3 class="reveal-text">Web Design</h3>
+              <p class="reveal-text">
+                Beautiful, functional websites that make an impact.
+              </p>
             </div>
-            <!-- service-item end -->
-            <!-- service-item start -->
-            <div class='service-item' data-aos='zoom-in' data-aos-delay='100'>
-                <div class='service-item-inner'>
-                    <div class='icon'>
-                        <i class='fas fa-code'></i>
-                    </div>
-                    <h3 class="reveal-text">Clean Code</h3>
-                    <p class="reveal-text">Efficient, effective, and easy-to-read code for optimal performance.</p>
-                </div>
+          </div>
+          <!-- service-item end -->
+          <!-- service-item start -->
+          <div class="service-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-item-inner">
+              <div class="icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="reveal-text">Clean Code</h3>
+              <p class="reveal-text">
+                Efficient, effective, and easy-to-read code for optimal
+                performance.
+              </p>
             </div>
-            <!-- service-item end -->
+          </div>
+          <!-- service-item end -->
         </div>
-
-        
-    </div>
+      </div>
     </section>
     <!--==================================== service-section end ====================================-->
 
-
     <!--==================================== portfolio-section start ====================================-->
     <section class="portfolio-section section" id="portfolio">
-    <div class="container">
+      <div class="container">
         <div class="row">
-            <div class="section-title">
-                <h2 data-heading="portfolio">latest work</h2>
-            </div>
+          <div class="section-title">
+            <h2 data-heading="portfolio">latest work</h2>
+          </div>
         </div>
-        
+
         <!-- portfolio filter start -->
         <div class="portfolio-filter">
-            <span class="filter-item active" data-target="all">all</span>
-            <span class="filter-item" data-target="web-app">web app</span>
-            <span class="filter-item" data-target="landing-page">landing page</span>
-            <span class="filter-item" data-target="portfolio">portfolio</span>
-            <span class="filter-item" data-target="blog">blog</span>
+          <span class="filter-item active" data-target="all">all</span>
+          <span class="filter-item" data-target="web-app">web app</span>
+          <span class="filter-item" data-target="landing-page"
+            >landing page</span
+          >
+          <span class="filter-item" data-target="portfolio">portfolio</span>
+          <span class="filter-item" data-target="blog">blog</span>
         </div>
         <!-- portfolio filter end -->
 
         <!-- portfolio items start -->
         <div class="row portfolio-items">
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="700">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-7/1.png" alt="landing page" 
-                        data-screenshots="assets/projects/project-7/1.png,
-                        assets/projects/project-7/2.png,
-                        assets/projects/project-7/3.png,
-                        assets/projects/project-7/4.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">agency website <span>2022</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>Studio is an interactive website builder for agencies, freelancers and for everyone who loves design - Check out the solutions and build your new website easily and quickly.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>HTML, CSS</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo07">https://aj-tolulope.github.io/Demo07</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="700">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-7/1.png" alt="landing page" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">
+                agency website <span>2022</span>
+              </p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="800">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-8/1.png" alt="landing page" 
-                        data-screenshots="assets/projects/project-8/1.png,
-                        assets/projects/project-8/2.png,
-                        assets/projects/project-8/3.png,
-                        assets/projects/project-8/4.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">furniture business landing page <span>2022</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>This is a landing page for business agency, responsive design.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2023</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>HTML, CSS, JavaScript, AOS.js, Swiper.js</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo08">https://aj-tolulope.github.io/Demo08</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="800">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-8/1.png" alt="landing page" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">
+                furniture business landing page <span>2022</span>
+              </p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="900">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-9/1.png" alt="Real Estate Website" 
-                        data-screenshots="assets/projects/project-9/1.png,
-                        assets/projects/project-9/2.png,
-                        assets/projects/project-9/3.png,
-                        assets/projects/project-9/4.png,
-                        assets/projects/project-9/5.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">real estate landing page <span>2022</span></p>
-                    
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>Clean and well structured code of a real estate website</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2023</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>HTML, CSS, JavaScript, Swiper.js</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo09">https://aj-tolulope.github.io/Demo09</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="900">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img
+                  src="assets/projects/project-9/1.png"
+                  alt="Real Estate Website" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">
+                real estate landing page <span>2022</span>
+              </p>
             </div>
-            <!-- portfolio item end -->
-             
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="100">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-1/1.png" alt="landing page" 
-                        data-screenshots="assets/projects/project-1/1.png,
-                        assets/projects/project-1/2.png,
-                        assets/projects/project-1/3.png,
-                        assets/projects/project-1/4.png,
-                        assets/projects/project-1/5.png,
-                        assets/projects/project-1/6.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">landing page <span>2021</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>Business website for display and keeping in touch with your clients.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>html, css, javascript, jquery.</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo01">https://aj-tolulope.github.io/Demo01</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
-            </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="web-app" data-aos="fade-up" data-aos-delay="200">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-2/1.png" alt="web app" 
-                        data-screenshots="assets/projects/project-2/1.png,
-                        assets/projects/project-2/2.png,
-                        assets/projects/project-2/3.png,
-                        assets/projects/project-2/4.png,
-                        assets/projects/project-2/5.png,
-                        assets/projects/project-2/6.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">web app <span>2021</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>Simple web application for food blog. Created judt with html, css and Javascript.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>html, css, javascript</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo02">https://aj-tolulope.github.io/Demo02</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-1/1.png" alt="landing page" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">landing page <span>2021</span></p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="blog" data-aos="fade-up" data-aos-delay="300">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-3/1.png" alt="blog site" 
-                        data-screenshots="assets/projects/project-3/1.png,
-                        assets/projects/project-3/2.png,
-                        assets/projects/project-3/3.png,
-                        assets/projects/project-3/4.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">blog site <span>2021</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>A very nice layout design  professionaly build, responsive website for food blog.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>html, css, javascript</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo03">https://aj-tolulope.github.io/Demo03</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="web-app"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-2/1.png" alt="web app" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">web app <span>2021</span></p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="400">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-4/1.png" alt="landing page" 
-                        data-screenshots="assets/projects/project-4/1.png,
-                        assets/projects/project-4/2.png,
-                        assets/projects/project-4/3.png,
-                        assets/projects/project-4/4.png,
-                        assets/projects/project-4/5.png,
-                        assets/projects/project-4/6.png,
-                        assets/projects/project-4/7.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">product landing page <span>2020</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>A very simple landing page for a product.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>html, css, javascript</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo04">https://aj-tolulope.github.io/Demo04</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="blog"
+            data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-3/1.png" alt="blog site" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">blog site <span>2021</span></p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="500">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-5/1.png" alt="landing page" 
-                        data-screenshots="assets/projects/project-5/1.png,
-                        assets/projects/project-5/2.png,
-                        assets/projects/project-5/3.png,
-                        assets/projects/project-5/4.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">landing page <span>2020</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>Here is a simple landing page for any simple product. Simple layout and easy to navigate.</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>html, css, javascript</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo05">https://aj-tolulope.github.io/Demo05</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="400">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-4/1.png" alt="landing page" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">
+                product landing page <span>2020</span>
+              </p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-            <!-- portfolio item start -->
-            <div class="portfolio-item" data-category="landing-page" data-aos="fade-up" data-aos-delay="600">
-                <div class="portfolio-item-inner">
-                    <div class="portfolio-item-img">
-                        <img src="assets/projects/project-6/1.png" alt="landing page" 
-                        data-screenshots="assets/projects/project-6/1.png,
-                        assets/projects/project-6/2.png,
-                        assets/projects/project-6/3.png,
-                        assets/projects/project-6/4.png,
-                        assets/projects/project-6/5.png">
-                        <!-- View Course btn -->
-                        <span class="view-project">View Project</span>
-                    </div>
-                    <p class="portfolio-item-title">E-commerce clothing website <span>2021</span></p>
-                    <!-- portfolio item details start -->
-                    <div class="portfolio-item-details">
-                        <div class="row">
-                            <div class="description">
-                                <h4>Project Brief:</h4>
-                                <p>This is a landing page for business products I created with html, css and jquery. Nicely design and mobile friendly</p>
-                            </div>
-                            <div class="info">
-                                <h4>Project Info</h4>
-                                <ul>
-                                    <li>Date - <span>2021</span></li>
-                                    <li>Client - <span>xyz</span></li>
-                                    <li>Tools - <span>HTML, CSS, Jquery</span></li>
-                                    <li>Web - <span><a href="https://aj-tolulope.github.io/Demo06">https://aj-tolulope.github.io/Demo06</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- portfolio item details end -->
-                </div>
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="500">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-5/1.png" alt="landing page" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">landing page <span>2020</span></p>
             </div>
-            <!-- portfolio item end -->
+          </div>
+          <!-- portfolio item end -->
 
-            
+          <!-- portfolio item start -->
+          <div
+            class="portfolio-item"
+            data-category="landing-page"
+            data-aos="fade-up"
+            data-aos-delay="600">
+            <div class="portfolio-item-inner">
+              <div class="portfolio-item-img">
+                <img src="assets/projects/project-6/1.png" alt="landing page" />
+                <!-- View Course btn -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="portfolio-item-title">
+                E-commerce clothing website <span>2021</span>
+              </p>
+            </div>
+          </div>
+          <!-- portfolio item end -->
         </div>
         <!-- portfolio items end -->
 
@@ -771,250 +775,350 @@
                 </div>
             </div>
         </div> -->
-    </div>
+      </div>
     </section>
     <!--==================================== portfolio-section end ====================================-->
-    
 
     <!--==================================== portfolio popup start ====================================-->
     <div class="portfolio-popup">
-    <div class="pp-details">
-        <div class="pp-details-inner">
+      <div class="pp-back">
+        <i class="fas fa-arrow-left"></i>
+        <p>Back</p>
+      </div>
+      <div class="container">
+        <div class="pp-details">
+          <div class="pp-details-inner">
             <div class="pp-title">
-                <h2>personal portfolio</h2>
-                <p>Category - <span class="pp-project-category"></span></p>
+              <!-- Dynamic title will be inserted here -->
+              <h2 id="portfolioTitle"></h2>
+              <p>
+                Category -
+                <span class="pp-project-category" id="portfolioCategory"></span>
+              </p>
             </div>
             <div class="pp-project-details">
-                
+              <div class="row">
+                <div class="description">
+                  <h4>Project Brief:</h4>
+                  <p id="portfolioDescription"></p>
+                </div>
+                <div class="info">
+                  <h4>Project Info</h4>
+                  <ul>
+                    <li>Date - <span id="portfolioYear"></span></li>
+                    <li>Client - <span id="portfolioClient"></span></li>
+                    <li>Tools - <span id="portfolioTools"></span></li>
+                    <li>
+                      Web - <span><a href="#" id="portfolioWeb"></a></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <div class="separator"></div>
-
-    <div class="pp-main">
-        <div class="pp-main-inner">
-            <div class="pp-project-details-btn">
-                Project Details
-                <i class="fas fa-plus"></i>
-            </div>
-            <div class="pp-close"><i class="fas fa-times"></i></div>
-            <img src="./assets/projects/project-1/1.png" alt="img" class="pp-img">
-            <p>Screenshots <span class="pp-counter"></span></p>
+          </div>
         </div>
 
-        <!-- pp navigation -->
-        <div class="pp-prev"><i class="fas fa-play"></i></div>
-        <div class="pp-next"><i class="fas fa-play"></i></div>
-    </div>
+        <div class="pp-main">
+          <div class="pp-main-inner" id="portfolioContainer">
+            <!-- Images will be injected here by JavaScript -->
+          </div>
+        </div>
+      </div>
     </div>
     <!--==================================== portfolio popup end ====================================-->
 
-
     <!--==================================== testimonial section start ====================================-->
     <section class="testimonial-section section" id="testimonial">
-
-    <!--effect wrap start-->
-    <div class="effect-wrap">
-        
+      <!--effect wrap start-->
+      <div class="effect-wrap">
         <div class="effect effect-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        
+
         <div class="effect effect-2">
-            <div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-    </div>
-    <!--effect wrap end--> 
-    
-    
-    <div class="container">
+      </div>
+      <!--effect wrap end-->
+
+      <div class="container">
         <div class="row">
-            <div class="section-title">
-                <h2 data-heading="testimonial">Client Speak</h2>
-            </div>
+          <div class="section-title">
+            <h2 data-heading="testimonial">Client Speak</h2>
+          </div>
         </div>
         <div class="row">
-            <div class="testi-box">
-                <div class="testi-slider">
-                    <div class="testi-slider-container">
-                        <!-- testi item start -->
-                        <div class="testi-item">
-                            <i class="fas fa-quote-left left"></i>
-                            <i class="fas fa-quote-right right"></i>
-                            <p class="reveal-text">Aj's work is professionaly, creative, and impressive. His portfolio website is a great example of his skills and expertise.</p>
-                            <img src="assets/testimonials/user1.jpeg" alt="testimonial">
-                            <span>John</span>
-                        </div>
-                        <!-- testi item end -->
-    
-                        <!-- testi item start -->
-                        <div class="testi-item active">
-                            <i class="fas fa-quote-left left"></i>
-                            <i class="fas fa-quote-right right"></i>
-                            <p class="reveal-text">Talented and hardworking individual who takes great pride of his work.</p>
-                            <img src="assets/testimonials/user2.jpeg" alt="testimonial">
-                            <span>Mark</span>
-                        </div>
-                        <!-- testi item end -->
-    
-                        <!-- testi item start -->
-                        <div class="testi-item">
-                            <i class="fas fa-quote-left left"></i>
-                            <i class="fas fa-quote-right right"></i>
-                            <p class="reveal-text">I would recommend him without hesitation to anyone in need of a skilled web developer.</p>
-                            <img src="assets/testimonials/user4.jpg" alt="testimonial">
-                            <span>Thomas</span>
-                        </div>
-                        <!-- testi item end -->
-                    </div>
+          <div class="testi-box">
+            <div class="testi-slider">
+              <div class="testi-slider-container">
+                <!-- testi item start -->
+                <div class="testi-item">
+                  <i class="fas fa-quote-left left"></i>
+                  <i class="fas fa-quote-right right"></i>
+                  <p class="reveal-text">
+                    Aj's work is professionaly, creative, and impressive. His
+                    portfolio website is a great example of his skills and
+                    expertise.
+                  </p>
+                  <img src="assets/testimonials/user1.jpeg" alt="testimonial" />
+                  <span>John</span>
                 </div>
-                <div class="testi-slider-nav">
-                     <span class="prev"><i class="fas fa-angle-left"></i></span>
-                     <span class="next"><i class="fas fa-angle-right"></i></span>
+                <!-- testi item end -->
+
+                <!-- testi item start -->
+                <div class="testi-item active">
+                  <i class="fas fa-quote-left left"></i>
+                  <i class="fas fa-quote-right right"></i>
+                  <p class="reveal-text">
+                    Talented and hardworking individual who takes great pride of
+                    his work.
+                  </p>
+                  <img src="assets/testimonials/user2.jpeg" alt="testimonial" />
+                  <span>Mark</span>
                 </div>
+                <!-- testi item end -->
+
+                <!-- testi item start -->
+                <div class="testi-item">
+                  <i class="fas fa-quote-left left"></i>
+                  <i class="fas fa-quote-right right"></i>
+                  <p class="reveal-text">
+                    I would recommend him without hesitation to anyone in need
+                    of a skilled web developer.
+                  </p>
+                  <img src="assets/testimonials/user4.jpg" alt="testimonial" />
+                  <span>Thomas</span>
+                </div>
+                <!-- testi item end -->
+              </div>
             </div>
+            <div class="testi-slider-nav">
+              <span class="prev"><i class="fas fa-angle-left"></i></span>
+              <span class="next"><i class="fas fa-angle-right"></i></span>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </section>
     <!--==================================== testimonial section end ====================================-->
 
-
     <!--==================================== contact section start ====================================-->
     <section class="contact-section section" id="contact">
-
-    <!--effect wrap start-->
-    <div class="effect-wrap">
-        
+      <!--effect wrap start-->
+      <div class="effect-wrap">
         <div class="effect effect-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        
-        
+
         <div class="effect effect-2">
-            <div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-    </div>
-    <!--effect wrap end--> 
-    
-    
-    <div class="container">
+      </div>
+      <!--effect wrap end-->
+
+      <div class="container">
         <div class="row">
-            <div class="section-title">
-                <h2 data-heading="contact">Get In Touch</h2>
-            </div>
-        </div>
-        <div class="row">
-            <!-- contact item start -->
-            <div class="contact-item">
-                <div class="contact-item-inner">
-                    <i class="fas fa-phone"></i>
-                    <span>Contact</span>
-                    <p>Whatsapp:</br> +234 807 - 6277 - 688</p>
-                    <p>Phone:</br> +234 701 - 2105 - 995</p>
-                </div>
-            </div>
-            <!-- contact item end -->
-            <!-- contact item start -->
-            <div class="contact-item">
-                <div class="contact-item-inner">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                    <p>contactthewebedits@gmail.com</p>
-                </div>
-            </div>
-            <!-- contact item end -->
-            <!-- contact item start -->
-            <div class="contact-item">
-                <div class="contact-item-inner">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Location</span>
-                    <p>Lagos, Nigeria.</p>
-                </div>
-            </div>
-            <!-- contact item end -->
+          <div class="section-title">
+            <h2 data-heading="contact">Get In Touch</h2>
+          </div>
         </div>
         <div class="row">
-            <div class="contact-form">
-                <form>
-                    <div class="row">
-                        <div class="w-50">
-                            <div class="input-group">
-                                <input type="text" name="name" placeholder="Name" class="input-control name" required>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" name="email" placeholder="Email" class="input-control email" required>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" name="subject" placeholder="Subject" class="input-control subject" required>
-                            </div>
-                        </div>
-                        <div class="w-50">
-                            <div class="input-group">
-                                <textarea name="message" class="input-control message" placeholder="Message" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="submit-btn">
-                            <button class="btn" onclick="sendMail()">Send Message</button>
-                        </div>
-                    </div>
-                </fomr>
+          <!-- contact item start -->
+          <div class="contact-item">
+            <div class="contact-item-inner">
+              <i class="fas fa-phone"></i>
+              <span>Contact</span>
+              <p>
+                Whatsapp: <br />
+                +234 807 - 6277 - 688
+              </p>
+              <p>
+                Phone: <br />
+                +234 701 - 2105 - 995
+              </p>
             </div>
+          </div>
+          <!-- contact item end -->
+          <!-- contact item start -->
+          <div class="contact-item">
+            <div class="contact-item-inner">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+              <p>contactthewebedits@gmail.com</p>
+            </div>
+          </div>
+          <!-- contact item end -->
+          <!-- contact item start -->
+          <div class="contact-item">
+            <div class="contact-item-inner">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Location</span>
+              <p>Lagos, Nigeria.</p>
+            </div>
+          </div>
+          <!-- contact item end -->
         </div>
-    </div>
+        <div class="row">
+          <div class="contact-form">
+            <form>
+              <div class="row">
+                <div class="w-50">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      class="input-control name"
+                      required />
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Email"
+                      class="input-control email"
+                      required />
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                      class="input-control subject"
+                      required />
+                  </div>
+                </div>
+                <div class="w-50">
+                  <div class="input-group">
+                    <textarea
+                      name="message"
+                      class="input-control message"
+                      placeholder="Message"
+                      required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="submit-btn">
+                  <button class="btn" onclick="sendMail()">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <!--==================================== contact section end ====================================-->
 
-    
-    
-
-
     <!--==================================== footer section start ====================================-->
     <section class="footer-section section" id="footer">
-    <div class="container">
-       <h2>quick links</h2>
-       <ul>
-           <li><a href="#about">About</a></li>
-           <li><a href="#portfolio">Portfolio</a></li>
-           <li><a href="#contact">Contact</a></li>
-           <li><a href="./blogs.html">Blog</a></li>
-           <!-- <li><a href="./webedit_course.html">Webedit-Course</a></li> -->
+      <div class="container">
+        <h2>quick links</h2>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./blogs.html">Blog</a></li>
+          <!-- <li><a href="./webedit_course.html">Webedit-Course</a></li> -->
         </ul>
 
         <div class="copyright">
-            <p>&copy <span class="year"></span>, contactthewebedits@gmail.com</p>
-            <p>Made with <i class="fas fa-heart" style="color: red;"></i> by aj.tolulope Follow | <a href="https://instagram.com/thewebedits">@thewebedits</a></p>
+          <p>&copy <span class="year"></span>, contactthewebedits@gmail.com</p>
+          <p>
+            Made with <i class="fas fa-heart" style="color: red"></i> by
+            aj.tolulope Follow |
+            <a href="https://instagram.com/thewebedits">@thewebedits</a>
+          </p>
         </div>
-    </div>
+      </div>
     </section>
     <!--==================================== footer section end ====================================-->
 
-    
-    
-   <script src="./js/theme.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-   <script src="./js/gsap.js"></script>
-   <script src="https://unpkg.com/split-type"></script>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
-   <script src="./js/autotype.js"></script>
-   <script src="./js/main.js"></script>
-   <script src="./js/testi.js"></script>
-   <script src="./js/mail.js"></script>
-
-
-</body>
+    <script src="./js/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./js/gsap.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+    <script src="./js/autotype.js"></script>
+    <script src="./js/portfolioData.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/testi.js"></script>
+    <script src="./js/mail.js"></script>
+  </body>
 </html>
-
-
