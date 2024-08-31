@@ -692,49 +692,19 @@ about
   padding-right: 20px;
 }
 .about-section .about-img .img-box {
+  height: 420px;
   max-width: 450px;
   display: block;
   margin: auto;
-  padding: 15px;
   border-radius: var(--border-radius);
-  backdrop-filter: var(--blur);
   border: var(--border);
-}
-.about-section .about-img .img-box:before {
-  content: "";
-  width: 45%;
-  height: 10px;
-  background: var(--main-color);
-  display: block;
-  border-radius: var(--border-radius);
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  transition: all 0.7s ease;
-}
-.about-section .about-img .img-box:after {
-  content: "";
-  width: 10px;
-  height: 50%;
-  background: var(--main-color);
-  display: block;
-  border-radius: var(--border-radius);
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  transition: all 0.7s ease;
-}
-.about-section .about-img:hover .img-box:before {
-  width: 65%;
-}
-.about-section .about-img:hover .img-box:after {
-  height: 30%;
 }
 .about-section .about-img .img-box img {
   width: 100%;
+  height: 100%;
+  object-fit: center;
   border-radius: var(--border-radius);
   box-shadow: var(--outer-shadow);
-  border: 10px solid transparent;
 }
 .about-section .about-img .social-links {
   margin-top: 20px;
@@ -794,9 +764,6 @@ about
 .about-section h3 {
   margin: 1.5rem 0 0.5rem;
 }
-.about-section .course-brief > div,
-.about-section p.more,
-.about-section p.outline,
 .about-section ul {
   background-color: var(--bg-opacity);
   border: var(--border);
@@ -808,67 +775,6 @@ about
 }
 .about-section ul {
   color: var(--text-black-700);
-}
-.about-section .course-brief {
-  margin-top: 4rem;
-  padding-top: 4rem;
-  border-top: var(--border);
-  gap: 2rem;
-}
-.about-section .course-brief > div h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: var(--border);
-}
-.about-section .course-brief > div .more {
-  height: 0;
-  overflow: hidden;
-}
-.about-section .course-brief > div .more.active {
-  height: auto;
-}
-.about-section .course-brief > div .btn {
-  padding: 4px 14px;
-  margin-top: 1rem;
-  font-size: 12px;
-}
-.about-section .course-brief > div {
-  position: relative;
-}
-.about-section .course-brief > div::after {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  border: var(--border);
-  border-radius: 50%;
-  top: -14px;
-  right: 0;
-  color: var(--text-black-900);
-  display: grid;
-  place-content: center;
-  backdrop-filter: var(--blur);
-}
-.about-section .course-brief > div:nth-child(1):after {
-  content: "1";
-}
-.about-section .course-brief > div:nth-child(2):after {
-  content: "2";
-}
-.about-section .course-brief > div:nth-child(3):after {
-  content: "3";
-}
-.about-section .course-brief > div:nth-child(4):after {
-  content: "4";
-}
-.about-section .course-brief > div:nth-child(5):after {
-  content: "5";
-}
-.about-section .course-brief > div:nth-child(6):after {
-  content: "6";
-}
-.about-section .course-brief > div:nth-child(7):after {
-  content: "7";
 }
 .about-section .about-tabs {
   padding: 60px 15px 50px;
