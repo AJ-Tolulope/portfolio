@@ -209,16 +209,91 @@ if (tabsContainer) {
         portfolioWebLink.textContent = portfolio.description.web;
         portfolioWebLink.href = portfolio.description.web;
 
-        // Inject images into the portfolio container
-        portfolio.imageSrc.forEach((img) => {
-          const imageElement = document.createElement("img");
-          imageElement.src = img;
-          imageElement.width = 1000;
-          imageElement.height = 1000;
-          imageElement.alt = "portfolio image";
-          imageElement.className = "pp-img";
+        // Inject media into the portfolio container (images and videos)
+        portfolio.imageSrc.forEach((media) => {
+          // Check if the media source is a YouTube URL
+          if (media.includes("youtube.com") || media.includes("youtu.be")) {
+            // Extract video ID from YouTube URL
+            let videoId = "";
 
-          portfolioContainer.appendChild(imageElement);
+            if (media.includes("youtube.com/watch?v=")) {
+              videoId = media.split("watch?v=")[1].split("&")[0];
+            } else if (media.includes("youtu.be/")) {
+              videoId = media.split("youtu.be/")[1].split("?")[0];
+            } else if (media.includes("youtube.com/embed/")) {
+              videoId = media.split("embed/")[1].split("?")[0];
+            }
+
+            // Create iframe element for YouTube video
+            const iframeElement = document.createElement("iframe");
+            iframeElement.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`;
+            iframeElement.width = 1000;
+            iframeElement.height = 563; // 16:9 aspect ratio
+            iframeElement.className = "pp-video";
+            iframeElement.style.width = "100%";
+            iframeElement.style.height = "auto";
+            iframeElement.style.aspectRatio = "16/9";
+            iframeElement.style.borderRadius = "10px";
+            iframeElement.style.marginBottom = "20px";
+            iframeElement.style.border = "none";
+            iframeElement.allow =
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframeElement.allowFullscreen = true;
+
+            portfolioContainer.appendChild(iframeElement);
+          }
+          // Check if the media source is a local video file
+          else if (
+            media.endsWith(".mp4") ||
+            media.endsWith(".webm") ||
+            media.endsWith(".ogg")
+          ) {
+            // Create video element for local video files
+            const videoElement = document.createElement("video");
+            videoElement.src = media;
+            videoElement.width = 1000;
+            videoElement.height = 1000;
+            videoElement.className = "pp-video";
+            videoElement.controls = true;
+            videoElement.loop = true;
+            videoElement.muted = true;
+            videoElement.autoplay = true;
+            videoElement.style.width = "100%";
+            videoElement.style.height = "auto";
+            videoElement.style.borderRadius = "10px";
+            videoElement.style.marginBottom = "20px";
+            videoElement.style.cursor = "pointer";
+
+            // Add click to play/pause functionality
+            videoElement.addEventListener("click", function () {
+              if (this.paused) {
+                this.play();
+              } else {
+                this.pause();
+              }
+            });
+
+            // Add loading event to handle smooth playback
+            videoElement.addEventListener("loadeddata", function () {
+              this.style.opacity = "1";
+            });
+
+            // Set initial opacity for smooth transition
+            videoElement.style.opacity = "0.8";
+            videoElement.style.transition = "opacity 0.3s ease";
+
+            portfolioContainer.appendChild(videoElement);
+          } else {
+            // Create image element for regular images
+            const imageElement = document.createElement("img");
+            imageElement.src = media;
+            imageElement.width = 1000;
+            imageElement.height = 1000;
+            imageElement.alt = "portfolio image";
+            imageElement.className = "pp-img";
+
+            portfolioContainer.appendChild(imageElement);
+          }
         });
 
         popupToggle();

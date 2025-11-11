@@ -20,7 +20,7 @@ general
   --text-black-700: #c9c1c1;
   --text-black-600: #a0a0a0;
 
-  --spacing-h: .5rem;
+  --spacing-h: 0.5rem;
   --spacing: 1rem;
   --spacing-2x: 2rem;
   --spacing-3x: 3rem;
@@ -1052,12 +1052,13 @@ portfolio-section
   box-shadow: var(--shadow);
   border-bottom: 1px solid var(--main-color);
 }
-.portfolio-section .portfolio-item-img img {
+.portfolio-section .portfolio-item-img img,
+.portfolio-section .portfolio-item-img video {
   border-radius: var(--border-radius);
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   transition: var(--transition);
 }
 
@@ -1244,6 +1245,32 @@ portfolio-popup
   padding: 10px;
   border: var(--border);
   box-shadow: var(--shadow);
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-video {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(236, 148, 18, 0.3);
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-video::-webkit-media-controls {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-video::-webkit-media-controls-play-button,
+.portfolio-popup .pp-main .pp-main-inner .pp-video::-webkit-media-controls-volume-slider,
+.portfolio-popup .pp-main .pp-main-inner .pp-video::-webkit-media-controls-mute-button,
+.portfolio-popup .pp-main .pp-main-inner .pp-video::-webkit-media-controls-timeline {
+  filter: invert(1) hue-rotate(180deg) saturate(2);
 }
 /* ----------------------------- */
 
