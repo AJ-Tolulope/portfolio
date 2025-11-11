@@ -4,7 +4,7 @@ const portfolioData = {
   portfolio: [
     {
       id: 645875238875,
-      category: "video-editing",
+      category: "web-development",
       imageSrc: [
         "/assets/projects/project-7/1.png",
         "/assets/projects/project-7/2.png",
@@ -23,7 +23,7 @@ const portfolioData = {
     },
     {
       id: 86284666289,
-      category: "video-editing",
+      category: "web-development",
       imageSrc: [
         "/assets/projects/project-8/1.png",
         "/assets/projects/project-8/2.png",
@@ -42,7 +42,7 @@ const portfolioData = {
     },
     {
       id: 8276294763,
-      category: "brand-identity",
+      category: "web-development",
       imageSrc: [
         "/assets/projects/project-9/1.png",
         "/assets/projects/project-9/2.png",
@@ -60,39 +60,16 @@ const portfolioData = {
       },
     },
     {
-      id: 647348289374,
-      category: "video-editing",
-      imageSrc: [
-        "/assets/projects/project-1/1.png",
-        "/assets/projects/project-1/2.png",
-        "/assets/projects/project-1/3.png",
-        "/assets/projects/project-1/4.png",
-        "/assets/projects/project-1/5.png",
-        "/assets/projects/project-1/6.png",
-      ],
-      description: {
-        title: "Content Creator Video",
-        paragraph:
-          "Engaging content creator video optimized for social media platforms. Features dynamic cuts, trending transitions, caption integration, and platform-specific formatting to maximize viewer engagement and watch time across YouTube, Instagram, and TikTok.",
-        year: "2024",
-        client: "Content Creator",
-        tools: "Adobe Premiere Pro, After Effects, CapCut",
-        web: "#",
-      },
-    },
-    {
       id: 1224647253,
       category: "web-development",
       imageSrc: [
-        "/assets/projects/project-2/1.png",
-        "/assets/projects/project-2/2.png",
-        "/assets/projects/project-2/3.png",
-        "/assets/projects/project-2/4.png",
-        "/assets/projects/project-2/5.png",
-        "/assets/projects/project-2/6.png",
+        "/assets/projects/project-3/1.png",
+        "/assets/projects/project-3/2.png",
+        "/assets/projects/project-3/3.png",
+        "/assets/projects/project-3/4.png",
       ],
       description: {
-        title: "Brand Website",
+        title: "web-development",
         paragraph:
           "Custom brand website designed to showcase company identity and drive conversions. Features responsive design, optimized user experience, and seamless integration with brand visual elements to create cohesive online presence.",
         year: "2024",
@@ -103,12 +80,15 @@ const portfolioData = {
     },
     {
       id: 198746783658,
-      category: "brand-identity",
+      category: "wwb-developmemt",
       imageSrc: [
-        "/assets/projects/project-3/1.png",
-        "/assets/projects/project-3/2.png",
-        "/assets/projects/project-3/3.png",
-        "/assets/projects/project-3/4.png",
+        "/assets/projects/project-4/1.png",
+        "/assets/projects/project-4/2.png",
+        "/assets/projects/project-4/3.png",
+        "/assets/projects/project-4/4.png",
+        "/assets/projects/project-4/5.png",
+        "/assets/projects/project-4/6.png",
+        "/assets/projects/project-4/7.png",
       ],
       description: {
         title: "Logo Design",
