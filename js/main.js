@@ -211,7 +211,7 @@ if (tabsContainer) {
 
         // Inject media into the portfolio container (images and videos)
         portfolio.imageSrc.forEach((media) => {
-          // Check if the media source is a YouTube URL
+          // Check if the media source is a YouTube URL (watch, shorts, embed, youtu.be)
           if (media.includes("youtube.com") || media.includes("youtu.be")) {
             // Extract video ID from YouTube URL
             let videoId = "";
@@ -222,6 +222,8 @@ if (tabsContainer) {
               videoId = media.split("youtu.be/")[1].split("?")[0];
             } else if (media.includes("youtube.com/embed/")) {
               videoId = media.split("embed/")[1].split("?")[0];
+            } else if (media.includes("youtube.com/shorts/")) {
+              videoId = media.split("shorts/")[1].split("?")[0];
             }
 
             // Create iframe element for YouTube video
