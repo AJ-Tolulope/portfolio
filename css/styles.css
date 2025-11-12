@@ -1260,8 +1260,6 @@ portfolio-popup
   padding: 10px;
   border: var(--border);
   box-shadow: var(--shadow);
-  border-radius: 10px;
-  margin-bottom: 20px;
   background-color: #000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
