@@ -5,6 +5,10 @@ coverage/
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*firebase-adminsdk*.json
+*service-account*.json
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
