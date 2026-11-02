@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null && request.auth.token.admin == true;
+    }
+
+    match /posts/{postId} {
+      allow read: if resource.data.status == "published" || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /projects/{projectId} {
+      allow read: if resource.data.status == "published" || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /{collection}/{itemId} {
+      allow read: if collection in ["services", "skills", "testimonials", "socialLinks", "courses"]
+        && (resource.data.status == "published" || isAdmin());
+      allow write: if collection in ["services", "skills", "testimonials", "socialLinks", "courses"]
+        && isAdmin();
+    }
+
+    match /siteSettings/{settingsId} {
+      allow read: if settingsId == "main" || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /contactSubmissions/{submissionId} {
+      allow create: if request.resource.data.keys().hasOnly([
+          "name", "email", "subject", "message", "read", "createdAt"
+        ])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 254
+        && request.resource.data.subject is string
+        && request.resource.data.subject.size() > 0
+        && request.resource.data.subject.size() <= 160
+        && request.resource.data.message is string
+        && request.resource.data.message.size() > 0
+        && request.resource.data.message.size() <= 5000
+        && request.resource.data.read == false
+        && request.resource.data.createdAt is int;
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

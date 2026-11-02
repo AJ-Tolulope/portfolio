@@ -1,0 +1,17 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isAdmin() {
+      return request.auth != null && request.auth.token.admin == true;
+    }
+
+    match /uploads/{allPaths=**} {
+      allow read: if isAdmin();
+      allow write: if isAdmin()
+        && (request.resource == null
+          || (request.resource.size > 0
+            && request.resource.size <= 5 * 1024 * 1024
+            && request.resource.contentType.matches("image/(jpeg|png|webp|gif)")));
+    }
+  }
+}
